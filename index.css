@@ -1,0 +1,158 @@
+/* Your @font-face rule remains unchanged */
+@font-face {
+    font-family: 'TitleFont';
+    src: url('Montserrat-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4vw;
+    font-family: monospace;/*'TitleFont', sans-serif;*/
+    letter-spacing: 1rem;
+    
+    max-height: 40px;
+    min-height: 10px;
+    color: white;
+}
+
+/* Navigation Bar */
+nav {
+    margin: 30px auto 0;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: nowrap; /* Prevent elements from wrapping to a new line */
+    justify-content: space-between; /* Distribute the elements evenly */
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 50px;
+    background-color: #361d48;
+    border-radius: 5px;
+    font-size: 0;
+    align-items: stretch;
+}
+
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    width: 20%;
+}
+
+/*add a hover instead*/
+
+/* Add a media query for smaller screens */
+/*
+  nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+  }
+  a:nth-child(1) {
+    width: 100px;
+  }
+  a:nth-child(2) {
+    width: 110px;
+  }
+  a:nth-child(3) {
+    width: 100px;
+  }
+  a:nth-child(4) {
+    width: 160px;
+  }
+  a:nth-child(5) {
+    width: 120px;
+  }
+  nav .start-home, a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+    background-color: #1abc9c;
+  }
+  nav .start-about, a:nth-child(2):hover~.animation {
+    width: 110px;
+    left: 100px;
+    background-color: #e74c3c;
+  }
+  nav .start-blog, a:nth-child(3):hover~.animation {
+    width: 100px;
+    left: 210px;
+    background-color: #3498db;
+  }
+  nav .start-portefolio, a:nth-child(4):hover~.animation {
+    width: 160px;
+    left: 310px;
+    background-color: #9b59b6;
+  }
+  nav .start-contact, a:nth-child(5):hover~.animation {
+    width: 120px;
+    left: 470px;
+    background-color: #e67e22;
+  }
+*/
+  
+body {
+  font-size: 12px;
+  font-family: 'TitleFont', sans-serif;;
+  background: #492c50;
+}
+  
+p {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #ecf0f1;
+  font-family: monospace;
+  font-size: 2.5vw;
+  margin-top: 30px; /*something like this */
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0%{
+    top: 40%;
+    opacity: 0%;
+  }
+  50%{
+    top:50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+/* background stuff */
+/*change these colors*/
+body {
+    background: linear-gradient(-45deg, #4861d1, #b83047, #9c1a71, #6b1a9a);
+    background-size: 400% 400%;
+    animation: gradient 5s linear infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    50% {
+        background-position: 100% 50%;
+    }
+ 
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
