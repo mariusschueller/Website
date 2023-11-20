@@ -62,71 +62,114 @@ nav a {
     width: 20%;
 }
 
-
-
-
-h2 {
-    color: #ecf0f1;
-    font-family: monospace;
-    font-size: 30px;
-    margin: 0px;
-}
-
-p {
-  color: #ecf0f1;
-  font-family: monospace;
-  font-size: 15px;
-  margin-top: 5px;
   
+body {
+  font-size: 12px;
+  font-family: 'TitleFont', sans-serif;
+}
+  
+
+
+h2{
+    color: white;
+    font-size: 2rem;
+    font-family: monospace;
+    margin-bottom: 0px;
 }
 
-.container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    overflow: hidden;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.column {
-    width: 100%;
-    float: left;
-    box-sizing: border-box;
-    text-align: center; /* Center the contents */
-    margin-bottom: 20px; /* Add some space between columns */
-    
+
+
+body {
+  color: #444444;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*-moz-font-feature-settings: "liga" on;*/
 }
 
-@media (min-width: 750px) {
-    .column {
-        width: 48%;
-        margin: 1%;
+.btn {
+  background-color: white;
+  border: 1px solid #cccccc;
+  color: #696969;
+  padding: 0.5rem;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  display: flex;
+  padding: 1rem;
+  @media (min-width: 40rem) {
+    width: 50%;
+  }
+  @media (min-width: 56rem) {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  &:hover {
+    .card__image {
+      filter: contrast(100%);
     }
-    h2 {
-        font-size: 1.75vw;
-    }
-    
-    p {
-      font-size: 1.5vw;
-    }
+  }
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__title {
+  color: #696969;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
 }
 
 
-/* background stuff */
-/*change these colors*/
+
 body {
     background: linear-gradient(-45deg, #4861d1, #b83047, #9c1a71, #6b1a9a);
     background-size: 400% 400%;
     animation: gradient 5s linear infinite;
-    
-    overflow-x: hidden;
-        
-    font-size: 12px;
-    font-family: 'TitleFont', sans-serif;
-}
-
-img {
-    width: 10%;
-    margin: 0px;
 }
 
 @keyframes gradient {
@@ -142,4 +185,3 @@ img {
         background-position: 0% 50%;
     }
 }
-
