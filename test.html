@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .column {
+            width: 100%;
+            float: left;
+            box-sizing: border-box;
+            text-align: center; /* Center the contents */
+            margin-bottom: 20px; /* Add some space between columns */
+        }
+
+        @media (min-width: 600px) {
+            .column {
+                width: 48%;
+                margin: 1%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="column">
+            <h2>Programming</h2>
+            <p>I'm a programmer who loves to make games, solve everyday issues, and just do fun stuff.</p>
+        </div>
+        <div class="column">
+            <h2>Music</h2>
+            <p>I play piano, cello, and a variety of other, for the most part, random instruments.</p>
+        </div>
+    </div>
+
+</body>
+</html>
