@@ -48,24 +48,25 @@ nav {
 }
 
 nav a {
-    line-height: 50px;
-    height: 100%;
-    font-size: 15px;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    color: white;
-    cursor: pointer;
-    width: 20%;
+  line-height: 50px;
+  height: 100%;
+  font-size: 18px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  width: 20%;
+  font-family: monospace;
 }
 
   
 body {
   font-size: 12px;
-  font-family: 'TitleFont', sans-serif;
+  font-family: monospace, sans-serif;
   background: #492c50;
 }
   
@@ -78,26 +79,11 @@ h2{
     margin-bottom: 0px;
 }
 
-/*
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-*/
 
-
-
-.btn {
-  background-color: white;
-  border: 1px solid #cccccc;
-  color: #696969;
-  padding: 0.5rem;
-}
-
-.btn--block {
-  display: block;
-  width: 100%;
+.learn-more {
+  color: black;
+  text-align: center;
+  font-size: .875rem;
 }
 
 .cards {
@@ -120,7 +106,7 @@ h2{
 }
 
 .card {
-  background-color: rgb(220, 220, 220);
+  background-color: white;
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -145,7 +131,6 @@ h2{
   font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 .card__text {
@@ -157,6 +142,8 @@ h2{
 
 
 
+
+/*Background stuff*/
 body {
     background: linear-gradient(-45deg, #4861d1, #b83047, #9c1a71, #6b1a9a);
     background-size: 400% 400%;

@@ -1,12 +1,12 @@
 /* Your @font-face rule remains unchanged */
 @font-face {
     font-family: 'TitleFont';
-    src: url('Montserrat-Bold.ttf') format('truetype');
+    src: url('../Montserrat-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-h1 {
+#name {
     text-align: center;
     font-size: 4vw;
     font-family: monospace;/*'TitleFont', sans-serif;*/
@@ -63,71 +63,42 @@ nav a {
     font-family: monospace;
 }
 
-
-
-
-h2 {
-    color: #ecf0f1;
-    font-family: monospace;
-    font-size: 30px;
-    margin: 0px;
-}
-
-p {
-  color: #ecf0f1;
-  font-family: monospace;
+ 
+body {
   font-size: 15px;
-  margin-top: 5px;
-  
+  font-family: monospace;
 }
 
-.container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    overflow: hidden;
+/* Project stuff*/
+h2{
+    text-align: center;
+    color: white;
 }
 
-.column {
-    width: 100%;
-    float: left;
-    box-sizing: border-box;
-    text-align: center; /* Center the contents */
-    margin-bottom: 20px; /* Add some space between columns */
-    
+p{
+    color: white;
+    padding-right: 10%;
+    padding-left: 10%;
 }
 
-@media (min-width: 750px) {
-    .column {
-        width: 48%;
-        margin: 1%;
-    }
-    h2 {
-        font-size: 1.75vw;
-    }
-    
-    p {
-      font-size: 1.5vw;
-    }
+.description {
+    text-align: left;
+}
+
+.resources {
+    text-align: left;
+}
+
+.resources a{
+    color: white;
 }
 
 
-/* background stuff */
-/*change these colors*/
+/*Background stuff*/
 body {
     background: linear-gradient(-45deg, #4861d1, #b83047, #9c1a71, #6b1a9a);
-    background-size: 400% 400%;
+    background-size: 500% 1000%;
     animation: gradient 5s linear infinite;
-    
-    overflow-x: hidden;
-        
-    font-size: 12px;
-    font-family: 'TitleFont', sans-serif;
-}
-
-img {
-    width: 10%;
-    margin: 0px;
 }
 
 @keyframes gradient {
@@ -143,4 +114,3 @@ img {
         background-position: 0% 50%;
     }
 }
-
