@@ -1,5 +1,76 @@
+/* Your @font-face rule remains unchanged */
+@font-face {
+  font-family: 'TitleFont';
+  src: url('Montserrat-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#name{
+  text-align: center;
+  font-size: 4vw;
+  font-family: monospace;/*'TitleFont', sans-serif;*/
+  letter-spacing: 1rem;
+  
+  max-height: 40px;
+  min-height: 10px;
+  color: white;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+@media (max-width: 750px) {
+
+#name{
+  margin-bottom: 0px;
+}
+nav{
+  margin-top: 10px;
+}
+
+}
+
+/* Navigation Bar */
+nav {
+  margin-top: 1.5vw;
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: nowrap; /* Prevent elements from wrapping to a new line */
+  justify-content: center; /* Distribute the elements evenly */
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 50px;
+  background-color: #361d48;
+  border-radius: 5px;
+  font-size: 0;
+  align-items: stretch;
+}
+
+nav a {
+  line-height: 50px;
+  height: 100%;
+  font-size: 15px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  width: 20%;
+}
+
+
 body {
-    background: #e5ded8;
+font-size: 12px;
+font-family: 'TitleFont', sans-serif;
+background: #492c50;
+}
+
+
+body {
     box-sizing: border-box;
   }
   
@@ -54,7 +125,6 @@ body {
   
   .blog-author,
   .blog-author--no-cover {
-    margin: 0 auto;
     padding-top: .125rem;
     width: 80%;
   }
