@@ -16,68 +16,101 @@
                <a href="contact.html">Contact</a>
           </nav>
 
-          <h2>CS Projects</h2>
-          <!--THE PROJECT CARDS-->     
-          <ul class="cards">
-               <li class="cards__item">
-                 <div class="card">
-                   <div class="card__content">
-                     <div class="card__title">Portfolio Website</div>
-                     <p class="card__text">I made a website using HTML and CSS. This is the website you are currently looking at!</p>
-                     <a href="projects/website.html" class="learn-more">Learn More</a>
-                   </div>
-                 </div>
-               </li>
-               <!--
-               <li class="cards__item">
-                 <div class="card">
-                   <div class="card__content">
-                     <div class="card__title">Flex Grow</div>
-                     <p class="card__text">This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
-                     <button class="btn btn--block card__btn">Learn More</button>
-                   </div>
-                 </div>
-               </li>
-               <li class="cards__item">
-                 <div class="card">
-                   <div class="card__content">
-                     <div class="card__title">Flex Shrink</div>
-                     <p class="card__text">This defines the ability for a flex item to shrink if necessary. Negative numbers are invalid.</p>
-                     <button class="btn btn--block card__btn">Button</button>
-                   </div>
-                 </div>
-               </li> -->
-          </ul>
+          <div class="tabs">
+            <input class="input" name="tabs" type="radio" id="tab-1" checked="checked"/>
+            <label class="label" for="tab-1">All</label>
+            <div class="panel">
 
-          <h2>Engineering Projects</h2>
-          <!--THE PROJECT CARDS-->     
-          <ul class="cards">
-               <li class="cards__item">
-                 <div class="card">
-                    <!--<div class="card__image card__image--river"></div>-->
-                   <div class="card__content">
-                     <div class="card__title">Coming soon</div>
-                     <p class="card__text">There will be something here in the future...</p>
-                     <a href="#" class="learn-more">Learn More</a>
-                   </div>
-                 </div>
-               </li>
-          </ul>
+              <ul class="cards">
 
-          <h2>Music Projects</h2>
-          <!--THE PROJECT CARDS-->     
-          <ul class="cards">
-               <li class="cards__item">
-                 <div class="card">
-                    <!--<div class="card__image card__image--river"></div>-->
-                   <div class="card__content">
-                     <div class="card__title">Coming Soon</div>
-                     <p class="card__text">There will be something here in the future...</p>
-                     <a href="#" class="learn-more">Learn More</a>
-                   </div>
-                 </div>
-               </li>
-          </ul>
+                <!--CARD 1-->
+                <li class="cards__item">
+                  <div class="card">
+                    <div class="card__content">
+                      <div class="card__title">Portfolio Website</div>
+                      <p class="card__date">11/20/2023</p>
+                      <p class="card__text">I made a website using HTML and CSS. This is the website you are currently looking at!</p>
+                      <a href="projects/website.html" class="learn-more">Learn More</a>
+                    </div>
+                  </div>
+                </li>
+                
+                <!--CARD 2-->
+                <li class="cards__item">
+                  <div class="card">
+                    <div class="card__content">
+                      <div class="card__title">Secret Santa Email Sender</div>
+                      <p class="card__date">11/18/2023</p>
+                      <p class="card__text">Created a program that will create pairs for a secret santa gift exchange and then sends emails to the pairs.</p>
+                      <a href="projects/secretSanta.html" class="learn-more">Learn More</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+            <input class="input" name="tabs" type="radio" id="tab-2"/>
+            <label class="label" for="tab-2">CS</label>
+            <div class="panel">
+              <ul class="cards">
+
+                <!--CARD 1 -->
+                <li class="cards__item">
+                  <div class="card">
+                    <div class="card__content">
+                      <div class="card__title">Portfolio Website</div>
+                      <p class="card__date">11/20/2023</p>
+                      <p class="card__text">I made a website using HTML and CSS. This is the website you are currently looking at!</p>
+                      <a href="projects/website.html" class="learn-more">Learn More</a>
+                    </div>
+                  </div>
+                </li>
+
+                <!--CARD 2-->
+                <li class="cards__item">
+                  <div class="card">
+                    <div class="card__content">
+                      <div class="card__title">Secret Santa Email Sender</div>
+                      <p class="card__date">11/18/2023</p>
+                      <p class="card__text">Created a program that will create pairs for a secret santa gift exchange and then sends emails to the pairs.</p>
+                      <a href="projects/secretSanta.html" class="learn-more">Learn More</a>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+            <input class="input" name="tabs" type="radio" id="tab-3"/>
+            <label class="label" for="tab-3">Music</label>
+            <div class="panel">
+              <ul class="cards">
+
+                <!--CARD 1 -->
+                <li class="cards__item">
+                  <div class="card">
+                    <div class="card__content">
+                      <div class="card__title">Coming soon</div>
+                      <p class="card__date">00/00/0000</p>
+                      
+                      <p class="card__text">There will be something here in the future so stay tuned for more fun stuff...</p>
+                      <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="cards__item">
+                  <div class="card">
+                    <div class="card__content">
+                      <div class="card__title">Coming soon</div>
+                      <p class="card__date">00/00/0000</p>
+                      <p class="card__text">There will be something here in the future so stay tuned for more fun stuff...</p>
+                      <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
           
      </body>
 </html>
