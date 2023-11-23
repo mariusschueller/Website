@@ -23,7 +23,7 @@
 
 /* Navigation Bar */
 nav {
-  margin-top: 1.5vw;
+  margin-top: 4vh;
   display: flex; /* Use flexbox for layout */
   flex-wrap: nowrap; /* Prevent elements from wrapping to a new line */
   justify-content: center; /* Distribute the elements evenly */
