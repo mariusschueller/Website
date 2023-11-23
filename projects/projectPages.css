@@ -94,6 +94,13 @@ h2{
 .cards__item {
     display: flex;
     padding: 3rem;
+
+    @media (max-width: 600px) {
+      .description{
+        display: block;
+        text-align: center;
+      }
+    }
     
   }
   
