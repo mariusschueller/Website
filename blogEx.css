@@ -27,8 +27,8 @@ nav {
   flex-wrap: nowrap; /* Prevent elements from wrapping to a new line */
   justify-content: center; /* Distribute the elements evenly */
   position: relative;
-  width: 100%;
-  max-width: 100%;
+  width: 90%;
+  max-width: 90%;
   height: 50px;
   background-color: #361d48;
   border-radius: 5px;
