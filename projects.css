@@ -121,6 +121,38 @@ h2{
     }
   }
 }
+details {
+  margin: auto;
+  text-align: center;
+
+}
+
+details[open] summary {
+	display: none;
+  border-style: none;
+}
+
+details[open] img {
+  animation: .3s cubic-bezier(0.1, 0, 0.1, 1) both;
+  
+}
+
+summary {
+  text-decoration: underline;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px;
+  border-style: solid;
+}
+
+
+@keyframes reveal {
+  from {
+    transform: scale(.7);
+    opacity: 0;
+  }
+}
 
 .card__image{
   max-width: 45vw;
