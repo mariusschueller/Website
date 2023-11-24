@@ -150,6 +150,16 @@ h2{
     height: 10rem;
 
   }
+
+  .big-media{
+    display: block;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1.25rem;
+    width: 55vw;
+
+  }
   
   .description {
     display: flex;
