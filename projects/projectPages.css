@@ -15,9 +15,8 @@
     max-height: 40px;
     min-height: 10px;
     color: white;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    padding-top: 0px;
+    margin: auto;
+    padding-left: 4vw;
 
     animation-name: shadow;
     animation-duration: 4s;
