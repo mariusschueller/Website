@@ -103,7 +103,7 @@ a{
 
 body {
   background: linear-gradient(-45deg, #4861d1, #b83047, #9c1a71, #6b1a9a);
-  background-size: 400% 400%;
+  background-size: 400% 500%;
   animation: gradient 5s linear infinite;
 }
 

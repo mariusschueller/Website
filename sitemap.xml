@@ -9,47 +9,72 @@
 
 <url>
   <loc>https://mariusschueller.com/</loc>
-  <lastmod>2023-11-22T04:42:20+00:00</lastmod>
+  <lastmod>2023-11-23T01:44:05+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/index.html</loc>
-  <lastmod>2023-11-22T04:42:20+00:00</lastmod>
+  <lastmod>2023-11-23T01:44:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/projects.html</loc>
-  <lastmod>2023-11-22T16:12:38+00:00</lastmod>
+  <lastmod>2023-11-24T15:18:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/blog.html</loc>
-  <lastmod>2023-11-22T04:42:20+00:00</lastmod>
+  <lastmod>2023-11-23T00:27:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/about.html</loc>
-  <lastmod>2023-11-22T04:42:20+00:00</lastmod>
+  <lastmod>2023-11-24T18:28:34+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/contact.html</loc>
-  <lastmod>2023-11-22T04:42:20+00:00</lastmod>
+  <lastmod>2023-11-23T00:27:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/projects/website.html</loc>
-  <lastmod>2023-11-22T16:12:38+00:00</lastmod>
+  <lastmod>2023-11-24T05:31:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/projects/secretSanta.html</loc>
-  <lastmod>2023-11-22T16:12:38+00:00</lastmod>
+  <lastmod>2023-11-24T05:31:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/dall-e.html</loc>
+  <lastmod>2023-11-24T05:31:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/origins.html</loc>
+  <lastmod>2023-11-24T05:31:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/unscripted.html</loc>
+  <lastmod>2023-11-24T05:31:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/lockScreen.html</loc>
+  <lastmod>2023-11-24T15:18:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/nutcracker.html</loc>
+  <lastmod>2023-11-24T15:21:34+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/blogs/ItBegins.html</loc>
-  <lastmod>2023-11-22T04:42:20+00:00</lastmod>
+  <lastmod>2023-11-24T05:31:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
