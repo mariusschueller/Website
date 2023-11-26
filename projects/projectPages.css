@@ -62,6 +62,11 @@ nav a {
     cursor: pointer;
     width: 20%;
     font-family: monospace;
+    border-radius: 5px;
+}
+
+nav a:hover{
+  background-color: #22122e;
 }
 
 @media (max-width: 750px) {
