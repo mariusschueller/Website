@@ -178,7 +178,11 @@ h2{
     flex-direction: row;
   }
   
-
+  /* for any code snippets" 
+  .code {
+    height: 300px;
+    overflow-y: scroll;
+  }
 
 /*Background stuff*/
 body {

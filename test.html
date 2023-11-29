@@ -1,69 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<html>
+     <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+          <title>Drawing Generator</title>
+          <link rel="stylesheet" href="projectPages.css">
+          <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+     </head>
+     <body>
+          <h1 id="name">Marius Schueller</h1>
+          <nav>
+            <a href="/index.html">Home</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+          </nav>
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            overflow: hidden;
-        }
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Drawing Generator</div>
+                <div class="description">
+                    <p class="card__text">A python program that prompts the user on whether they want to draw a pokemon, animal, or superhero. 
+                        From there, the program gives a random thing from that catagory.
+                        Then, the user is prompted on if they want to see a drawing tutorial for their thing pulled up in their browser.
+                        The user can continue getting things from their catagory or switch to another catagory.
+                        <br><br>
+                        This program was created because I wanted to learn how to draw but I didn't know what to do.
+                        So, I figured it would be fun to learn by drawing random pokemon. 
+                        After creating the program with pokemon, I extended it to also include superheros and animals.
+                    </p>
+                </div>
+                <div class="code">
+                <script src="https://gist.github.com/mariusschueller/445adb937ef4a3367508d84fed26c3fc.js"></script>
+                </div>
+                <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@MariusSchueller/test-1?embed=true"></iframe>
 
-        h2 {
-            color: #333;
-        }
+                <p>Created: 6/11/2022</p>
+                <p class="resources"><a href="https://github.com/mariusschueller/Rand-Draw-Generator" target="_blank">Github</a></p>
 
-        p {
-            color: #666;
-        }
-
-        .column {
-            width: 100%;
-            float: left;
-            box-sizing: border-box;
-            text-align: center; /* Center the contents */
-            margin-bottom: 20px; /* Add some space between columns */
-        }
-
-        @media (min-width: 750px) {
-            .column {
-                width: 48%;
-                margin: 1%;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <div class="column">
-            <h2>Programming</h2>
-            <p>I'm a programmer who loves to make games, solve everyday issues, and just do fun stuff.</p>
-        </div>
-        <div class="column">
-            <h2>Music</h2>
-            <p>I play piano, cello, and a variety of other, for the most part, random instruments.</p>
-        </div>
-        <div class="column">
-            <h2>Engineering</h2>
-            <p>I love to 3d print, solder, and learn to build stuff.</p>
-        </div>
-        <div class="column">
-            <h2>Teaching</h2>
-            <p>I love to pass on my knowledge to anyone interested in learning. Contact me if you'd like to get in touch. </p>
-            
-        </div>
+              </div>
+            </div>
+          </li>
         
-    </div>
-
-</body>
+    </body>
 </html>
