@@ -99,14 +99,14 @@ body {
 }
 
 .typing-demo {
-  width: 43ch;
-  animation: typing 3s steps(43), blink .5s step-end infinite alternate;
+  width: 49ch;
+  animation: typing 3s steps(49), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
   font-family: monospace;
 
-  font-size: 3.5vw;
+  font-size: 3.25vw;
   color: white;
 }
 
