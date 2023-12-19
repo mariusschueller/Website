@@ -1,7 +1,7 @@
 /* Your @font-face rule remains unchanged */
 @font-face {
-    font-family: 'TitleFont';
-    src: url('Montserrat-Bold.ttf') format('truetype');
+    font-family: 'Hack';
+    src: url('/hack.regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -9,7 +9,7 @@
 #name {
     text-align: center;
     font-size: 4vw;
-    font-family: monospace;/*'TitleFont', sans-serif;*/
+    font-family: 'Hack', monospace;/*'TitleFont', sans-serif;*/
     letter-spacing: 1rem;
     
     max-height: 40px;
@@ -61,7 +61,7 @@ nav a {
   color: white;
   cursor: pointer;
   width: 20%;
-  font-family: monospace;
+  font-family:'Hack', monospace;
   border-radius: 5px;
 }
 
@@ -85,19 +85,19 @@ nav a:hover{
   
 body {
   font-size: 12px;
-  font-family: 'TitleFont', sans-serif;
+  font-family: 'Hack', sans-serif;
 }
 
 
 h2{
-    font-family: monospace;
+    font-family: 'Hack', monospace;
     text-align: center;
     color: white;
     font-size: 50px;
 }
 
 p{
-    font-family: monospace;
+    font-family: 'Hack', monospace;
     text-align: center;
     color: white;
     font-size: 20px;

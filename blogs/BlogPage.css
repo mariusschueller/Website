@@ -1,7 +1,7 @@
 /* Your @font-face rule remains unchanged */
 @font-face {
-    font-family: 'TitleFont';
-    src: url('../Montserrat-Bold.ttf') format('truetype');
+    font-family: 'SourceCodePro';
+    src: url('/hack.regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -9,7 +9,7 @@
 #name {
     text-align: center;
     font-size: 4vw;
-    font-family: monospace;/*'TitleFont', sans-serif;*/
+    font-family: 'SourceCodePro';/*'TitleFont', sans-serif;*/
     letter-spacing: 1rem;
     
     max-height: 40px;
@@ -61,7 +61,7 @@ nav a {
     color: white;
     cursor: pointer;
     width: 20%;
-    font-family: monospace;
+    font-family: 'SourceCodePro';
     border-radius: 5px;
 }
 
@@ -84,9 +84,10 @@ nav a:hover{
 }  
 
 body {
-  font-size: 15px;
-  font-family: monospace;
+  font-size: 5px;
+  font-family: 'SourceCodePro';
   background: #492c50;
+  line-height: 1.4;
 }
 
 /* Blog Stuff */
@@ -101,8 +102,8 @@ body {
     background: #fff;
     border-radius: 5px;
     box-shadow: hsla(0, 0, 0, .2) 0 4px 2px -2px;
-    font-family: monospace, sans-serif;
-    font-size: 15px;
+    font-family: 'SourceCodePro', monospace, sans-serif;
+    font-size: 13.5px;
     font-weight: 100;
     margin: 48px auto;
     width: 20rem;
