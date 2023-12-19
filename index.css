@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'SourceCodePro';
-  src: url('source-code-pro.regular.ttf') format('truetype');
+  src: url('hack.regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
 #name {
     text-align: center;
     font-size: 4vw;
-    font-family: 'SourceCodePro';/*'TitleFont', sans-serif;*/
+    font-family: 'SourceCodePro', monospace;/*'TitleFont', sans-serif;*/
     letter-spacing: 1rem;
     
     max-height: 40px;
@@ -69,7 +69,7 @@ nav a {
     color: white;
     cursor: pointer;
     width: 20%;
-    font-family: 'SourceCodePro';
+    font-family: 'SourceCodePro', monospace;
     border-radius: 5px;
 }
 
@@ -94,7 +94,7 @@ nav a:hover{
   
 body {
   font-size: 12px;
-  font-family: 'SourceCodePro';
+  font-family: 'SourceCodePro', monospace;
   background: #492c50;
 }
 
@@ -111,7 +111,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  font-family: 'SourceCodePro';
+  font-family: 'SourceCodePro' monospace;
 
   font-size: 3.1vw;
   color: white;
