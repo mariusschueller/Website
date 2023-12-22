@@ -90,6 +90,53 @@ body {
   line-height: 1.4;
 }
 
+/* subscribe stuff*/
+.subscribe {
+  background: white;
+  width: 400px;
+  max-width: 40%;
+  height: auto;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1px;
+  font-size: 15px;
+  /* position: fixed;
+  bottom: 10px;
+  left:50%;
+  transform: translateX(-50%); */
+  
+  /* border: 2px solid #333; 
+  box-sizing: border-box; */
+}
+.subscribe p {
+  font-size: 14px;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.subscribe input {
+  margin: 0px;
+  max-width: 70%;
+  box-sizing: 90%;
+  margin-bottom: 5px;
+}
+
+.subscribe .button {
+  background: black;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+
+.subscribe .requiredemail{
+  padding: 5px;
+}
+
 /* Blog Stuff */
 
 
