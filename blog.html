@@ -1,157 +1,147 @@
 <!DOCTYPE html>
 <html>
-     <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-          <title>Blog</title>
-          <link rel="stylesheet" href="blog.css">
-          <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-     </head>
-     <body>
-          <h1 id="name">Marius Schueller</h1>
-          <nav>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="blog.html">Blog</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-          </nav>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <title>Blog</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  </head>
+  <body>
+    <h1 id="name">Marius Schueller</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-          <!--Blog Post-->
-          <div class="blog-container">
-            <div class="blog-header">
-              <div class="blog-cover">
-                <img src="/images/20230319_083705.jpg">
-              </div>
-            </div>
-          
-            <div class="blog-body">
-              <div class="blog-title">
-                <h1><a href="blogs/Semester Review.html"><br>A Semester Review (As a Vanderbilt CS Student)</a></h1>
-              </div>
-              <div class="blog-summary">
-                <p>Another semester has passed, and I wanted to give a recap/review of how things went. I did a lot of stuff, and there's a lot I want to talk about. So, here's everything from my academic to social life, all in one post...</p>
-              </div>
-              <p><a href="blogs/Semester Review.html">Read On</a></p>
-            </div>
-            
-            <div class="footer">
-              
-              <p class="date">12/17/2023</p>
-              <!--<p class="languages">HTML CSS</p>-->
-            </div>
-         </div>
-
-          <!--Blog Post-->
-          <div class="blog-container">
-            <div class="blog-header">
-            </div>
-          
-            <div class="blog-body">
-              <div class="blog-title">
-                <h1><a href="blogs/ItBegins.html"><br>This week I learned to _</a></h1>
-              </div>
-              <div class="blog-summary">
-                <p>This week, I learned to juggle. Yeah, kind of random, but I decided it was something I wanted to do.
-                   So, on Sunday night, I started trying to learn. 
-                   I think I watched 1 video a week ago and then forgot almost all of it. 
-                   Regardless, I just started practicing and got the hang of it after like an hour. 
-                   After a little more practice, I'm more consistent and would say I've learned the skill pretty well...</p>
-              </div>
-              <p><a href="blogs/thisWeekILearned.html">Read On</a></p>
-            </div>
-            
-            <div class="footer">
-              
-              <p class="date">12/03/2023</p>
-              <!--<p class="languages">HTML CSS</p>-->
-            </div>
-         </div>
-
-          <div class="blog-container">
-              
-               <div class="blog-header">
-               </div>
-             
-               <div class="blog-body">
-                 <div class="blog-title">
-                   <h1><a href="blogs/ItBegins.html"><br>And so it Begins</a></h1>
-                 </div>
-                 <div class="blog-summary">
-                   <p>I made a website to share all of my projects! 
-                    By creating this website, you're able to read the words you're reading right now. 
-                    I've been wanting to make a website for a while and last weekend I decided to dive right in and do it. 
-                    So, over the course of 3 days, I designed this website which I hope to continue updating. 
-                    It was made with only HTML and CSS. I designed the home, projects, about, contact, and blog pages...</p>
-                 </div>
-                 <p><a href="blogs/ItBegins.html">Read On</a></p>
-               </div>
-               
-               <div class="footer">
-                 
-                 <p class="date">11/21/2023</p>
-                 <p class="languages">HTML CSS</p>
-                 
-               </div>
-            </div>
-
-          <!--MORE CONTENT-->
-          <div id="more-content">
-          </div>
-
-          <div class="show-more-btn" onclick="toggleContent()">Show More</div>
-
-          <script>
-            function toggleContent() {
-                var x = document.getElementById("more-content");
-                var btn = document.querySelector('.show-more-btn');
-                
-                // Get the computed style of the element
-                var displayStyle = window.getComputedStyle(x).display;
+    <!--Blog Post 1-->
+    <div class="blog-container">
+      <div class="blog-header">
+        <div class="blog-cover">
+          <img src="/images/holidayblog/banner.jpg">
+        </div>
+      </div>
+    
+      <div class="blog-body">
+        <div class="blog-title">
+          <h1><a href="blogs/Handmade Holidays.html"><br>Handmade for the Holidays: DIY Holiday Gifts with a Personal Touch</a></h1>
+        </div>
+        <div class="blog-summary">
+          <p>Tis the season! My family doesn't do lists for gifts, and I find it very hard to buy great gifts for other people. As a result, for the past few years, I've been making DIY gifts. This year, creating my gifts was fun, and I ended up with some cool projects, but I ran into many issues. All the <b>final</b> gifts should be able to be able to be made with minimal upfront cost, and maybe some basic graphic design. So, here's my documented experience...</p>
+        </div>
+        <p><a href="blogs/Handmade Holidays.html">Read On</a></p>
+      </div>
+      
+      <div class="footer">
         
-                if (displayStyle === "none") {
-                    x.style.display = "block";
-                    btn.innerHTML = 'Show Less';
-                } else {
-                    x.style.display = "none";
-                    btn.innerHTML = 'Show More';
-                }
-            }
-        </script>        
+        <p class="date">12/30/2023</p>
+        <p class="languages">Soldering &nbsp 3D Modeling &nbsp Graphic Design &nbsp Epoxy</p>
+      </div>
+    </div>
 
+    <!--Blog Post 2-->
+    <div class="blog-container">
+      <div class="blog-header">
+        <div class="blog-cover">
+          <img src="/images/20230319_083705.jpg">
+        </div>
+      </div>
+    
+      <div class="blog-body">
+        <div class="blog-title">
+          <h1><a href="blogs/Semester Review.html"><br>A Semester Review (As a Vanderbilt CS Student)</a></h1>
+        </div>
+        <div class="blog-summary">
+          <p>Another semester has passed, and I wanted to give a recap/review of how things went. I did a lot of stuff, and there's a lot I want to talk about. So, here's everything from my academic to social life, all in one post...</p>
+        </div>
+        <p><a href="blogs/Semester Review.html">Read On</a></p>
+      </div>
+      
+      <div class="footer">
+        
+        <p class="date">12/17/2023</p>
+        <!--<p class="languages">HTML CSS</p>-->
+      </div>
+    </div>
 
-            <!--Subcribe-->
-            <!-- <div class="subscribe">
-              <div id="mc_embed_shell">    
-                <div id="mc_embed_signup">
-                    <form action="https://mariusschueller.us9.list-manage.com/subscribe/post?u=996964c1d6b20eb6b8c5e777a&amp;id=7d5e6f0e46&amp;f_id=00ef18e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                        <div id="mc_embed_signup_scroll"><h3>Subscribe!</h3>
-                          <p>Get notified when stuff gets added to stay in the loop.</p>
-                            
-                            <div class="mc-field-group">
-                              
-                              <input type="email" name="EMAIL" class="requiredemail" id="mce-EMAIL" required="" value="" placeholder="Email"><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
-                        <div id="mce-responses" class="clear foot">
-                            <div class="response" id="mce-error-response" style="display: none;"></div>
-                            <div class="response" id="mce-success-response" style="display: none;"></div>
-                        </div>
-                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-                        <input type="text" name="b_996964c1d6b20eb6b8c5e777a_7d5e6f0e46" tabindex="-1" value="">
-                    </div>
-                        <div class="optionalParent">
-                            <div class="clear foot">
-                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                </div>
-                <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
-            </div> -->
+    <!--Blog Post 3-->
+    <div class="blog-container">
+      <div class="blog-header">
+      </div>
+    
+      <div class="blog-body">
+        <div class="blog-title">
+          <h1><a href="blogs/ItBegins.html"><br>This week I learned to _</a></h1>
+        </div>
+        <div class="blog-summary">
+          <p>This week, I learned to juggle. Yeah, kind of random, but I decided it was something I wanted to do.
+              So, on Sunday night, I started trying to learn. 
+              I think I watched 1 video a week ago and then forgot almost all of it. 
+              Regardless, I just started practicing and got the hang of it after like an hour. 
+              After a little more practice, I'm more consistent and would say I've learned the skill pretty well...</p>
+        </div>
+        <p><a href="blogs/thisWeekILearned.html">Read On</a></p>
+      </div>
+      
+      <div class="footer">
+        
+        <p class="date">12/03/2023</p>
+        <!--<p class="languages">HTML CSS</p>-->
+      </div>
+    </div>
+    
+    <!--MORE CONTENT-->
+    <div id="more-content">
+      <div class="blog-container">
+        <div class="blog-header">
+        </div>
+      
+        <div class="blog-body">
+          <div class="blog-title">
+            <h1><a href="blogs/ItBegins.html"><br>And so it Begins</a></h1>
+          </div>
+          <div class="blog-summary">
+            <p>I made a website to share all of my projects! 
+            By creating this website, you're able to read the words you're reading right now. 
+            I've been wanting to make a website for a while and last weekend I decided to dive right in and do it. 
+            So, over the course of 3 days, I designed this website which I hope to continue updating. 
+            It was made with only HTML and CSS. I designed the home, projects, about, contact, and blog pages...</p>
+          </div>
+          <p><a href="blogs/ItBegins.html">Read On</a></p>
+        </div>
+        
+        <div class="footer">
+          
+          <p class="date">11/21/2023</p>
+          <p class="languages">HTML CSS</p>
+        </div>
+      </div>
+    </div>
 
-            <!--SENDGRID SUBSCRIBE-->
-            <iframe class="new-subscribe" src="https://cdn.forms-content-1.sg-form.com/4ea806cf-a0da-11ee-a940-cead52b50d91" width="500" height="550">
-     </body>
+    <div class="show-more-btn" onclick="toggleContent()">Show More</div>
+
+    <script>
+      function toggleContent() {
+        var x = document.getElementById("more-content");
+        var btn = document.querySelector('.show-more-btn');
+              
+        // Get the computed style of the element
+        var displayStyle = window.getComputedStyle(x).display;
+      
+        if (displayStyle === "none") {
+          x.style.display = "block";
+          btn.innerHTML = 'Show Less';
+        } else {
+          x.style.display = "none";
+          btn.innerHTML = 'Show More';
+        }
+      }
+    </script>        
+
+    <!--SENDGRID SUBSCRIBE-->
+    <iframe class="new-subscribe" src="https://cdn.forms-content-1.sg-form.com/4ea806cf-a0da-11ee-a940-cead52b50d91" width="500" height="550">
+  </body>
 </html>
