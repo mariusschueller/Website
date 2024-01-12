@@ -32,7 +32,7 @@
 
 /* Navigation Bar */
 nav {
-    margin-top: 4vh;
+    margin-top: 5vh;
     display: flex; /* Use flexbox for layout */
     flex-wrap: nowrap; /* Prevent elements from wrapping to a new line */
     justify-content: center; /* Distribute the elements evenly */
@@ -109,7 +109,7 @@ h2 {
   margin: 0;
   padding: 0;
   overflow-y: auto; /* Enable horizontal scrolling */
-  max-height: 450px; /* Set a fixed height for vertical scrolling */
+  max-height: 70vh; /* Set a fixed height for vertical scrolling */
   border-radius: 5px;
 }
 
