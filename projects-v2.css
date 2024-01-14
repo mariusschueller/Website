@@ -21,6 +21,7 @@
     animation-name: shadow;
     animation-duration: 4s;
     animation-iteration-count: infinite;
+    margin-top: 15px;
 }
 
 @keyframes shadow {
@@ -32,20 +33,20 @@
 
 /* Navigation Bar */
 nav {
-    margin-top: 5vh;
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: nowrap; /* Prevent elements from wrapping to a new line */
-    justify-content: center; /* Distribute the elements evenly */
-    position: relative;
-    width: 90%;
-    max-width: 90%;
-    height: 50px;
-    background-color: #361d48;
-    border-radius: 5px;
-    font-size: 0;
-    align-items: stretch;
-    margin-right: auto;
-    margin-left: auto;
+  margin-top: 7vh;
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: nowrap; /* Prevent elements from wrapping to a new line */
+  justify-content: center; /* Distribute the elements evenly */
+  position: relative;
+  width: 90%;
+  max-width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 0;
+  align-items: stretch;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 nav a {
@@ -56,17 +57,18 @@ nav a {
   position: relative;
   z-index: 1;
   text-decoration: none;
-  text-transform: uppercase;
   text-align: center;
   color: white;
   cursor: pointer;
   width: 20%;
-  font-family: 'Hack',monospace;
+  font-family: 'SourceCodePro', monospace;
   border-radius: 5px;
+  border: 2px solid transparent; 
+  transition: border 0.3s ease;
 }
 
-nav a:hover{
-  background-color: #22122e;
+nav a:hover {
+  border: 2px solid white; 
 }
 
 @media (max-width: 750px) {
@@ -85,8 +87,11 @@ nav a:hover{
 
 body {
   font-size: 12px;
-  font-family: 'Hack',monospace, sans-serif;
-  background: #492c50;
+  font-family: 'SourceCodePro', monospace;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
 }
 
 h2 {
@@ -199,27 +204,6 @@ summary {
   margin-bottom: 0px;
 }
 
-/* Background stuff */
-body {
-  background: linear-gradient(-45deg, #4861d1, #b83047, #9c1a71, #6b1a9a);
-  background-size: 400% 400%;
-  animation: gradient 5s linear infinite;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 p {
   margin-top: 20px;
   margin-bottom: 0;
@@ -232,7 +216,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
-  background: #e5e5e5;
+  background: 	rgba(0, 0, 0, 0.3);
   box-shadow: 0 48px 80px -32px rgba(0, 0, 0, 0.3);
   margin: 30px;
   border-radius: 5px;
@@ -246,17 +230,17 @@ p {
 .label {
   width: 100%;
   padding: 20px 30px;
-  background: #e5e5e5;
+  background: rgba(0, 0, 0, 0.7);
   cursor: pointer;
   font-weight: bold;
   font-size: 18px;
-  color: #7f7f7f;
+  color: white;
   transition: background 0.1s, color 0.1s;
   border-radius: 5px;
 }
 
 .label:hover {
-  background: #d8d8d8;
+  background: #282828;
 }
 
 .label:active {
@@ -281,8 +265,10 @@ p {
 .panel {
   display: none;
   padding: 0px 0px 0px;
-  background: #fff;
+  background: rgba(18, 18, 18, .8);
   border-radius: 5x;
+  margin-bottom: 20px;
+  overflow-x: auto;
 }
 
 @media (min-width: 600px) {
@@ -293,4 +279,54 @@ p {
 
 .input:checked + .label + .panel {
   display: block;
+}
+
+.featured__cards {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: scroll;
+  height: 70vh;
+  max-height: 70vh; /* Set a fixed height for vertical scrolling */
+  border-radius: 5px;
+  
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.featured__cards__item {
+  flex-shrink: 0;
+  margin: 2vw;
+  padding: 1rem;
+  @media (min-width: 50rem) {
+    width: 80vw;
+
+    .card__image {
+      max-width: 30vw;
+      margin: auto;
+    }
+  }
+}
+
+
+/* Background stuff */
+#canvas1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: black;
+  overflow-x: hidden;
+  /* Remove margin: 0 auto; */
+  /* background: radial-gradient(#202020, #000000); */
+}
+
+.content {
+  position: absolute;
+  width: 99%;
+  height: 100%;
+  margin: 0 auto;
 }

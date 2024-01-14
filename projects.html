@@ -4,536 +4,613 @@
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1" /> 
           <title>Projects</title>
-          <link rel="stylesheet" href="projects.css">
+          <link rel="stylesheet" href="projects-v2.css">
           <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
      </head>
      <body>
-          <h1 id="name">Marius Schueller</h1>
-          <nav>
-               <a href="index.html">Home</a>
-               <a href="projects.html">Projects</a>
-               <a href="blog.html">Blog</a>
-               <a href="about.html">About</a>
-               <a href="contact.html">Contact</a>
-          </nav>
-
-          <div class="tabs">
-            <!-- ALL CARDS -->
-            <input class="input" name="tabs" type="radio" id="tab-1" checked="checked"/>
-            <label class="label" for="tab-1">All</label>
-            <div class="panel">
-
-              <ul class="cards">
-                <!--Capybara Clicker Bot CARD-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Capybara Clicker Bot</div>
-                      <p class="card__date">11/25/2023</p>
-                      <p class="card__text">A python program that controls my screen and plays capybara clicker until the final upgrade is bought. 
-                      </p>
-                      <a href="projects/capybara.html" class="learn-more">Learn More</a>
-                    </div>
+      <canvas id="canvas1"></canvas>
+      <script src="/particles.js"></script>
+      <div class="content">
+        <h1 id="name">Marius Schueller</h1>
+        <nav>
+              <a href="index.html">Home</a>
+              <a href="projects.html">Projects</a>
+              <a href="blog.html">Blog</a>
+              <a href="about.html">About</a>
+              <a href="contact.html">Contact</a>
+        </nav>
+        
+        <div class="tabs">
+          <!-- Featured Cards -->
+          <!-- <input class="input" name="tabs" type="radio" id="tab-1" checked="checked"/>
+          <label class="label" for="tab-1">Featured</label>
+          <div class="panel"> -->
+            <!-- <ul class="featured__cards" id="scrollContainer"> -->
+              <!--Capybara Clicker Bot CARD-->
+              <!-- <li class="featured__cards__item" id="firstFeatured">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Capybara Clicker Bot</div>
+                    <p class="card__date">11/25/2023</p>
+                    <p class="card__text">A python program that controls my screen and plays capybara clicker until the final upgrade is bought. 
+                    </p>
+                    <p class="card__text">I made an app to help me learn how to play guitar.
+                      This was made in Unity over the course of a couple of days.
+                    </p>
+                    <p class="card__text">I made an app to help me learn how to play guitar.
+                      This was made in Unity over the course of a couple of days.
+                    </p>
+                    <p class="card__text">I made an app to help me learn how to play guitar.
+                      This was made in Unity over the course of a couple of days.
+                    </p>
+                    <a href="projects/capybara.html" class="learn-more">Learn More</a>
                   </div>
-                </li>
+                </div>
+              </li> -->
 
-                <!--GUITAR CARD-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Guitar App</div>
-                      <p class="card__date">11/25/2023</p>
-                      <p class="card__text">I made an app to help me learn how to play guitar.
-                        This was made in Unity over the course of a couple of days.
-                      </p>
-                      <a href="projects/guitar.html" class="learn-more">Learn More</a>
-                    </div>
+              <!--GUITAR CARD-->
+              <!-- <li class="featured__cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Guitar App</div>
+                    <p class="card__date">11/25/2023</p>
+                    <p class="card__text">I made an app to help me learn how to play guitar.
+                      This was made in Unity over the course of a couple of days.
+                    </p>
+                    <a href="projects/guitar.html" class="learn-more">Learn More</a>
                   </div>
-                </li>
+                </div>
+              </li> -->
 
-
-                <!--WEBSITE CARD-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Portfolio Website</div>
-                      <p class="card__date">11/20/2023</p>
-                      <p class="card__text">I made a website using HTML and CSS. This is the website you are currently looking at!</p>
-                      <a href="projects/website.html" class="learn-more">Learn More</a>
-                    </div>
+              <!--GUITAR CARD-->
+              <!-- <li class="featured__cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Guitar App</div>
+                    <p class="card__date">11/25/2023</p>
+                    <p class="card__text">I made an app to help me learn how to play guitar.
+                      This was made in Unity over the course of a couple of days.
+                    </p>
+                    <a href="projects/guitar.html" class="learn-more">Learn More</a>
                   </div>
-                </li>
-                
-                <!--SANTA CARD-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Secret Santa Email Sender</div>
-                      <p class="card__date">11/18/2023</p>
-                      <p class="card__text">Created a Python program that will create pairs for a secret santa gift exchange and then sends emails to the pairs.</p>
-                      <a href="projects/secretSanta.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
+                </div>
+              </li>
+            </ul>
 
-                <!-- Color Catch Card -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Color Catch</div>
-                      <p class="card__date">3/10/2023</p>
-                      <p class="card__text">A very cool (if I do say so myself) Unity game made for Vanderbilt's Programmers of Games Competition.
-                      </p>
-                      <a href="projects/colorcatch.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Kids Icebreaker Activity Card -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Kids Icebreaker Activity</div>
-                      <p class="card__date">2/5/2023</p>
-                      <p class="card__text">A neat little python project that generates a fantasy introduction for a kid using an OpenAI text generator.
-                      </p>
-                      <a href="projects/kidsicebreaker.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- DALL-E-CHARADES -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">DALL-E Charades</div>
-                      <p class="card__date">1/11/2023</p>
-                      <p class="card__text">Used the OpenAI library in Python to make a fun game where two people guess the words DALL-E used to generate an image.</p>
-                      <a href="projects/dall-e.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!--2p Battle Circles-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">2p Battle Circles</div>
-                      <p class="card__date">5/20/2022</p>
-                      <p class="card__text">A fun Unity game made for two players with some fun bounce and shooting mechanics.</p>
-                      <a href="projects/2pbattlecircles.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Random Drawing Generator Card -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Random Drawing Generator</div>
-                      <p class="card__date">6/11/2022</p>
-                      <p class="card__text">A Python program that allows users to choose a catagory, 
-                        and then get something random to draw from that category. 
-                        Then it can automatically pull up a drawing tutorial video.</p>
-                      <a href="projects/drawGenerator.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Random Key Card -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Random Key App</div>
-                      <p class="card__date">2/12/2022</p>
-                      <p class="card__text">A Unity app designed to give me a random music key to play in. Just tap a button and get a music key.
-                      </p>
-                      <a href="projects/randomkey.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Card Slapp Card -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Card Slapp App</div>
-                      <p class="card__date">12/23/2021</p>
-                      <p class="card__text">A Unity game to help improve my ability to play the card game known as rat slap.</p>
-                      <a href="projects/cardslap.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Sequence Memorizer Card -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Sequence Memorizer App</div>
-                      <p class="card__date">7/9/2021</p>
-                      <p class="card__text">A Unity game designed for me to improve my memory. Originally a mobile game.
-                      </p>
-                      <a href="projects/sequencememorizer.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!--ORIGINS ALBUM CARD-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Origins Album</div>
-                      <p class="card__date">9/29/2020</p>
-                      <!--<img src="/images/origins album cover.webp" class="card__image">-->
-                      <p class="card__text">Wrote and released a music album. The music in this album was created for my Neon Drop game.</p>
-                      <a href="projects/origins.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!--2p Pixel Bounce-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">2p Pixel Bounce App</div>
-                      <p class="card__date">8/28/2020</p>
-
-                      <p class="card__text">A fun two player Unity app. You try to shoot little pixelated bullets and try to hit the other person on other side.
-                      </p>
-                      <a href="projects/2p-pixelbounce.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!--Unscripted-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Unscripted</div>
-                      <p class="card__date">5/11/2020</p>
-                      <img class="card__image" aria-live="polite" src="/images/Just Improvise.jpg" alt="Alt text." loading="lazy" onload="this.style.animationName = 'reveal'">
-                      <!-- <details>
-                        <summary>Show<br>image</summary>
-                        
-                      </details> -->
-                      <p class="card__text">Created a computer background based on 2 of my favorite moments visually from Spider-Man: Into the Spider-Verse.</p>
-                      <a href="projects/unscripted.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!--lock screen-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Personalized Lock Screen</div>
-                      <p class="card__date">1/3/2020</p>
-                      <details>
-                        <summary>Show<br>image</summary>
-                        <img class="card__image" aria-live="polite" src="/images/Lock Screen.png" alt="Alt text." loading="lazy" onload="this.style.animationName = 'reveal'">
-                      </details>
-                      <p class="card__text">Made a lock screen that showcases my main interests at the time. 
-                        This has been my phone's lock screen since it was created.</p>
-                      <a href="projects/lockScreen.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!--Neon Drop Card-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Neon Drop App</div>
-                      <p class="card__date">11/2/2019</p>
-                      <p class="card__text">My first coding project! Made in Unity. A very bad game, but you gotta start somewhere.
-                      </p>
-                      <a href="projects/neondrop.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!--Nutcracker Medly CARD-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Nutcracker Medley</div>
-                      <p class="card__date">12/23/2017</p>
-                      <p class="card__text">A medley of Nutcracker music for Cello and Violin. 
-                        This was written for a performance during my church's Christmas mass.
-                      </p>
-                      <a href="projects/nutcracker.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-            </div>
-
-            <!-- CS PROJECTS -->
-            <input class="input" name="tabs" type="radio" id="tab-2"/>
-            <label class="label" for="tab-2">CS</label>
-            <div class="panel">
-              <ul class="cards">
-                <!--Capybara Clicker Bot CARD-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Capybara Clicker Bot</div>
-                      <p class="card__date">11/25/2023</p>
-                      <p class="card__text">A python program that controls my screen and plays capybara clicker until the final upgrade is bought. 
-                      </p>
-                      <a href="projects/capybara.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!--GUITAR CARD-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Guitar App</div>
-                      <p class="card__date">11/25/2023</p>
-                      <p class="card__text">I made an app to help me learn how to play guitar.
-                        This was made in Unity over the course of a couple of days.
-                      </p>
-                      <a href="projects/guitar.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!--Website card -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Portfolio Website</div>
-                      <p class="card__date">11/20/2023</p>
-                      <p class="card__text">I made a website using HTML and CSS. This is the website you are currently looking at!</p>
-                      <a href="projects/website.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-                
-                <!-- secret santa -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Secret Santa Email Sender</div>
-                      <p class="card__date">11/18/2023</p>
-                      <p class="card__text">Created a Python program that will create pairs for a secret santa gift exchange and then sends emails to the pairs.</p>
-                      <a href="projects/secretSanta.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Color Catch Card -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Color Catch</div>
-                      <p class="card__date">3/10/2023</p>
-                      <p class="card__text">A very cool (if I do say so myself) Unity game made for Vanderbilt's Programmers of Games Competition.
-                      </p>
-                      <a href="projects/colorcatch.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Kids Icebreaker Activity Card -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Kids Icebreaker Activity</div>
-                      <p class="card__date">2/5/2023</p>
-                      <p class="card__text">A neat little python project that generates a fantasy introduction for a kid using an OpenAI text generator.
-                      </p>
-                      <a href="projects/kidsicebreaker.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- DALL-E-CHARADES -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">DALL-E Charades</div>
-                      <p class="card__date">1/11/2023</p>
-                      <p class="card__text">Used the OpenAI library in Python to make a fun game where two people guess the words DALL-E used to generate an image.</p>
-                      <a href="projects/dall-e.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!--2p Battle Circles-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">2p Battle Circles</div>
-                      <p class="card__date">5/20/2022</p>
-                      <p class="card__text">A fun Unity game made for two players with some fun bounce and shooting mechanics.</p>
-                      <a href="projects/2pbattlecircles.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Random Drawing Generator Card -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Random Drawing Generator</div>
-                      <p class="card__date">6/11/2022</p>
-                      <p class="card__text">A Python program that allows users to choose a catagory, 
-                        and then get something random to draw from that category. 
-                        Then it can automatically pull up a drawing tutorial video.</p>
-                      <a href="projects/drawGenerator.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Random Key Card -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Random Key App</div>
-                      <p class="card__date">2/12/2022</p>
-                      <p class="card__text">A Unity app designed to give me a random music key to play in. Just tap a button and get a music key.
-                      </p>
-                      <a href="projects/randomkey.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Card Slapp Card -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Card Slapp App</div>
-                      <p class="card__date">12/23/2021</p>
-                      <p class="card__text">A Unity game to help improve my ability to play the card game known as rat slap.</p>
-                      <a href="projects/cardslap.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Sequence Memorizer Card -->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Sequence Memorizer App</div>
-                      <p class="card__date">7/9/2021</p>
-                      <p class="card__text">A Unity game designed for me to improve my memory. Originally a mobile game.
-                      </p>
-                      <a href="projects/sequencememorizer.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!--2p Pixel Bounce-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">2p Pixel Bounce App</div>
-                      <p class="card__date">8/28/2020</p>
-                      
-                      <p class="card__text">A fun two player Unity app. You try to shoot little pixelated bullets and try to hit the other person on other side.
-                      </p>
-                      <a href="projects/2p-pixelbounce.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!--Neon Drop Card-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Neon Drop App</div>
-                      <p class="card__date">11/2/2019</p>
-                      <p class="card__text">My first coding project! Made in Unity. A very bad game, but you gotta start somewhere.
-                      </p>
-                      <a href="projects/neondrop.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-              </ul>
-            </div>
-
-            <!-- MUSIC CARDS -->
-            <input class="input" name="tabs" type="radio" id="tab-3"/>
-            <label class="label" for="tab-3">Music</label>
-            <div class="panel">
-              <ul class="cards">
-
-                <!--ORIGINS ALBUM CARD-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Origins Album</div>
-                      <p class="card__date">9/29/2020</p>
-                      <!--<img src="/images/origins album cover.webp" class="card__image">-->
-                      <p class="card__text">Wrote and released a music album. The music in this album was created for my Neon Drop game.</p>
-                      <a href="projects/origins.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!--Nutcracker Medly CARD-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Nutcracker Medley</div>
-                      <p class="card__date">12/23/2017</p>
-                      <p class="card__text">A medley of Nutcracker music for Cello and Violin. 
-                        This was written for a performance during my church's Christmas mass.
-                      </p>
-                      <a href="projects/nutcracker.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            
-            <!-- Graphic Design -->
-            <input class="input" name="tabs" type="radio" id="tab-4"/>
-            <label class="label" for="tab-4">Graphic Design</label>
-            <div class="panel">
-              <ul class="cards"> 
-
-                <!--Unscripted-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Unscripted</div>
-                      <p class="card__date">5/11/2020</p>
-                      
-                      <img class="card__image" aria-live="polite" src="/images/Just Improvise.jpg" alt="Alt text." loading="lazy" onload="this.style.animationName = 'reveal'">
-                      
-                      <p class="card__text">Created a computer background based on 2 of my favorite moments visually from Spider-Man: Into the Spider-Verse.</p>
-                      <a href="projects/unscripted.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-                <!--lock screen-->
-                <li class="cards__item">
-                  <div class="card">
-                    <div class="card__content">
-                      <div class="card__title">Personalized Lock Screen</div>
-                      <p class="card__date">1/3/2020</p>
-                      <details>
-                        <summary>Show<br>image</summary>
-                        <img class="card__image" aria-live="polite" src="/images/Lock Screen.png" alt="Alt text." loading="lazy" onload="this.style.animationName = 'reveal'">
-                      </details>
-                      <p class="card__text">Made a lock screen that showcases my main interests at the time. 
-                        This has been my phone's lock screen since it was created.</p>
-                      <a href="projects/lockScreen.html" class="learn-more">Learn More</a>
-                    </div>
-                  </div>
-                </li>
-
-              </ul>
-            </div>
           </div>
+
+          <script>
+            var scrollContainer = document.getElementById("scrollContainer");
+            var firstFeatured = document.getElementById("firstFeatured");
+          
+            // Function to scroll to the next card
+            function scrollNext() {
+              var cardWidth = firstFeatured.offsetWidth + 20;
+              scrollContainer.scrollLeft += cardWidth;
+            }
+          
+            // Set an interval to scroll every 5 seconds (adjust as needed)
+            setInterval(scrollNext, 10000);
+          </script> -->
+
+          <!-- ALL CARDS -->
+          <input class="input" name="tabs" type="radio" id="tab-2" checked="checked"/>
+          <label class="label" for="tab-2">All</label>
+          <div class="panel">
+
+            <ul class="cards">
+              <!--Capybara Clicker Bot CARD-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Capybara Clicker Bot</div>
+                    <p class="card__date">11/25/2023</p>
+                    <p class="card__text">A python program that controls my screen and plays capybara clicker until the final upgrade is bought. 
+                    </p>
+                    <a href="projects/capybara.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!--GUITAR CARD-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Guitar App</div>
+                    <p class="card__date">11/25/2023</p>
+                    <p class="card__text">I made an app to help me learn how to play guitar.
+                      This was made in Unity over the course of a couple of days.
+                    </p>
+                    <a href="projects/guitar.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+
+              <!--WEBSITE CARD-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Portfolio Website</div>
+                    <p class="card__date">11/20/2023</p>
+                    <p class="card__text">I made a website using HTML and CSS. This is the website you are currently looking at!</p>
+                    <a href="projects/website.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+              
+              <!--SANTA CARD-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Secret Santa Email Sender</div>
+                    <p class="card__date">11/18/2023</p>
+                    <p class="card__text">Created a Python program that will create pairs for a secret santa gift exchange and then sends emails to the pairs.</p>
+                    <a href="projects/secretSanta.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Color Catch Card -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Color Catch</div>
+                    <p class="card__date">3/10/2023</p>
+                    <p class="card__text">A very cool (if I do say so myself) Unity game made for Vanderbilt's Programmers of Games Competition.
+                    </p>
+                    <a href="projects/colorcatch.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Kids Icebreaker Activity Card -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Kids Icebreaker Activity</div>
+                    <p class="card__date">2/5/2023</p>
+                    <p class="card__text">A neat little python project that generates a fantasy introduction for a kid using an OpenAI text generator.
+                    </p>
+                    <a href="projects/kidsicebreaker.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- DALL-E-CHARADES -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">DALL-E Charades</div>
+                    <p class="card__date">1/11/2023</p>
+                    <p class="card__text">Used the OpenAI library in Python to make a fun game where two people guess the words DALL-E used to generate an image.</p>
+                    <a href="projects/dall-e.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!--2p Battle Circles-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">2p Battle Circles</div>
+                    <p class="card__date">5/20/2022</p>
+                    <p class="card__text">A fun Unity game made for two players with some fun bounce and shooting mechanics.</p>
+                    <a href="projects/2pbattlecircles.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Random Drawing Generator Card -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Random Drawing Generator</div>
+                    <p class="card__date">6/11/2022</p>
+                    <p class="card__text">A Python program that allows users to choose a catagory, 
+                      and then get something random to draw from that category. 
+                      Then it can automatically pull up a drawing tutorial video.</p>
+                    <a href="projects/drawGenerator.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Random Key Card -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Random Key App</div>
+                    <p class="card__date">2/12/2022</p>
+                    <p class="card__text">A Unity app designed to give me a random music key to play in. Just tap a button and get a music key.
+                    </p>
+                    <a href="projects/randomkey.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Card Slapp Card -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Card Slapp App</div>
+                    <p class="card__date">12/23/2021</p>
+                    <p class="card__text">A Unity game to help improve my ability to play the card game known as rat slap.</p>
+                    <a href="projects/cardslap.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Sequence Memorizer Card -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Sequence Memorizer App</div>
+                    <p class="card__date">7/9/2021</p>
+                    <p class="card__text">A Unity game designed for me to improve my memory. Originally a mobile game.
+                    </p>
+                    <a href="projects/sequencememorizer.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!--ORIGINS ALBUM CARD-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Origins Album</div>
+                    <p class="card__date">9/29/2020</p>
+                    <!--<img src="/images/origins album cover.webp" class="card__image">-->
+                    <p class="card__text">Wrote and released a music album. The music in this album was created for my Neon Drop game.</p>
+                    <a href="projects/origins.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!--2p Pixel Bounce-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">2p Pixel Bounce App</div>
+                    <p class="card__date">8/28/2020</p>
+
+                    <p class="card__text">A fun two player Unity app. You try to shoot little pixelated bullets and try to hit the other person on other side.
+                    </p>
+                    <a href="projects/2p-pixelbounce.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!--Unscripted-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Unscripted</div>
+                    <p class="card__date">5/11/2020</p>
+                    <img class="card__image" aria-live="polite" src="/images/Just Improvise.jpg" alt="Alt text." loading="lazy" onload="this.style.animationName = 'reveal'">
+                    <!-- <details>
+                      <summary>Show<br>image</summary>
+                      
+                    </details> -->
+                    <p class="card__text">Created a computer background based on 2 of my favorite moments visually from Spider-Man: Into the Spider-Verse.</p>
+                    <a href="projects/unscripted.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!--lock screen-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Personalized Lock Screen</div>
+                    <p class="card__date">1/3/2020</p>
+                    <details>
+                      <summary>Show<br>image</summary>
+                      <img class="card__image" aria-live="polite" src="/images/Lock Screen.png" alt="Alt text." loading="lazy" onload="this.style.animationName = 'reveal'">
+                    </details>
+                    <p class="card__text">Made a lock screen that showcases my main interests at the time. 
+                      This has been my phone's lock screen since it was created.</p>
+                    <a href="projects/lockScreen.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!--Neon Drop Card-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Neon Drop App</div>
+                    <p class="card__date">11/2/2019</p>
+                    <p class="card__text">My first coding project! Made in Unity. A very bad game, but you gotta start somewhere.
+                    </p>
+                    <a href="projects/neondrop.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!--Nutcracker Medly CARD-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Nutcracker Medley</div>
+                    <p class="card__date">12/23/2017</p>
+                    <p class="card__text">A medley of Nutcracker music for Cello and Violin. 
+                      This was written for a performance during my church's Christmas mass.
+                    </p>
+                    <a href="projects/nutcracker.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+
+          <!-- CS PROJECTS -->
+          <input class="input" name="tabs" type="radio" id="tab-3"/>
+          <label class="label" for="tab-3">CS</label>
+          <div class="panel">
+            <ul class="cards">
+              <!--Capybara Clicker Bot CARD-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Capybara Clicker Bot</div>
+                    <p class="card__date">11/25/2023</p>
+                    <p class="card__text">A python program that controls my screen and plays capybara clicker until the final upgrade is bought. 
+                    </p>
+                    <a href="projects/capybara.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!--GUITAR CARD-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Guitar App</div>
+                    <p class="card__date">11/25/2023</p>
+                    <p class="card__text">I made an app to help me learn how to play guitar.
+                      This was made in Unity over the course of a couple of days.
+                    </p>
+                    <a href="projects/guitar.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!--Website card -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Portfolio Website</div>
+                    <p class="card__date">11/20/2023</p>
+                    <p class="card__text">I made a website using HTML and CSS. This is the website you are currently looking at!</p>
+                    <a href="projects/website.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+              
+              <!-- secret santa -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Secret Santa Email Sender</div>
+                    <p class="card__date">11/18/2023</p>
+                    <p class="card__text">Created a Python program that will create pairs for a secret santa gift exchange and then sends emails to the pairs.</p>
+                    <a href="projects/secretSanta.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Color Catch Card -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Color Catch</div>
+                    <p class="card__date">3/10/2023</p>
+                    <p class="card__text">A very cool (if I do say so myself) Unity game made for Vanderbilt's Programmers of Games Competition.
+                    </p>
+                    <a href="projects/colorcatch.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Kids Icebreaker Activity Card -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Kids Icebreaker Activity</div>
+                    <p class="card__date">2/5/2023</p>
+                    <p class="card__text">A neat little python project that generates a fantasy introduction for a kid using an OpenAI text generator.
+                    </p>
+                    <a href="projects/kidsicebreaker.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- DALL-E-CHARADES -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">DALL-E Charades</div>
+                    <p class="card__date">1/11/2023</p>
+                    <p class="card__text">Used the OpenAI library in Python to make a fun game where two people guess the words DALL-E used to generate an image.</p>
+                    <a href="projects/dall-e.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!--2p Battle Circles-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">2p Battle Circles</div>
+                    <p class="card__date">5/20/2022</p>
+                    <p class="card__text">A fun Unity game made for two players with some fun bounce and shooting mechanics.</p>
+                    <a href="projects/2pbattlecircles.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Random Drawing Generator Card -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Random Drawing Generator</div>
+                    <p class="card__date">6/11/2022</p>
+                    <p class="card__text">A Python program that allows users to choose a catagory, 
+                      and then get something random to draw from that category. 
+                      Then it can automatically pull up a drawing tutorial video.</p>
+                    <a href="projects/drawGenerator.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Random Key Card -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Random Key App</div>
+                    <p class="card__date">2/12/2022</p>
+                    <p class="card__text">A Unity app designed to give me a random music key to play in. Just tap a button and get a music key.
+                    </p>
+                    <a href="projects/randomkey.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Card Slapp Card -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Card Slapp App</div>
+                    <p class="card__date">12/23/2021</p>
+                    <p class="card__text">A Unity game to help improve my ability to play the card game known as rat slap.</p>
+                    <a href="projects/cardslap.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Sequence Memorizer Card -->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Sequence Memorizer App</div>
+                    <p class="card__date">7/9/2021</p>
+                    <p class="card__text">A Unity game designed for me to improve my memory. Originally a mobile game.
+                    </p>
+                    <a href="projects/sequencememorizer.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!--2p Pixel Bounce-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">2p Pixel Bounce App</div>
+                    <p class="card__date">8/28/2020</p>
+                    
+                    <p class="card__text">A fun two player Unity app. You try to shoot little pixelated bullets and try to hit the other person on other side.
+                    </p>
+                    <a href="projects/2p-pixelbounce.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!--Neon Drop Card-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Neon Drop App</div>
+                    <p class="card__date">11/2/2019</p>
+                    <p class="card__text">My first coding project! Made in Unity. A very bad game, but you gotta start somewhere.
+                    </p>
+                    <a href="projects/neondrop.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- MUSIC CARDS -->
+          <input class="input" name="tabs" type="radio" id="tab-4"/>
+          <label class="label" for="tab-4">Music</label>
+          <div class="panel">
+            <ul class="cards">
+
+              <!--ORIGINS ALBUM CARD-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Origins Album</div>
+                    <p class="card__date">9/29/2020</p>
+                    <!--<img src="/images/origins album cover.webp" class="card__image">-->
+                    <p class="card__text">Wrote and released a music album. The music in this album was created for my Neon Drop game.</p>
+                    <a href="projects/origins.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!--Nutcracker Medly CARD-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Nutcracker Medley</div>
+                    <p class="card__date">12/23/2017</p>
+                    <p class="card__text">A medley of Nutcracker music for Cello and Violin. 
+                      This was written for a performance during my church's Christmas mass.
+                    </p>
+                    <a href="projects/nutcracker.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          
+          <!-- Graphic Design -->
+          <input class="input" name="tabs" type="radio" id="tab-5"/>
+          <label class="label" for="tab-5">Graphic Design</label>
+          <div class="panel">
+            <ul class="cards"> 
+
+              <!--Unscripted-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Unscripted</div>
+                    <p class="card__date">5/11/2020</p>
+                    
+                    <img class="card__image" aria-live="polite" src="/images/Just Improvise.jpg" alt="Alt text." loading="lazy" onload="this.style.animationName = 'reveal'">
+                    
+                    <p class="card__text">Created a computer background based on 2 of my favorite moments visually from Spider-Man: Into the Spider-Verse.</p>
+                    <a href="projects/unscripted.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+              <!--lock screen-->
+              <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Personalized Lock Screen</div>
+                    <p class="card__date">1/3/2020</p>
+                    <details>
+                      <summary>Show<br>image</summary>
+                      <img class="card__image" aria-live="polite" src="/images/Lock Screen.png" alt="Alt text." loading="lazy" onload="this.style.animationName = 'reveal'">
+                    </details>
+                    <p class="card__text">Made a lock screen that showcases my main interests at the time. 
+                      This has been my phone's lock screen since it was created.</p>
+                    <a href="projects/lockScreen.html" class="learn-more">Learn More</a>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+          
           
      </body>
 </html>

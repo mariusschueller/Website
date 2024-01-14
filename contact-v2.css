@@ -1,6 +1,6 @@
 /* Your @font-face rule remains unchanged */
 @font-face {
-    font-family: 'Hack';
+    font-family: 'SourceCodePro';
     src: url('/hack.regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -9,7 +9,7 @@
 #name {
     text-align: center;
     font-size: 4vw;
-    font-family: 'Hack', monospace;/*'TitleFont', sans-serif;*/
+    font-family: 'SourceCodePro', monospace;/*'TitleFont', sans-serif;*/
     letter-spacing: 1rem;
     
     max-height: 40px;
@@ -21,6 +21,8 @@
     animation-name: shadow;
     animation-duration: 4s;
     animation-iteration-count: infinite;
+
+    margin-top: 15px;
 }
 
 @keyframes shadow {
@@ -32,7 +34,7 @@
 
 /* Navigation Bar */
 nav {
-    margin-top: 5vh;
+    margin-top: 7vh;
     display: flex; /* Use flexbox for layout */
     flex-wrap: nowrap; /* Prevent elements from wrapping to a new line */
     justify-content: center; /* Distribute the elements evenly */
@@ -40,12 +42,12 @@ nav {
     width: 90%;
     max-width: 90%;
     height: 50px;
-    background-color: #361d48;
     border-radius: 5px;
     font-size: 0;
     align-items: stretch;
     margin-right: auto;
     margin-left: auto;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 nav a {
@@ -56,17 +58,18 @@ nav a {
   position: relative;
   z-index: 1;
   text-decoration: none;
-  text-transform: uppercase;
   text-align: center;
   color: white;
   cursor: pointer;
   width: 20%;
-  font-family:'Hack', monospace;
+  font-family: 'SourceCodePro', monospace;
   border-radius: 5px;
+  border: 2px solid transparent; 
+  transition: border 0.3s ease;
 }
 
-nav a:hover{
-  background-color: #22122e;
+nav a:hover {
+  border: 2px solid white; 
 }
 
 @media (max-width: 750px) {
@@ -85,19 +88,23 @@ nav a:hover{
   
 body {
   font-size: 12px;
-  font-family: 'Hack', sans-serif;
+  font-family: 'SourceCodePro', monospace;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
 }
 
 
 h2{
-    font-family: 'Hack', monospace;
+    font-family: 'SourceCodePro', monospace;
     text-align: center;
     color: white;
     font-size: 50px;
 }
 
 p{
-    font-family: 'Hack', monospace;
+    font-family: 'SourceCodePro', monospace;
     text-align: center;
     color: white;
     font-size: 20px;
@@ -106,22 +113,22 @@ a{
     color: white;
 }
 
-body {
-  background: linear-gradient(-45deg, #4861d1, #b83047, #9c1a71, #6b1a9a);
-  background-size: 400% 500%;
-  animation: gradient 5s linear infinite;
+#canvas1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: black;
+  overflow-x: hidden;
+  /* Remove margin: 0 auto; */
+  /* background: radial-gradient(#202020, #000000); */
 }
 
-@keyframes gradient {
-  0% {
-      background-position: 0% 50%;
-  }
-
-  50% {
-      background-position: 100% 50%;
-  }
-
-  100% {
-      background-position: 0% 50%;
-  }
+.content {
+  position: absolute;
+  width: 99%;
+  height: 100%;
+  margin: 0 auto;
 }

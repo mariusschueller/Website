@@ -4,27 +4,87 @@
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1" /> 
           <title>Home Page</title>
-          <link rel="stylesheet" href="index.css">
+          <link rel="stylesheet" href="index-v2.css">
           <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
      </head>
      <body>
-          <h1 id="name">Marius Schueller</h1>
-          <nav>
-               <a href="index.html">Home</a>
-               <a href="projects.html">Projects</a>
-               <a href="blog.html">Blog</a>
-               <a href="about.html">About</a>
-               <a href="contact.html">Contact</a>
-          </nav>
-          <div class="wrapper">
-               <div class="typing-demo">
-                    This is mariusschueller.com, a website by Marius!
+          <canvas id="canvas1"></canvas>
+          <script src="/particles.js"></script>
+          <div class="content">
+               <h1 id="name">Marius Schueller</h1>
+               <nav>
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+               </nav>
+
+               <p id = "typedText"></p>
+          
+               <div class="socials">
+                    <a href="https://github.com/mariusschueller"><img src="images/github icon.png"></a>
+                    <!--<p>Github LinkedIn Spotify Insta?</p>-->
                </div>
-           </div>
-           <div class="socials">
-               <a href="https://github.com/mariusschueller"><img src="images/github icon.png"></a>
-               <!--<p>Github LinkedIn Spotify Insta?</p>-->
-           </div>
-           
+          </div>
+          
+           <script>
+               var i = 0;
+var speed = 100;
+
+function typewriter(text, callback) {
+  var j = 0;
+  function type() {
+    if (j < text.length) {
+      document.getElementById("typedText").innerHTML += text.charAt(j);
+      j++;
+      setTimeout(type, speed);
+    } else {
+      setTimeout(function() {
+        deleteText(callback);
+      }, 1000);
+    }
+  }
+  type();
+}
+
+function lasttypewriter(text) {
+  var j = 0;
+  function type() {
+    if (j < text.length) {
+      document.getElementById("typedText").innerHTML += text.charAt(j);
+      j++;
+      setTimeout(type, speed);
+    } 
+  }
+  type();
+}
+
+function deleteText(callback) {
+  var text = document.getElementById("typedText").innerHTML;
+  var k = text.length;
+  function deleteChar() {
+    if (k >= 0) {
+      document.getElementById("typedText").innerHTML = text.substring(0, k);
+      k--;
+      setTimeout(deleteChar, speed/2);
+    } else {
+      setTimeout(callback, 500); // Call the callback function to start the next text
+    }
+  }
+  deleteChar();
+}
+
+function startTypewriter() {
+  document.getElementById("typedText").innerHTML = "";
+  typewriter('Hi', function() {
+    typewriter('My name is Marius', function() {
+      lasttypewriter('Welcome to my website!');
+    });
+  });
+}
+
+setTimeout(startTypewriter, 500); // Call startTypewriter initially
+           </script>
      </body>
 </html>
