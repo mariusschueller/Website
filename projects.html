@@ -4,7 +4,7 @@
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1" /> 
           <title>Projects</title>
-          <link rel="stylesheet" href="projects-v2.css">
+          <link rel="stylesheet" href="projects-v3.css">
           <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
      </head>
      <body>
@@ -22,56 +22,75 @@
         
         <div class="tabs">
           <!-- Featured Cards -->
-          <!-- <input class="input" name="tabs" type="radio" id="tab-1" checked="checked"/>
+          <input class="input" name="tabs" type="radio" id="tab-1" checked="checked"/>
           <label class="label" for="tab-1">Featured</label>
-          <div class="panel"> -->
-            <!-- <ul class="featured__cards" id="scrollContainer"> -->
+          <div class="panel">
+            <ul class="featured__cards" id="scrollContainer"> 
+              <!-- Color Catch Card -->
+              <li class="featured__cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">Color Catch</div>
+                    <p class="card__date">3/10/2023</p>
+                    <div class="card__image-text-container">
+                      <img src="/images/color catch project.png" class="featured__image" alt="Origins Album Cover">
+                      <p class="featured__card__text">Description:<br>
+                        A satisfying game where you dash towards enemies to defeat them and collect their colors as particles. Each color corresponds to an added attribute to the enemies.
+                        <br><br>
+                        Why It's Cool:<br>
+                        This game won the game competition hosted by Vanderbilt Programmers of Games. The competition was a one month game jam. The core part of this game has to do with color and specifically RGB which is a concept I love.
+                        <br><br>
+                        How it was made:<br>
+                        This was made in Unity. I used ChatGPT for the character spinning and dashing. Besides that, it was a lot of documentation. I used simmer.io to allow people to play the game online.
+                      </p>
+                    </div>
+                    <a href="projects/colorcatch.html" class="featured__learn-more">Play Game & View Code</a> <!--NEEDS TO BE BIGGER FOR FEATURED-->
+                  </div>
+                </div>
+              </li>
               <!--Capybara Clicker Bot CARD-->
-              <!-- <li class="featured__cards__item" id="firstFeatured">
+              <li class="featured__cards__item" id="firstFeatured">
                 <div class="card">
                   <div class="card__content">
                     <div class="card__title">Capybara Clicker Bot</div>
-                    <p class="card__date">11/25/2023</p>
-                    <p class="card__text">A python program that controls my screen and plays capybara clicker until the final upgrade is bought. 
-                    </p>
-                    <p class="card__text">I made an app to help me learn how to play guitar.
-                      This was made in Unity over the course of a couple of days.
-                    </p>
-                    <p class="card__text">I made an app to help me learn how to play guitar.
-                      This was made in Unity over the course of a couple of days.
-                    </p>
-                    <p class="card__text">I made an app to help me learn how to play guitar.
-                      This was made in Unity over the course of a couple of days.
-                    </p>
-                    <a href="projects/capybara.html" class="learn-more">Learn More</a>
+                    <p class="card__date">12/16/2023</p>
+                    <div class="card__image-text-container">
+                      <img src="/images/capybaraprojectlogo.png" class="featured__image" alt="Origins Album Cover">
+                      <p class="featured__card__text">Description:<br>
+                        An auto clicker and auto upgrade program for the game Capybara Clicker, a cookie clicker clone. This program plays the game and is able to buy the last upgrade.
+                        <br><br>
+                        Why It's Cool:<br>
+                        The program controls my computer's mouse and analyses the RGB values of certain pixels on my screen to play the game. 
+                        <br><br>
+                        How It Was Made:<br>
+                        To start, Python's webbrowser library opens up the game in my browser. I then use Python's PyAutoGUI library to control the mouse. 
+                      </p>
+                      
+                    </div>
+                    <a href="projects/capybara.html" class="featured__learn-more">Watch It Work & View Code</a>
                   </div>
                 </div>
-              </li> -->
+              </li>
 
-              <!--GUITAR CARD-->
-              <!-- <li class="featured__cards__item">
+              <!--ORIGINS ALBUM CARD-->
+              <li class="featured__cards__item">
                 <div class="card">
                   <div class="card__content">
-                    <div class="card__title">Guitar App</div>
-                    <p class="card__date">11/25/2023</p>
-                    <p class="card__text">I made an app to help me learn how to play guitar.
-                      This was made in Unity over the course of a couple of days.
-                    </p>
-                    <a href="projects/guitar.html" class="learn-more">Learn More</a>
-                  </div>
-                </div>
-              </li> -->
-
-              <!--GUITAR CARD-->
-              <!-- <li class="featured__cards__item">
-                <div class="card">
-                  <div class="card__content">
-                    <div class="card__title">Guitar App</div>
-                    <p class="card__date">11/25/2023</p>
-                    <p class="card__text">I made an app to help me learn how to play guitar.
-                      This was made in Unity over the course of a couple of days.
-                    </p>
-                    <a href="projects/guitar.html" class="learn-more">Learn More</a>
+                    <div class="card__title">Origins Album</div>
+                    <p class="card__date">9/29/2020</p>
+                    <div class="card__image-text-container">
+                      <img src="/images/origins album cover.webp" class="featured__image" alt="Origins Album Cover">
+                      <p class="featured__card__text">Description:<br>
+                        An EDM music album made up of songs I made for my mobile game Neon Drop. Released on all major music platforms.
+                        <br><br>
+                        Why It's Cool:<br>
+                        Most of this album was made over the course of a week. It was first time releasing music, and despite the fact that most songs aren't great, I'm very proud of this.
+                        <br><br>
+                        How it was made:<br>
+                        I made this in GarageBand. I would come up with the main melody on the piano and then write the rest of it in GarageBand. I used Amuse to release the album.
+                      </p>
+                    </div>
+                    <a href="projects/origins.html" class="featured__learn-more">Listen</a>
                   </div>
                 </div>
               </li>
@@ -82,19 +101,48 @@
           <script>
             var scrollContainer = document.getElementById("scrollContainer");
             var firstFeatured = document.getElementById("firstFeatured");
-          
+            let count = 0;
+            let lastScrollPos = 0;
+            let scrollInterval;
+            var cardWidth = firstFeatured.offsetWidth - firstFeatured.offsetWidth;
+            var shouldScroll = true;
+
+            function letScroll(){
+              shouldScroll = true;
+            }
+
             // Function to scroll to the next card
             function scrollNext() {
-              var cardWidth = firstFeatured.offsetWidth + 20;
-              scrollContainer.scrollLeft += cardWidth;
+              if (count < 2 && shouldScroll) {
+                cardWidth = firstFeatured.offsetWidth - firstFeatured.offsetWidth / 22;
+                scrollContainer.scrollLeft = lastScrollPos + cardWidth;
+                lastScrollPos += cardWidth;
+                count += 1;
+                
+                setTimeout(letScroll, 750);
+              } else if (shouldScroll){
+                scrollContainer.scrollLeft -= 10000;
+                count = 0;
+                lastScrollPos = 0;
+                setTimeout(letScroll, 750);
+              }
             }
-          
-            // Set an interval to scroll every 5 seconds (adjust as needed)
-            setInterval(scrollNext, 10000);
-          </script> -->
+
+            // Set an interval to scroll every 20 seconds (adjust as needed)
+            scrollInterval = setInterval(scrollNext, 20000);
+
+            // Function to stop the scrolling animation when the user scrolls
+            function stopScrollAnimation() {
+              shouldScroll = false;
+            }
+
+            // Add a scroll event listener to the scrollContainer
+            scrollContainer.addEventListener("scroll", stopScrollAnimation);
+
+          </script>
 
           <!-- ALL CARDS -->
-          <input class="input" name="tabs" type="radio" id="tab-2" checked="checked"/>
+          <input class="input" name="tabs" type="radio" id="tab-2"/>
           <label class="label" for="tab-2">All</label>
           <div class="panel">
 
