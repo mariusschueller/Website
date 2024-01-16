@@ -9,72 +9,142 @@
 
 <url>
   <loc>https://mariusschueller.com/</loc>
-  <lastmod>2023-11-23T01:44:05+00:00</lastmod>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/index.html</loc>
-  <lastmod>2023-11-23T01:44:05+00:00</lastmod>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/projects.html</loc>
-  <lastmod>2023-11-24T15:18:13+00:00</lastmod>
+  <lastmod>2024-01-16T15:37:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/blog.html</loc>
-  <lastmod>2023-11-23T00:27:38+00:00</lastmod>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/about.html</loc>
-  <lastmod>2023-11-24T18:28:34+00:00</lastmod>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/contact.html</loc>
-  <lastmod>2023-11-23T00:27:38+00:00</lastmod>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://mariusschueller.com/projects/website.html</loc>
-  <lastmod>2023-11-24T05:31:26+00:00</lastmod>
+  <loc>https://mariusschueller.com/projects/colorcatch.html</loc>
+  <lastmod>2024-01-16T15:43:59+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://mariusschueller.com/projects/secretSanta.html</loc>
-  <lastmod>2023-11-24T05:31:26+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://mariusschueller.com/projects/dall-e.html</loc>
-  <lastmod>2023-11-24T05:31:26+00:00</lastmod>
+  <loc>https://mariusschueller.com/projects/capybara.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/projects/origins.html</loc>
-  <lastmod>2023-11-24T05:31:26+00:00</lastmod>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/guitar.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/website.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/secretSanta.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/kidsicebreaker.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/dall-e.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/2pbattlecircles.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/drawGenerator.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/randomkey.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/cardslap.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/sequencememorizer.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/2p-pixelbounce.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/projects/unscripted.html</loc>
-  <lastmod>2023-11-24T05:31:26+00:00</lastmod>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/projects/lockScreen.html</loc>
-  <lastmod>2023-11-24T15:18:13+00:00</lastmod>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/neondrop.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/projects/nutcracker.html</loc>
-  <lastmod>2023-11-24T15:21:34+00:00</lastmod>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/blogs/Handmade%20Holidays.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/blogs/Semester%20Review.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/blogs/thisWeekILearned.html</loc>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/blogs/ItBegins.html</loc>
-  <lastmod>2023-11-24T05:31:26+00:00</lastmod>
+  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
