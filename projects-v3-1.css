@@ -327,8 +327,7 @@ p {
   margin-bottom: 1.25rem;
   margin-top: 15px;
   margin-left: 10px;
-  text-wrap:wrap;
-  white-space: wrap;
+  white-space: normal;
 }
 
 .featured__learn-more {
