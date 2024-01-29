@@ -1,5 +1,5 @@
 .type {
-    margin: 5px;
+    margin:5px;
     padding: 10px;
     border-radius: 5px;
     width: fit-content;
@@ -28,7 +28,6 @@ body {
 
 .normal {
     background-color: rgba(168,168,124,1);
-    border-width: 5px;
 }
 
 .fire {
@@ -97,4 +96,11 @@ body {
 
 .fairy {
     background-color: rgba(231,161,230,1);
+}
+
+.selected {
+    border-width: 5px;
+    padding: 7.5px;
+    border-style: groove;
+    border-color: black;
 }
