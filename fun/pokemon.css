@@ -1,0 +1,100 @@
+.type {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    color: white;
+    font-weight: bold;
+    text-shadow: #000 0px 0px 2px;
+}
+
+.type-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    background-color: rgb(245,245,245);
+}
+
+.poketext {
+    font-size: 15px;
+}
+
+.normal {
+    background-color: rgba(168,168,124,1);
+    border-width: 5px;
+}
+
+.fire {
+    background-color: rgba(241,126,47,1);
+}
+
+.water {
+    background-color: rgba(107,143,242,1);
+}
+
+.electric {
+    background-color: rgba(248,210,51,1);
+}
+
+.grass {
+    background-color: rgba(118,200,81,1);
+}
+
+.ice {
+    background-color: rgba(153,217,216,1);
+}
+
+.fighting {
+    background-color: rgba(192,47,38,1);
+}
+
+.poison {
+    background-color: rgba(160,65,162,1);
+}
+
+.ground {
+    background-color: rgba(227,191,106,1);
+}
+
+.flying {
+    background-color: rgba(168,144,238,1);
+}
+
+.psychic {
+    background-color: rgba(250,87,136,1);
+}
+
+.bug {
+    background-color: rgba(168,185,32,1);
+}
+
+.rock {
+    background-color: rgba(185,158,56,1);
+}
+
+.ghost {
+    background-color: rgba(112,88,151,1);
+}
+
+.dragon {
+    background-color: rgba(111,57,248,1);
+}
+
+.dark {
+    background-color: rgba(111,88,72,1);
+}
+
+.steel {
+    background-color: rgba(184,184,208,1);
+}
+
+.fairy {
+    background-color: rgba(231,161,230,1);
+}
