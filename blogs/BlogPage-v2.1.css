@@ -1,0 +1,233 @@
+/* Your @font-face rule remains unchanged */
+@font-face {
+    font-family: 'SourceCodePro';
+    src: url('/hack.regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#name {
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'SourceCodePro';/*'TitleFont', sans-serif;*/
+    letter-spacing: 1rem;
+    
+    max-height: 40px;
+    min-height: 10px;
+    color: white;
+    margin: auto;
+    padding-left: 4vw;
+
+    animation-name: shadow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+    margin-top: 15px;
+}
+
+@keyframes shadow {
+    0% {text-shadow: 2px 0px 2px rgba(0, 0, 0, 1);}
+    50% {text-shadow: -2px 0px 2px rgba(0, 0, 0, 1);}
+    100% {text-shadow: 2px 0px 2px rgba(0, 0, 0, 1);}
+}
+
+
+/* Navigation Bar */
+nav {
+  margin-top: 7vh;
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: nowrap; /* Prevent elements from wrapping to a new line */
+  justify-content: center; /* Distribute the elements evenly */
+  position: relative;
+  width: 90%;
+  max-width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 0;
+  align-items: stretch;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+nav a {
+  line-height: 50px;
+  height: 100%;
+  font-size: 18px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  width: 20%;
+  font-family: 'SourceCodePro', monospace;
+  border-radius: 5px;
+  border: 2px solid transparent; 
+  transition: border 0.3s ease;
+}
+
+nav a:hover {
+  border: 2px solid white; 
+}
+
+@media (max-width: 750px) {
+  
+  h1{
+    margin-bottom: 0px;
+  }
+  nav{
+    margin-top: 10px;
+  }
+  nav a {
+    font-size: 3.5vw;
+  }
+  
+}  
+
+body {
+  font-size: 5px;
+  font-family: 'SourceCodePro', monospace;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  line-height: 1.4;
+}
+
+/*new subscribe*/
+.new-subscribe {
+  border-width: 0;
+  /* display: flex; */
+  margin: auto; 
+  width: 100%;
+
+  height: 550px;
+}
+
+
+/* Blog Stuff */
+body {
+    box-sizing: border-box;
+  }
+  
+  /* Blog container */
+  .blog-container {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: hsla(0, 0, 0, .2) 0 4px 2px -2px;
+    font-family: 'SourceCodePro', monospace, sans-serif;
+    font-size: 13.5px;
+    font-weight: 100;
+    margin: 48px auto;
+    max-width: 80vw;
+  }
+  
+  .blog-container a {
+    color: #4d4dff;
+    text-decoration: none;
+    transition: .25s ease;
+  }
+  
+  .blog-container a:hover {
+    border-color: #ff4d4d;
+    color: #ff4d4d;
+  }
+  
+  @media screen and (min-width: 480px) {
+    .blog-container {
+      max-width: 80vw;
+    }
+  }
+  
+  @media screen and (min-width: 767px) {
+    .blog-container {
+      max-width: 80vw;
+    }
+  }
+  
+  @media screen and (min-width: 959px) {
+    .blog-container {
+      max-width: 80vw;
+    }
+  }
+  
+  /* Blog header */
+  .blog-cover{
+    border-radius: 5px 5px 0 0;
+    height: 15rem;
+    box-shadow: inset hsla(0, 0, 0, .2) 0 64px 64px 16px;
+  }
+  .blog-cover img{
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    object-position: top;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  
+  /* Blog body */
+  .blog-body {
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  .video-body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .blog-title h1 a {
+    color: #333;
+    font-weight: 100;
+  }
+  
+  .blog-summary p {
+    color: lighten(#333, 10%);
+  }
+  
+  
+
+  .footer {
+    margin: 0 auto;
+    width: 90%;
+    padding-bottom: 10px;
+  }
+/*
+  .languages{
+    float: right;
+  }
+  .date {
+    float: left;
+  }
+  
+  */
+  
+
+
+/* background stuff */
+#canvas1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: black;
+  overflow-x: hidden;
+  /* Remove margin: 0 auto; */
+  /* background: radial-gradient(#202020, #000000); */
+}
+
+.content {
+  position: absolute;
+  width: 99%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.gist-meta {
+  display: none;
+}

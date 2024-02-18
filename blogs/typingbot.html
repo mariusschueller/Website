@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+        <title>Typing Bot</title>
+        <link rel="stylesheet" href="BlogPage-v2.1.css">
+        <link rel="stylesheet" href="/img.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        
+    </head>
+    <body>
+        <canvas id="canvas1"></canvas>
+        <script src="/particles.js"></script>
+        <div class="content">
+            <h1 id="name">Marius Schueller</h1>
+            <nav>
+            <a href="/index.html">Home</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+            </nav>
+
+            <div class="blog-container">
+                
+                <div class="blog-header">
+                <div class="blog-cover">
+                    <img src="/images/monkeytype.png" style="object-position:left;">
+                </div>
+                </div>
+                
+                <div class="blog-body">
+                    <div class="blog-title">
+                        <h1><br>Making a Typing Test Bot</h1>
+                    </div>
+                    <p>2/17/2024</p>
+                    <div class="blog-summary">
+                        <p>
+                        <br>
+                        I have some friends who are fast typers. That being said, I want to show them that I can type faster than them if I wanted to, and by that I mean I can make something that can type faster than them. Here's my step by step process.
+                        <br><br>
+                        </p>
+                        
+                        <h3>Step 1: Strategizing</h3>
+                        
+                        <p>
+                            After some thought, there are two possible routes to go down. I can either take a screenshot and read the text on the screen, or I can try to web scrape the text and do my typing through an input. I'm going to try web scraping first because I think it'll work better when new words appear because, in theory, they would just be in the HTML.
+                            <br><br>
+                        </p>
+                        
+                        
+                        <h3>Step 2: Inspecting Elements</h3>
+                        <p>
+                            Since I'm going to be doing web scraping, I'll need to be able to see and manipulate the HTML code on the website. So, after opening Monkey Type, a popular typing test website that I've seen my friends use, I began right-clicking stuff and hitting inspect element. 
+                            <br><br>
+                            <h4>Getting the current word</h4>
+                            After right-clicking around, I'm finding a bunch of divs in a word class and a bunch of letter elements inside of it. With further inspection, it seems that the current word that you should type also has the "active" class which I think will be very helpful in the future. Lastly, I want to make sure that this pattern holds true as you type words, which it does.
+                            <br>
+                            <video autoplay loop style="width: 80%; display: flex; margin: auto; margin-top: 10px;">
+                                <source src="/videos/Monkeytype Active Word.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                            </video>
+                            <br><br>
+                            <h4>Finding the input</h4>
+                            The next thing I need to find is the place to type out the words. My assumption for how the website works, is that it uses an input element that I can find in HTML. Clicking around and randomly inspecting elements isn't working, so I plan B is doing a ctrl+f search on the HTML code for "input". With that, I see an element with an id of wordsInput which I'm gonna assume is the input that takes in the typing.
+                            <br><img src="/images/monkeytypeInput.png" width="80%" style="display:flex; margin: auto; margin-top: 10px; border-radius: 5px;">
+                            <br><br>
+                        </p>
+                        
+                        <h3>Step 3: Let's Get Coding</h3>
+                        <p>
+                            I'm gonna try to use Selenium to do the webscraping and inputting of information. Selenium should allow me to view and select HTML elements and input the words. So I wrote this to get started and just open the site.
+                            <script src="https://gist.github.com/mariusschueller/4edc74ea030dbe66cc5f0f5cf7d3b217.js"></script>
+                            <br>
+                            <h4>Printing out the current word</h4>
+                            To get the current word, I'm trying to get the element where class="word active". My initial thought is to use By.CLASS_NAME, but this won't work when an element has more than one class (and our element has the classes word and active). So I used By.CSS_SELECTOR and used the dot notation to get both classes.
+                            <br><br><script src="https://gist.github.com/mariusschueller/f4261ab6abed9ed9ee0ad4ae70505623.js"></script>
+                            <br>
+                            
+                            <h4>Typing out a word</h4>
+                            Now comes the typing. My guess for how the website works with input is indeed correct! So I'm typing everything into that input. I'm also seeing that the input isn't typed unless the cookies popup is answered, so I'm adding something to click on that before continuing.
+                            <br><br><script src="https://gist.github.com/mariusschueller/9a4abaf9dc95c38c659ff75954ac946a.js"></script>
+                            <br><br>
+
+                            <h4>Typing many words</h4>
+                            Typing out one word is cool, but I want get this to type out more words. As you can see below, I'm opting for a forever loop that stops once an error occurs. I'm noticing that the page has a results element that has the class "hidden", which then gets removed once the test is over. I keep running the loop until our result element is no longer hidden because the test has ended. At that point an error occurs which then gets caught, and I break from the while loop.
+                            <br><br><script src="https://gist.github.com/mariusschueller/8d33afb978ecaecbfe530835f0c3b104.js"></script>
+                            <br><br>
+
+                            <h4>Final Changes</h4>
+                            Using a manual time delay is lame. Let's change things so we'll just wait until the cookies button is loaded, and then click it. I also want the final stats to be printed. I found the element that contains words per minute, right clicked it, and copied its (css) selector to print out the word count.
+                            <br><br>
+                            Here's the final code:
+                            <br>
+                            <script src="https://gist.github.com/mariusschueller/5b63179991c31108e58b5d0fa2a851d6.js"></script>
+                            <a href="https://github.com/mariusschueller/typing-tester" target="_blank">Github</a>
+                            <br><br>
+                        </p>
+
+                        <h3>Ending Thoughts</h3>
+                        <p>This was a chill project. I've done a couple of selenium projects in the past, so I know the main pitfalls and avoided them in this project. That being said, I'm surprised I didn't run into problems with the current active word. The program usually scores somewhere between 250-800 wpm depending on the wifi speed and how my computer is feeling. From my test-runs, it beats the human record of 216 wpm. It's a cute little program of just under 50 lines of code and took around an hour of coding with no chatGPT assistance. I can't wait to challenge my friends to typing tests and crush them!
+                            <br><br>
+                            
+                        </p>
+
+                        <video controls loop style="width: 100%;">
+                            <source src="/videos/Typing Test Video.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+
+                        <p>- Marius</p>
+
+                    </div>
+                </div>
+                <div class="footer">
+                </div>
+                
+            </div>
+
+            <!--SENDGRID SUBSCRIBE-->
+            <iframe class="new-subscribe" src="https://cdn.forms-content-1.sg-form.com/4ea806cf-a0da-11ee-a940-cead52b50d91" width="500" height="550">
+
+            <script src="/img.js"></script>
+        </div>
+    </body>
+</html>
