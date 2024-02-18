@@ -19,12 +19,12 @@
 </url>
 <url>
   <loc>https://mariusschueller.com/projects.html</loc>
-  <lastmod>2024-01-16T15:37:02+00:00</lastmod>
+  <lastmod>2024-02-18T04:13:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/blog.html</loc>
-  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <lastmod>2024-02-18T04:13:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -44,12 +44,22 @@
 </url>
 <url>
   <loc>https://mariusschueller.com/projects/capybara.html</loc>
-  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <lastmod>2024-01-16T21:07:55+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/projects/origins.html</loc>
   <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/blogs/typingbot.html</loc>
+  <lastmod>2024-02-18T04:13:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/projects/pokemongenerator.html</loc>
+  <lastmod>2024-01-29T21:11:37+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
@@ -129,23 +139,28 @@
 </url>
 <url>
   <loc>https://mariusschueller.com/blogs/Handmade%20Holidays.html</loc>
-  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <lastmod>2024-02-18T04:13:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/blogs/Semester%20Review.html</loc>
-  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <lastmod>2024-02-18T04:13:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/blogs/thisWeekILearned.html</loc>
-  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <lastmod>2024-02-18T04:13:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://mariusschueller.com/blogs/ItBegins.html</loc>
-  <lastmod>2024-01-14T16:41:35+00:00</lastmod>
+  <lastmod>2024-02-18T04:13:33+00:00</lastmod>
   <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mariusschueller.com/fun/pokemon.html</loc>
+  <lastmod>2024-01-29T21:11:37+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 
 
