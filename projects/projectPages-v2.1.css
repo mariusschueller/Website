@@ -162,7 +162,17 @@ h2{
     margin-right: 10px;
     margin-bottom: 1.25rem;
     height: 10rem;
+    border-radius: 5px;
 
+  }
+
+  .mid-media{
+    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    max-width: 30vw;
+    border-radius: 5px;
   }
 
   .big-media{
@@ -171,7 +181,6 @@ h2{
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 1.25rem;
-    
 
     max-width: 55vw;
     max-height: 500px;

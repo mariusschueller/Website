@@ -78,8 +78,10 @@ function deleteText(callback) {
 function startTypewriter() {
   document.getElementById("typedText").innerHTML = "";
   typewriter('Hi', function() {
-    typewriter('My name is Marius', function() {
-      lasttypewriter('Welcome to my website!');
+    typewriter('I tried to make a cool website', function() {
+      typewriter('so', function() {
+        lasttypewriter('welcome to mariusschueller.com!');
+      });
     });
   });
 }
