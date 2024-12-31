@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+          <title>Daily CS Paper</title>
+          <link rel="stylesheet" href="randompaper.css">
+          <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+     </head>
+     <body>
+        <h1>Daily CS Paper (with Code)</h1>
+
+        <!-- replace with vertical centering -->
+        <div id="loading">
+            <img id="loadingGif" src="loadingblack.gif" alt="Loading">
+            <h2 id='loadingText'>Loading</h2>
+        </div>
+
+        <script>
+               // get the data from the API
+               fetch('https://random-papers.vercel.app/')
+               .then(response => response.json())
+               .then(data => {
+                    // remove the loading gif
+                    document.getElementById('loading').remove();
+     
+                    // create the elements for the data
+                    
+                    let title = document.createElement('h2');
+                    title.innerHTML = data.title;
+                    document.body.appendChild(title);
+
+                    let repo = document.createElement('a');
+                    repo.href = data.repo;
+                    repo.innerHTML = data.repo;
+                    document.body.appendChild(repo);
+
+                    document.body.appendChild(document.createElement('br'));
+                    document.body.appendChild(document.createElement('br'));
+
+                    let iframe = document.createElement('iframe');
+                    iframe.src = data.url;
+                    iframe.width = "90%";
+                    iframe.height = "600px";
+                    iframe.style.border = "none";
+                    document.body.appendChild(iframe);
+               })
+               .catch(error => {
+                    // remove the loading gif
+                    document.getElementById('loading').remove();
+     
+                    // create the error message
+                    let errorText = document.createElement('h2');
+                    errorText.innerHTML = 'Error: ' + error;
+                    document.body.appendChild(errorText);
+               });
+        </script>
+        
+     </body>
+</html>
