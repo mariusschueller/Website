@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Send a background request to increment the counter
-    fetch('counter.php', { method: 'GET' })
+    fetch('/counter/counter.php', { method: 'GET' })
       .then(() => {
         console.log('Visit counted.');
       })
