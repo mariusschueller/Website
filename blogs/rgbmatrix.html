@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RGB Matrix</title>
+    <link rel="stylesheet" href="BlogPage-v2.1.css">
+    <link rel="stylesheet" href="/img.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+</head>
+
+<body>
+    <img src="/counter/counter.php" style="display: none;">
+    <canvas id="canvas1"></canvas>
+    <script src="/particles.js"></script>
+    <div class="content">
+        <h1 id="name">Marius Schueller</h1>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+
+        <div class="blog-container">
+
+            <div class="blog-header">
+                <div class="blog-cover">
+                    <img src="/images/ledboardgraphic.png" style="object-position:left;">
+                </div>
+            </div>
+
+            <div class="blog-body">
+                <div class="blog-title">
+                    <h1><br>Building a Custom Animation Display</h1>
+                </div>
+                <p>1/31/2025</p>
+                <div class="blog-summary">
+                    <p>
+                        <br>
+                        I programmed a light board to play any animation I want whenever I want. Here’s how I did it.
+                        <br><br>
+                        <video autoplay loop style="width: 50%; display: flex; margin: auto; margin-top: 10px;">
+                            <source src="/videos/ledVid.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        
+                    </p>
+
+                    <h2>What I used</h2>
+
+                    <p>
+                        RGB LED Matrix (32x32)<br>
+                        Raspberry Pi 3<br>
+                        Adafruit RGB Matrix Bonnet<br>
+                        Power cords (Raspberry Pi 3, Adafruit RGB Matrix Bonnet)<br>
+
+                        <br>
+                    </p>
+
+                    <h2>Getting a visualization</h2>
+                    <p>
+                        I started by working on the programming. Knowing that my end goal was 
+                        getting my own animations to play, I wanted to get data from an image. 
+                        What data? Well, I need to know what color to display on the lights on 
+                        the board. The board is an RGB matrix meaning the colors shown are 
+                        represented by the amount of red, green, and blue (RGB) present. Lucky 
+                        for us, the color of pixels in photos can be represented by the RGB 
+                        amounts present. If we have a 1280 x 720 image, we have 921,600 pixels, 
+                        each with RGB values.
+                        <br><br>
+
+                        <h3>Sizing</h3>
+                        The next issue we get is that our board is only 32x32, so the resolution 
+                        of images has to be decreased to this point. I chose to take the average 
+                        color of 1/32 of the original image for every row and column. 
+                        <img src="/images/downsizing.png" alt="Click to enlarge" onclick="showImage(this)" width="60%" style="display:flex; margin: auto; border-radius: 20px;">
+
+                        <br><br>
+                        <script src="https://gist.github.com/mariusschueller/7a5e5caa4b884a0d810860c6a7225703.js"></script>
+                        <br>
+
+                        <h3>Visualization</h3>
+                        To check if things worked, I visualized the data I was getting. I used 
+                        the matplotlib library to create a graph with x and y values from 0-32 
+                        and then colored each point by its RGB value.
+                        <br><br>
+                        <script src="https://gist.github.com/mariusschueller/fba3d5ef57c2811fab77e41987fdb1e9.js"></script> 
+                        <br>
+                        
+                        <h3>Videos</h3>
+                        Videos weren’t too hard from there, because a video is simply a series 
+                        of images played in rapid succession. I wrote some code that would get 
+                        every frame of a video and then apply the aforementioned photo 
+                        transformations. I then visualized everything using a delay of 0.05 
+                        seconds (20fps). This is very handy because I could see how things would 
+                        look before putting them on the board. 
+                        <br><br>
+                        <video autoplay loop style="width: 50%; display: flex; margin: auto; margin-top: 10px;">
+                            <source src="/videos/VideoSmileDownsize.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        <br><br>
+                        <script src="https://gist.github.com/mariusschueller/00c30f9ee869fea602675b5eaa384f95.js"></script>
+                        <br>
+                    </p>
+
+                    <h2>Storing and Accessing Data</h2>
+                    <p>
+                        I need to be able to store this data for future use. There are definitely 
+                        more efficient encoding methods, but for simplicity, I used a JSON format. 
+                        Every video is grouped, containing elements of every frame. Every frame 
+                        has 1024 elements for pixels (32 x 32), and every pixel has 3 elements 
+                        representing RGB values.
+                        <br><br>
+                        
+                        So, for me, there was a question of where to store the animation JSON data. 
+                        I considered storing the animations on the Raspberry Pi, but that would 
+                        mean reprogramming the board every time I want to change the animations. 
+                        That limits the flexibility, so I decided that an API would be the best. 
+                        An API is an application from which I can receive information. I’ve done 
+                        a couple of projects in the past where I created APIs using Flask. I 
+                        initially programmed the API to give back a random animation. I hosted 
+                        this API on Vercel because it’s free and pretty straightforward. I wanted 
+                        my final product to play certain things on certain days like holidays and 
+                        birthdays. So, I used the datetime library in Python and added some 
+                        conditions for playing things at certain times.
+                        <br><br>
+                        <script src="https://gist.github.com/mariusschueller/bd31b0027a84bd4186c63a316d1865c6.js"></script>
+                        <br>
+                    </p>
+
+                    <h2>Working Board!!!</h2>
+                    <p>
+                        Now comes the scariest part for me. I did all of this programming while 
+                        I was waiting for a power chord to arrive so I had no idea how things 
+                        would work.
+                        <br><br>
+
+                        <h3>Coding</h3>
+                        I forked rpi-rgb-led-matrix library which is made for LED matrices. I 
+                        know Adafruit has a fork of the library, but their library hasn’t been 
+                        updated in 8 years and is 829 commits behind the main repository, so 
+                        I felt a little more comfortable using the main repository. After forking,
+                        I added in my files and used their samples to see how to create my own script.
+                        <br><br>
+
+                        <h3>Environment Setup</h3>
+                        Putting things on the Raspberry Pi was a little annoying. To start, I 
+                        cloned my repository to the board. I followed the instructions in the 
+                        repository to set things up. I first tested one of their samples, and 
+                        it was so cool to see it work. Then I tried to run my programs. Because 
+                        pip isn’t a thing in Raspberry Pi boards, I added the necessary libraries 
+                        by using sudo apt install. 
+                        <br><br>
+                        <h3>Success</h3>
+                        After some reworking of my code, I experienced the pure joy that comes 
+                        with seeing the result of hours and hours of hard work come together. 
+                        Seeing the animation play for the first time was incredible.
+                        <br>
+                        <video autoplay loop style="width: 50%; display: flex; margin: auto; margin-top: 10px;">
+                            <source src="/videos/ledVid.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+
+                    </p>
+
+                    <h2>Moving Forward</h2>
+                    <p>
+                        Feel free to look at my code that I have linked at the bottom of the page. 
+                        This project is now pretty much done, but I will occasionally add 
+                        animations here and there and program in more holidays. When my 
+                        favorite sports teams win, I can have it show something in 
+                        celebration. It's just so cool to have around!
+                        <br><br>
+                    </p>
+                    
+
+                    <p>- Marius</p>
+
+                </div>
+
+            </div>
+            <div class="footer">
+                <a href="https://github.com/mariusschueller/rpi-rgb-led-matrix">Forked LED Library</a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/mariusschueller/flask-vercel-led">LED API</a>
+            </div>
+
+        </div>
+
+        <!--SENDGRID SUBSCRIBE-->
+        <iframe class="new-subscribe" src="https://cdn.forms-content-1.sg-form.com/4ea806cf-a0da-11ee-a940-cead52b50d91"
+            width="500" height="550">
+
+            <script src="/img.js"></script>
+    </div>
+</body>
+
+</html>
