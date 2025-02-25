@@ -1,11 +1,23 @@
 const canvas = document.getElementById("canvas1");
-const ctx = canvas.getContext('2d')
+const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let particlesArray;
 
-//particle class
+// Create a global mouse object
+const mouse = {
+    x: undefined,
+    y: undefined,
+    radius: 200 // particles within 200px will be attracted
+};
+
+window.addEventListener('mousemove', function(event) {
+    mouse.x = event.x;
+    mouse.y = event.y;
+});
+
+// Particle class
 class Particle {
     constructor(x, y, directionX, directionY, size, color, directionSize) {
         this.x = x;
@@ -17,53 +29,65 @@ class Particle {
         this.directionSize = directionSize;
     }
 
-    //draws each individual particle
+    // Draw the particle
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = this.color; // What color is this?
+        ctx.fillStyle = this.color;
         ctx.fill();
     }
 
+    // Update particle position and add mouse attraction
     update() {
-        if (this.x > canvas.width || this.x < 0){
+        // Bounce off canvas edges
+        if (this.x > canvas.width || this.x < 0) {
             this.directionX = -this.directionX;
         }
-        if (this.y > canvas.height || this.y < 0){
+        if (this.y > canvas.height || this.y < 0) {
             this.directionY = -this.directionY;
         }
 
-        // move particle
+        // Calculate the vector from the particle to the mouse
+        let dx = mouse.x - this.x;
+        let dy = mouse.y - this.y;
+        let distance = Math.sqrt(dx * dx + dy * dy);
+
+        // If the particle is within the mouse's influence radius, add a small acceleration toward the mouse
+        if (distance < mouse.radius && distance > 0) {
+            let acceleration = 0.05; // Adjust this value for stronger/weaker attraction
+            // Normalize the vector (dx/distance, dy/distance) and apply the acceleration
+            this.directionX += (dx / distance) * acceleration;
+            this.directionY += (dy / distance) * acceleration;
+        }
+
+        else if (this.directionX > 4 || this.directionY > 4) {
+            
+            this.directionX *= .5;
+            this.directionY *= .5;
+        }
+
+        // Move particle by adding velocity
         this.x += this.directionX;
         this.y += this.directionY;
 
-        // change size
-        if (this.directionSize){
+        // Change particle size (growing and shrinking)
+        if (this.directionSize) {
             this.size += 0.01;
-        }
-        else{
+        } else {
             this.size -= 0.01;
         }
-
-        if (this.size >= 4 && this.directionSize){
+        if (this.size >= 4 && this.directionSize) {
             this.directionSize = false;
         }
-
-        //respawn if particle is too small
-        if (this.size <= 0.5){
-            // this.x = Math.random() * (innerWidth - this.size * 2) + this.size;
-            // this.y = Math.random() * (innerHeight - this.size * 2) + this.size;
+        if (this.size <= 0.5) {
             this.directionSize = true;
         }
 
-        
-
-        // draw particle
         this.draw();
     }
 }
 
-// create particle array
+// Create particles and store them in an array
 function init() {
     particlesArray = [];
     let numberOfParticles = (canvas.height * canvas.width) / 10000;
@@ -75,58 +99,52 @@ function init() {
         let directionX = (Math.random() * 2) - 1;
         let directionY = (Math.random() * 2) - 1;
         let color = '#FFFFFF';
-        
         let directionSize = Math.random() < 0.5;
 
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color, directionSize));
     }
 }
 
-// draw lines between particles
+// Draw lines between particles
 function connect() {
     let opacityValue = 1;
-
     for (let a = 0; a < particlesArray.length; a++) {
         for (let b = a; b < particlesArray.length; b++) {
-            let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
+            let distance = ((particlesArray[a].x - particlesArray[b].x) ** 2) +
+                           ((particlesArray[a].y - particlesArray[b].y) ** 2);
             
-            
-                if (distance < (canvas.width / 7) * (canvas.height / 7)) {
-                    opacityValue = 1 - (distance / 20000);
-                    ctx.strokeStyle = 'rgba(255,255,255,' + opacityValue + ')';
-                    ctx.lineWidth = 1;
-                    ctx.beginPath();
-                    ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
-                    ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
-                    ctx.stroke();
-                }
+            if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+                opacityValue = 1 - (distance / 20000);
+                ctx.strokeStyle = 'rgba(255,255,255,' + opacityValue + ')';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                ctx.stroke();
+            }
         }
     }
 }
 
-
+// Animation loop
 function animate() {
     requestAnimationFrame(animate);
-    ctx.clearRect(0,0, innerWidth, innerHeight);
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
     
-    // changes opacity for the screen
-    ctx.globalAlpha = 0.3;
-
+    // Set global opacity for a trailing effect
+    ctx.globalAlpha = 0.4;
     for (let i = 0; i < particlesArray.length; ++i){
         particlesArray[i].update();
     }
     connect();
-
     ctx.globalAlpha = 1.0;
 }
 
-window.addEventListener('resize',
-    function(){
-        canvas.width = this.innerWidth;
-        canvas.height = this.innerHeight;
-        init();
-    }
-);
+window.addEventListener('resize', function(){
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+    init();
+});
 
 init();
 animate();

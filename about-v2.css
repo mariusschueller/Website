@@ -7,22 +7,38 @@
 }
 
 #name {
-    text-align: center;
-    font-size: 4vw;
-    font-family: 'SourceCodePro';/*'TitleFont', sans-serif;*/
-    letter-spacing: 1rem;
-    
-    max-height: 40px;
-    min-height: 10px;
-    color: white;
-    margin: auto;
-    padding-left: 4vw;
+  text-align: center;
+  font-size: 4vw;
+  font-family: 'Hack', monospace;/*'TitleFont', sans-serif;*/
+  letter-spacing: 1rem;
+  
+  max-height: 40px;
+  min-height: 10px;
+  color: white;
+  margin: auto;
+  padding-left: 4vw;
 
-    animation-name: shadow;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+  animation-name: shadow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: 15px;
+  position: relative;
+}
 
-    margin-top: 15px;
+#name:hover {
+  animation-name: shadow, colorChange;
+  animation-duration: 4s, 3s;
+  animation-iteration-count: infinite, infinite;
+  animation-timing-function: ease-in-out, ease-in-out;
+}
+
+@keyframes colorChange {
+  0% { color: #fff; }
+  25% { color: #df67f7; }
+  50% { color: #00f7ff; }
+  75% { color: #10ff74; }
+  100% { color: #fff; }
 }
 
 @keyframes shadow {
@@ -69,7 +85,16 @@ nav a {
 }
 
 nav a:hover {
-    border: 2px solid white; 
+  border: 2px solid white; 
+  animation: borderColorChange 3s infinite ease-in-out;
+}
+
+@keyframes borderColorChange {
+  0% { border-color: #fff; }
+  25% { border-color: #df67f7; }
+  50% { border-color: #00f7ff; }
+  75% { border-color: #10ff74; }
+  100% { border-color: #fff; }
 }
 
 @media (max-width: 750px) {
