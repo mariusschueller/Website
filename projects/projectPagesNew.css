@@ -63,6 +63,10 @@ h2{
     color: white;
 }
 
+div.description > p > a {
+  color: black;
+}
+
 
 .resources a{
     color: black;
