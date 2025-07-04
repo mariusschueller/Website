@@ -21,7 +21,7 @@ function text(){
 
         switch(newSection) {
             case "Home":
-                animateText(text_box, "Hi, my name is Marius and I'm a creator with lots of ideas...");
+                animateText(text_box, "Hi, my name is Marius and I'm a creator with lots of ideas...<br><br>Use arrow keys or WASD to navigate");
                 section_views();
                 break;
             case "Projects":
