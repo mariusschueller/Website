@@ -19,5 +19,5 @@ Redirect 301 /projects /project
 
 
 <FilesMatch "\.(js|css)$">
-  Header set Cache-Control "public, max-age=31536000, immutable"
+  Header set Cache-Control "public, max-age=0, must-revalidate"
 </FilesMatch>
