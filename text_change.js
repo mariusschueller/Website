@@ -39,7 +39,7 @@ function text(){
                 threeD_project_view.style.animation = "appear 1s, pulse-glow 2s ease-in-out infinite 1s";
                 break;
             case "Blog":
-                animateText(text_box, "Check out my writting!");
+                animateText(text_box, "Check out my writing!");
                 section_views();
 
                 blog_view.style.display = "flex";
