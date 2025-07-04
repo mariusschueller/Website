@@ -1,0 +1,18 @@
+RewriteEngine On
+
+# Redirect .html URLs to clean URLs
+RewriteCond %{THE_REQUEST} /\S+\.html [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+# Internally rewrite clean URLs to .html files
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
+
+# Remove trailing slashes from URLs (except root "/")
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ $1 [R=301,L]
+
+# Prevent Apache from forcing a trailing slash on directories
+DirectorySlash Off
+
+Redirect 301 /projects /project

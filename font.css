@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'MisterPixelRegular';
+    src: url('Mister Pixel Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Example usage */
+body {
+    font-family: 'MisterPixelRegular', sans-serif;
+}

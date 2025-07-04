@@ -1,0 +1,81 @@
+.panel {
+    padding: 20px; 
+    overflow-y: auto; 
+  }
+
+  .blog-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  
+  .blog-header .blog-cover img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: left;
+    display: block;
+  }
+  
+  .blog-body {
+    padding: 1.5rem;
+  }
+  
+  .blog-title h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  
+  .blog-title a {
+    text-decoration: none;
+    color: #222;
+    transition: color 0.2s ease;
+  }
+  
+  .blog-title a:hover {
+    color: #00994f;
+  }
+  
+  .blog-summary p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .blog-body p a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #00994f;
+    font-weight: bold;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+  
+  .blog-body p a:hover {
+    opacity: 0.7;
+  }
+  
+  .footer {
+    padding: 1rem 1.5rem;
+    background-color: #f7f7f7;
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer .languages {
+    font-style: italic;
+  }
+  
+
+  /* .read-more {
+    outline: 1px solid black;
+  } */

@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marius</title>
+  <link rel="stylesheet" href="font.css">
+  <link rel="stylesheet" href="/navbar.css">
+  <link rel="stylesheet" href="sectioninfo.css">
+  <link rel="stylesheet" href="max_button.css">
+  <link rel="stylesheet" href="projects.css">
+  <link rel="stylesheet" href="blog.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { display: block; background: #000; }
+  </style>
+</head>
+<body>
+  <img src="/counter/counter.php" style="display: none;">
+  <div id="navbar">
+    <a href="/home.html"> <img src="/images/Logo.png"></a>
+    <span>Marius Schueller</span>
+      <ul>
+        <li><a onclick="home()">Home</a></li>
+        <li><a onclick="projects()">Projects</a></li>
+        <li><a onclick="blog()">Blog</a></li>
+        <li><a onclick="about()">About</a></li>
+        <li><a onclick="contact()">Contact</a></li>
+      </ul>
+  </div>
+  <!-- <h1>Welcome!</h1> -->
+  <div class="section-info">
+    <span id="section-text" class="title">Home</span><br>
+    <span id="text" class="text"><span>  
+  </div>
+
+
+  <button id="all-project-view" class="expand-btn btn top-right">
+    <span class="display-content">All<br>Projects</span>
+    <span class="hover-content">
+      <div class="panel">
+        <ul class="cards">
+          <!--LinkedIn Banner-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">LinkedIn Banner</div>
+                <p class="card__date">2/27/2025</p>
+                <img class="card__image" aria-live="polite" src="/images/LinkedInBanner.png" alt="Alt text."
+                  loading="lazy" onload="this.style.animationName = 'reveal'" style="width: 100%; border-radius: 5px;">
+                <p class="card__text">
+                  I made a LinkedIn banner that will hopefully attract more attention when someone is on my page. The banner will serve as a mini description of my skills by illustrating my core skill areas in web dev, embedded systems, game dev, and software development. 
+                </p>
+                <a href="projects/linkedinbanner.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--CS Paper Daily-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">CS Paper Daily</div>
+                <p class="card__date">2/18/2025</p>
+                <img class="card__image" aria-live="polite" src="/images/DailyCSPaperSquare.png" alt="Alt text."
+                  loading="lazy" onload="this.style.animationName = 'reveal'" style="width: 50%; border-radius: 5px;">
+                <p class="card__text">
+                  "A CS paper a day keeps the bugs at bay."
+                </p>
+                <a href="https://cspaperdaily.com" target="_blank" class="learn-more">Visit The Site</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Custom Animation Display-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Custom Animation Display</div>
+                <p class="card__date">1/31/2025</p>
+                <img class="card__image" aria-live="polite" src="/images/ledboardgraphic.png" alt="Alt text."
+                  loading="lazy" onload="this.style.animationName = 'reveal'" style="width: 75%; border-radius: 5px;">
+                <p class="card__text">
+                  I programmed a light board to play any animation I want whenever I want.
+                </p>
+                <a href="blogs/rgbmatrix.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Fall Brawl-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Fall Brawl</div>
+                <p class="card__date">12/5/2024</p>
+                <img class="card__image" aria-live="polite" src="/images/fallbrawllogo.png" alt="Alt text."
+                  loading="lazy" onload="this.style.animationName = 'reveal'" style="width: 75%; border-radius: 5px;">
+                <p class="card__text">VR multiplayer game where you throw the ground at other players and try not to
+                  fall
+                </p>
+                <a href="projects/fallbrawl.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Literature AI-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Literature AI</div>
+                <p class="card__date">12/5/2024</p>
+                <img class="card__image" aria-live="polite" src="/images/LitReviewLogo.png" alt="Alt text."
+                  loading="lazy" onload="this.style.animationName = 'reveal'" style="width: 30%; border-radius: 5px;">
+                <p class="card__text">A website that features an AI that predicts the year text was written
+                </p>
+                <a href="projects/litai.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Projexts CLI-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Projexts CLI</div>
+                <p class="card__date">12/1/2024</p>
+                <p class="card__text">A command line tool made with Rust that saves shortcuts and helps workflow
+                </p>
+                <a href="projects/projexts.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Ascii logo-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Ascii Profile Picture</div>
+                <p class="card__date">6/3/2024</p>
+                <img class="card__image" aria-live="polite" src="/images/githublogo.png" alt="Alt text." loading="lazy"
+                  onload="this.style.animationName = 'reveal'" style="width: 50%; border-radius: 5px;">
+                <p class="card__text">I created a ascii profile photo using python.
+                </p>
+                <a href="projects/asciiPicture.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Random CS Paper CARD-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Random CS Paper Generator</div>
+                <p class="card__date">6/1/2024</p>
+                <p class="card__text">Python program that generates a random cs paper and allows you to read the pdf and
+                  see code.
+                </p>
+                <a href="projects/randomPaper.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Typing Test Bot CARD-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Typing Test Bot</div>
+                <p class="card__date">2/17/2024</p>
+                <p class="card__text">A Python project that automatically takes a typing test. It uses web scraping with
+                  Selenium to complete the typing test. See step by step instructions on how this was made in my blog
+                  post.
+                </p>
+                <a href="blogs/typingbot.html" class="learn-more">Blog Post</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Pokemon Resistance and Weakness Generator CARD-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Pokemon Resistance and Weakness Generator</div>
+                <p class="card__date">1/28/2024</p>
+                <p class="card__text">A website made with HTML, CSS, and Javascript. It takes in the type(s) of pokemon
+                  and gives that type(s) weaknesses and resistances.
+                </p>
+                <a href="projects/pokemongenerator.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Capybara Clicker Bot CARD-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Capybara Clicker Bot</div>
+                <p class="card__date">12/16/2023</p>
+                <p class="card__text">A python program that controls my screen and plays capybara clicker until the
+                  final upgrade is bought.
+                </p>
+                <a href="projects/capybara.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--GUITAR CARD-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Guitar App</div>
+                <p class="card__date">11/25/2023</p>
+                <p class="card__text">I made an app to help me learn how to play guitar.
+                  This was made in Unity over the course of a couple of days.
+                </p>
+                <a href="projects/guitar.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Website card -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Portfolio Website</div>
+                <p class="card__date">11/20/2023</p>
+                <p class="card__text">I made a website using HTML and CSS. This is the website you are currently
+                  looking
+                  at!</p>
+                <a href="projects/website.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- secret santa -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Secret Santa Email Sender</div>
+                <p class="card__date">11/18/2023</p>
+                <p class="card__text">Created a Python program that will create pairs for a secret santa gift exchange
+                  and then sends emails to the pairs.</p>
+                <a href="projects/secretSanta.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Color Catch Card -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Color Catch</div>
+                <p class="card__date">3/10/2023</p>
+                <p class="card__text">A very cool (if I do say so myself) Unity game made for Vanderbilt's Programmers
+                  of Games Competition.
+                </p>
+                <a href="projects/colorcatch.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Kids Icebreaker Activity Card -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Kids Icebreaker Activity</div>
+                <p class="card__date">2/5/2023</p>
+                <p class="card__text">A neat little python project that generates a fantasy introduction for a kid
+                  using
+                  an OpenAI text generator.
+                </p>
+                <a href="projects/kidsicebreaker.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- DALL-E-CHARADES -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">DALL-E Charades</div>
+                <p class="card__date">1/11/2023</p>
+                <p class="card__text">Used the OpenAI library in Python to make a fun game where two people guess the
+                  words DALL-E used to generate an image.</p>
+                <a href="projects/dall-e.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--2p Battle Circles-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">2p Battle Circles</div>
+                <p class="card__date">5/20/2022</p>
+                <p class="card__text">A fun Unity game made for two players with some fun bounce and shooting
+                  mechanics.
+                </p>
+                <a href="projects/2pbattlecircles.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Random Drawing Generator Card -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Random Drawing Generator</div>
+                <p class="card__date">6/11/2022</p>
+                <p class="card__text">A Python program that allows users to choose a catagory,
+                  and then get something random to draw from that category.
+                  Then it can automatically pull up a drawing tutorial video.</p>
+                <a href="projects/drawGenerator.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Random Key Card -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Random Key App</div>
+                <p class="card__date">2/12/2022</p>
+                <p class="card__text">A Unity app designed to give me a random music key to play in. Just tap a button
+                  and get a music key.
+                </p>
+                <a href="projects/randomkey.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Card Slapp Card -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Card Slapp App</div>
+                <p class="card__date">12/23/2021</p>
+                <p class="card__text">A Unity game to help improve my ability to play the card game known as rat slap.
+                </p>
+                <a href="projects/cardslap.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Sequence Memorizer Card -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Sequence Memorizer App</div>
+                <p class="card__date">7/9/2021</p>
+                <p class="card__text">A Unity game designed for me to improve my memory. Originally a mobile game.
+                </p>
+                <a href="projects/sequencememorizer.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--ORIGINS ALBUM CARD-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Origins Album</div>
+                <p class="card__date">9/29/2020</p>
+                <!--<img src="/images/origins album cover.webp" class="card__image">-->
+                <p class="card__text">Wrote and released a music album. The music in this album was created for my Neon
+                  Drop game.</p>
+                <a href="projects/origins.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--2p Pixel Bounce-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">2p Pixel Bounce App</div>
+                <p class="card__date">8/28/2020</p>
+
+                <p class="card__text">A fun two player Unity app. You try to shoot little pixelated bullets and try to
+                  hit the other person on other side.
+                </p>
+                <a href="projects/2p-pixelbounce.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Unscripted-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Unscripted</div>
+                <p class="card__date">5/11/2020</p>
+                <img class="card__image" aria-live="polite" src="/images/Just Improvise.jpg" alt="Alt text."
+                  loading="lazy" onload="this.style.animationName = 'reveal'">
+                <!-- <details>
+                      <summary>Show<br>image</summary>
+                      
+                    </details> -->
+                <p class="card__text">Created a computer background based on 2 of my favorite moments visually from
+                  Spider-Man: Into the Spider-Verse.</p>
+                <a href="projects/unscripted.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--lock screen-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Personalized Lock Screen</div>
+                <p class="card__date">1/3/2020</p>
+                <details>
+                  <summary>Show<br>image</summary>
+                  <img class="card__image" aria-live="polite" src="/images/Lock Screen.png" alt="Alt text."
+                    loading="lazy" onload="this.style.animationName = 'reveal'">
+                </details>
+                <p class="card__text">Made a lock screen that showcases my main interests at the time.
+                  This has been my phone's lock screen since it was created.</p>
+                <a href="projects/lockScreen.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Neon Drop Card-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Neon Drop App</div>
+                <p class="card__date">11/2/2019</p>
+                <p class="card__text">My first coding project! Made in Unity. A very bad game, but you gotta start
+                  somewhere.
+                </p>
+                <a href="projects/neondrop.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Nutcracker Medly CARD-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Nutcracker Medley</div>
+                <p class="card__date">12/23/2017</p>
+                <p class="card__text">A medley of Nutcracker music for Cello and Violin.
+                  This was written for a performance during my church's Christmas mass.
+                </p>
+                <a href="projects/nutcracker.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </span>
+  </button>
+
+  <!-- Overlay for fullscreen project images -->
+  <div id="image-overlay" class="image-overlay">
+    <img id="overlay-img" src="" alt="Project image">
+  </div>
+
+  <button id="coding-project-view" class="expand-btn btn middle-left">
+    <span class="display-content">Coding<br>Projects</span>
+    <span class="hover-content">
+      <div class="panel">
+        <ul class="cards">
+          <!--CS Paper Daily-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">CS Paper Daily</div>
+                <p class="card__date">2/18/2025</p>
+                <img class="card__image" aria-live="polite" src="/images/DailyCSPaperSquare.png" alt="Alt text."
+                  loading="lazy" onload="this.style.animationName = 'reveal'" style="width: 50%; border-radius: 5px;">
+                <p class="card__text">
+                  "A CS paper a day keeps the bugs at bay."
+                </p>
+                <a href="https://cspaperdaily.com" target="_blank" class="learn-more">Visit The Site</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Custom Animation Display-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Custom Animation Display</div>
+                <p class="card__date">1/31/2025</p>
+                <img class="card__image" aria-live="polite" src="/images/ledboardgraphic.png" alt="Alt text."
+                  loading="lazy" onload="this.style.animationName = 'reveal'" style="width: 75%; border-radius: 5px;">
+                <p class="card__text">
+                  I programmed a light board to play any animation I want whenever I want.
+                </p>
+                <a href="blogs/rgbmatrix.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Fall Brawl-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Fall Brawl</div>
+                <p class="card__date">12/5/2024</p>
+                <img class="card__image" aria-live="polite" src="/images/fallbrawllogo.png" alt="Alt text."
+                  loading="lazy" onload="this.style.animationName = 'reveal'" style="width: 75%; border-radius: 5px;">
+                <p class="card__text">VR multiplayer game where you throw the ground at other players and try not to
+                  fall
+                </p>
+                <a href="projects/fallbrawl.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Literature AI-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Literature AI</div>
+                <p class="card__date">12/5/2024</p>
+                <img class="card__image" aria-live="polite" src="/images/LitReviewLogo.png" alt="Alt text."
+                  loading="lazy" onload="this.style.animationName = 'reveal'" style="width: 30%; border-radius: 5px;">
+                <p class="card__text">A website that features an AI that predicts the year text was written
+                </p>
+                <a href="projects/litai.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Projexts CLI-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Projexts CLI</div>
+                <p class="card__date">12/1/2024</p>
+
+                <p class="card__text">A command line tool made with Rust that saves shortcuts and helps workflow
+                </p>
+                <a href="projects/projexts.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Ascii logo-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Ascii Profile Picture</div>
+                <p class="card__date">6/3/2024</p>
+                <img class="card__image" aria-live="polite" src="/images/githublogo.png" alt="Alt text." loading="lazy"
+                  onload="this.style.animationName = 'reveal'" style="width: 50%; border-radius: 5px;">
+                <p class="card__text">I created a ascii profile photo using python.
+                </p>
+                <a href="projects/asciiPicture.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Random CS Paper CARD-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Random CS Paper Generator</div>
+                <p class="card__date">6/1/2024</p>
+                <p class="card__text">Python program that generates a random cs paper and allows you to read the pdf
+                  and
+                  see code.
+                </p>
+                <a href="projects/randomPaper.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Typing Test Bot CARD-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Typing Test Bot</div>
+                <p class="card__date">2/17/2024</p>
+                <p class="card__text">A Python project that automatically takes a typing test. It uses web scraping
+                  with
+                  Selenium to complete the typing test. See step by step instructions on how this was made in my blog
+                  post.
+                </p>
+                <a href="blogs/typingbot.html" class="learn-more">Blog Post</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Pokemon Resistance and Weakness Generator CARD-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Pokemon Resistance and Weakness Generator</div>
+                <p class="card__date">1/28/2024</p>
+                <p class="card__text">A webapp made with HTML, CSS, and Javascript. It takes in the type(s) of pokemon
+                  and gives that type(s) weaknesses and resistances.
+                </p>
+                <a href="projects/pokemongenerator.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Capybara Clicker Bot CARD-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Capybara Clicker Bot</div>
+                <p class="card__date">12/16/2023</p>
+                <p class="card__text">A python program that controls my screen and plays capybara clicker until the
+                  final upgrade is bought.
+                </p>
+                <a href="projects/capybara.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--GUITAR CARD-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Guitar App</div>
+                <p class="card__date">11/25/2023</p>
+                <p class="card__text">I made an app to help me learn how to play guitar.
+                  This was made in Unity over the course of a couple of days.
+                </p>
+                <a href="projects/guitar.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Website card -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Portfolio Website</div>
+                <p class="card__date">11/20/2023</p>
+                <p class="card__text">I made a website using HTML and CSS. This is the website you are currently
+                  looking
+                  at!</p>
+                <a href="projects/website.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- secret santa -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Secret Santa Email Sender</div>
+                <p class="card__date">11/18/2023</p>
+                <p class="card__text">Created a Python program that will create pairs for a secret santa gift exchange
+                  and then sends emails to the pairs.</p>
+                <a href="projects/secretSanta.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Color Catch Card -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Color Catch</div>
+                <p class="card__date">3/10/2023</p>
+                <p class="card__text">A very cool (if I do say so myself) Unity game made for Vanderbilt's Programmers
+                  of Games Competition.
+                </p>
+                <a href="projects/colorcatch.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Kids Icebreaker Activity Card -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Kids Icebreaker Activity</div>
+                <p class="card__date">2/5/2023</p>
+                <p class="card__text">A neat little python project that generates a fantasy introduction for a kid
+                  using
+                  an OpenAI text generator.
+                </p>
+                <a href="projects/kidsicebreaker.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- DALL-E-CHARADES -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">DALL-E Charades</div>
+                <p class="card__date">1/11/2023</p>
+                <p class="card__text">Used the OpenAI library in Python to make a fun game where two people guess the
+                  words DALL-E used to generate an image.</p>
+                <a href="projects/dall-e.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--2p Battle Circles-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">2p Battle Circles</div>
+                <p class="card__date">5/20/2022</p>
+                <p class="card__text">A fun Unity game made for two players with some fun bounce and shooting
+                  mechanics.
+                </p>
+                <a href="projects/2pbattlecircles.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Random Drawing Generator Card -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Random Drawing Generator</div>
+                <p class="card__date">6/11/2022</p>
+                <p class="card__text">A Python program that allows users to choose a catagory,
+                  and then get something random to draw from that category.
+                  Then it can automatically pull up a drawing tutorial video.</p>
+                <a href="projects/drawGenerator.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Random Key Card -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Random Key App</div>
+                <p class="card__date">2/12/2022</p>
+                <p class="card__text">A Unity app designed to give me a random music key to play in. Just tap a button
+                  and get a music key.
+                </p>
+                <a href="projects/randomkey.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Card Slapp Card -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Card Slapp App</div>
+                <p class="card__date">12/23/2021</p>
+                <p class="card__text">A Unity game to help improve my ability to play the card game known as rat slap.
+                </p>
+                <a href="projects/cardslap.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Sequence Memorizer Card -->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Sequence Memorizer App</div>
+                <p class="card__date">7/9/2021</p>
+                <p class="card__text">A Unity game designed for me to improve my memory. Originally a mobile game.
+                </p>
+                <a href="projects/sequencememorizer.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--2p Pixel Bounce-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">2p Pixel Bounce App</div>
+                <p class="card__date">8/28/2020</p>
+
+                <p class="card__text">A fun two player Unity app. You try to shoot little pixelated bullets and try to
+                  hit the other person on other side.
+                </p>
+                <a href="projects/2p-pixelbounce.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Neon Drop Card-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Neon Drop App</div>
+                <p class="card__date">11/2/2019</p>
+                <p class="card__text">My first coding project! Made in Unity. A very bad game, but you gotta start
+                  somewhere.
+                </p>
+                <a href="projects/neondrop.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </span>
+  </button>
+
+  <button id="music-project-view" class="expand-btn btn middle-right">
+    <span class="display-content">Music<br>Projects</span>
+    <span class="hover-content">
+      <div class="panel">
+        <ul class="cards">
+
+          <!--ORIGINS ALBUM CARD-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Origins Album</div>
+                <p class="card__date">9/29/2020</p>
+                <!--<img src="/images/origins album cover.webp" class="card__image">-->
+                <p class="card__text">Wrote and released a music album. The music in this album was created for my Neon
+                  Drop game.</p>
+                <a href="projects/origins.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Nutcracker Medly CARD-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Nutcracker Medley</div>
+                <p class="card__date">12/23/2017</p>
+                <p class="card__text">A medley of Nutcracker music for Cello and Violin.
+                  This was written for a performance during my church's Christmas mass.
+                </p>
+                <a href="projects/nutcracker.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </span>
+  </button>
+
+  <button id="design-project-view" class="expand-btn btn bottom-left">
+    <span class="display-content">Design<br>Projects</span>
+    <span class="hover-content">
+      <div class="panel">
+        <ul class="cards">
+          <!--LinkedIn Banner-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">LinkedIn Banner</div>
+                <p class="card__date">2/27/2025</p>
+                <img class="card__image" aria-live="polite" src="/images/LinkedInBanner.png" alt="Alt text."
+                  loading="lazy" onload="this.style.animationName = 'reveal'" style="width: 100%; border-radius: 5px;">
+                <p class="card__text">
+                  I made a LinkedIn banner that will hopefully attract more attention when someone is on my page. The banner will serve as a mini description of my skills by illustrating my core skill areas in web dev, embedded systems, game dev, and software development. 
+                </p>
+                <a href="projects/linkedinbanner.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Framework Background-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Framework Background</div>
+                <p class="card__date">5/20/2024</p>
+                <img class="card__image" aria-live="polite" src="/images/FrameworkSkin.png" alt="Alt text."
+                  loading="lazy" onload="this.style.animationName = 'reveal'" style="width: 50%; border-radius: 5px;">
+                <p class="card__text">A background showcasing my interests that incorporates the framework logo for a
+                  framework laptop skin
+                </p>
+                <a href="projects/frameworkbackground.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Ascii logo-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Ascii Profile Picture</div>
+                <p class="card__date">6/3/2024</p>
+                <img class="card__image" aria-live="polite" src="/images/githublogo.png" alt="Alt text." loading="lazy"
+                  onload="this.style.animationName = 'reveal'" style="width: 50%; border-radius: 5px;">
+                <p class="card__text">I created a ascii profile photo using python.
+                </p>
+                <a href="projects/asciiPicture.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Unscripted-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Unscripted</div>
+                <p class="card__date">5/11/2020</p>
+
+                <img class="card__image" aria-live="polite" src="/images/Just Improvise.jpg" alt="Alt text."
+                  loading="lazy" onload="this.style.animationName = 'reveal'">
+
+                <p class="card__text">Created a computer background based on 2 of my favorite moments visually from
+                  Spider-Man: Into the Spider-Verse.</p>
+                <a href="projects/unscripted.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--lock screen-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Personalized Lock Screen</div>
+                <p class="card__date">1/3/2020</p>
+                <details>
+                  <summary>Show Image</summary>
+                  <img class="card__image" aria-live="polite" src="/images/Lock Screen.png" alt="Alt text."
+                    loading="lazy" onload="this.style.animationName = 'reveal'">
+                </details>
+                <p class="card__text">Made a lock screen that showcases my main interests at the time.
+                  This has been my phone's lock screen since it was created.</p>
+                <a href="projects/lockScreen.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </span>
+  </button>
+
+  <button id="3d-project-view" class="expand-btn btn bottom-right">
+    <span class="display-content">3D<br>Projects</span>
+    <span class="hover-content">
+      <div class="panel">
+        <ul class="cards">
+
+          <!--Pickleball Paddle CARD-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Pickleball Paddle</div>
+                <p class="card__date">4/19/2024</p>
+                <img class="card__image" aria-live="polite" src="/images//paddlephoto.jpg" alt="Alt text."
+                  loading="lazy" onload="this.style.animationName = 'reveal'" style="width: 50%; border-radius: 5px;">
+                <p class="card__text">3D printed pickleball paddle. I designed it and then printed it out of PLA.
+                </p>
+                <a href="projects/pickleball.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+
+          <!--Piano Keyboard Phone Stand-->
+          <li class="cards__item">
+            <div class="card">
+              <div class="card__content">
+                <div class="card__title">Piano Keyboard Phone Stand</div>
+                <p class="card__date">1/19/2024</p>
+                <img class="card__image" aria-live="polite" src="/images/phone stand blur square.jpg" alt="Alt text."
+                  loading="lazy" onload="this.style.animationName = 'reveal'" style="width: 50%; border-radius: 5px;">
+                <p class="card__text">I want to have a place for my phone while playing piano, so I desiged a phone
+                  stand that slots into a place on my keyboard.</p>
+                <a href="projects/keyboardphone.html" class="learn-more">Learn More</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </span>
+  </button>
+
+
+  <button id="blog-view" class="expand-btn btn top-right">
+    <span class="display-content">View<br>Blogs</span>
+    <span class="hover-content">
+      <!--Blog Post 1-->
+      <div class="panel">
+    <div class="blog-container">
+      <div class="blog-header">
+        <div class="blog-cover">
+          <img src="/images/cspaperdailybanner.png" style="object-position:left;">
+        </div>
+      </div>
+
+      <div class="blog-body">
+        <div class="blog-title">
+          <h1><a href="blogs/cspaperdaily.html">Introducing CS Paper Daily</a></h1>
+        </div>
+        <div class="blog-summary">
+          <p>
+            I created the site <a href="https://cspaperdaily.com" target="_blank">
+              cspaperdaily.com</a>. It gives users computer science papers to 
+              read each day with the goal of creating a habit. 
+        </div>
+        <p class="read-more"><a href="blogs/cspaperdaily.html">Read</a></p>
+      </div>
+
+      <div class="footer">
+        <p class="date">2/18/2025</p>
+      </div>
+    </div>
+
+    <!--Blog Post 2-->
+    <div class="blog-container">
+      <div class="blog-header">
+        <div class="blog-cover">
+          <img src="/images/ledboardgraphic.png" style="object-position:left;">
+        </div>
+      </div>
+
+      <div class="blog-body">
+        <div class="blog-title">
+          <h1><a href="blogs/rgbmatrix.html">Building a Custom Animation Display</a></h1>
+        </div>
+        <div class="blog-summary">
+          <p>I programmed a light board to play any animation I want whenever I want. Here’s how I did it...
+        </div>
+        <p class="read-more"><a href="blogs/rgbmatrix.html">Read On</a></p>
+      </div>
+
+      <div class="footer">
+
+        <p class="date">1/31/2025</p>
+      </div>
+    </div>
+
+    <!--Blog Post 3-->
+    <div class="blog-container">
+      <div class="blog-header">
+        <div class="blog-cover">
+          <img src="/images/vandyfootball.jpg" style="object-position: bottom;">
+        </div>
+      </div>
+
+      <div class="blog-body">
+        <div class="blog-title">
+          <h1><a href="blogs/finalfall.html">The Final Fall: My Semester Review</a></h1>
+        </div>
+        <div class="blog-summary">
+          <p>So, it’s my last fall semester, and I’m now a senior. With 3 years under my belt already, I think I’ve got
+            this college thing pretty figured out. This semester was without a doubt my favorite semester so far. Here’s
+            my review…</p>
+        </div>
+        <p class="read-more"><a href="blogs/finalfall.html">Read On</a></p>
+      </div>
+
+      <div class="footer">
+
+        <p class="date">12/29/2024</p>
+      </div>
+    </div>
+
+
+      <div class="blog-container">
+        <div class="blog-header">
+          <div class="blog-cover">
+            <img src="/images/recruitment.png" style="object-position: left;">
+          </div>
+        </div>
+
+        <div class="blog-body">
+          <div class="blog-title">
+            <h1><a href="blogs/fine_i'll_do_leetcode.html"><br>Fine, I'll Do LeetCode</a></h1>
+          </div>
+          <div class="blog-summary">
+            <p>In the current cs job market, I would argue it’s not easy to get a job (or internship) as a
+              cs major. It feels like there are more applicants than jobs. I’ve gotten lucky the past few
+              years when getting internships, but now I graduate in less than a year and I need to start
+              thinking about a full-time job. That said, the most dreaded part of the job process for cs
+              majors is the technical interview...</p>
+          </div>
+          <p class="read-more"><a href="blogs/fine_i'll_do_leetcode.html">Read On</a></p>
+        </div>
+
+        <div class="footer">
+
+          <p class="date">9/6/2024</p>
+          <p class="languages">Job Interview</p>
+        </div>
+      </div>
+      <div class="blog-container">
+        <div class="blog-header">
+          <div class="blog-cover">
+            <img src="/images/downtownnashville.jpg" style="object-position: left;">
+          </div>
+        </div>
+
+        <div class="blog-body">
+          <div class="blog-title">
+            <h1><a href="blogs/Summer2024Update.html"><br>Summer 2024 Update</a></h1>
+          </div>
+          <div class="blog-summary">
+            <p>The summer has passed, so here’s a little life update on what happened this summer...</p>
+          </div>
+          <p class="read-more"><a href="blogs/Summer2024Update.html">Read On</a></p>
+        </div>
+
+        <div class="footer">
+
+          <p class="date">8/26/2024</p>
+          <p class="languages">Life</p>
+        </div>
+      </div>
+      <div class="blog-container">
+        <div class="blog-header">
+          <div class="blog-cover">
+            <img src="/images/monkeytype.png" style="object-position: left;">
+          </div>
+        </div>
+
+        <div class="blog-body">
+          <div class="blog-title">
+            <h1><a href="blogs/typingbot.html">Making a Typing Test Bot</a></h1>
+          </div>
+          <div class="blog-summary">
+            <p>I have some friends who are fast typers. That being said, I want to show them that I can type faster than
+              them if I wanted to, and by that I mean I can make something that can type faster than them. Here's my
+              step by step process...</p>
+          </div>
+          <p class="read-more"><a href="blogs/typingbot.html">Read On</a></p>
+        </div>
+
+        <div class="footer">
+
+          <p class="date">2/17/2024</p>
+          <p class="languages">Web Scraping&nbsp Python&nbsp</p>
+        </div>
+      </div>
+
+      <div class="blog-container">
+        <div class="blog-header">
+          <div class="blog-cover">
+            <img src="/images/holidayblog/banner.jpg">
+          </div>
+        </div>
+
+        <div class="blog-body">
+          <div class="blog-title">
+            <h1><a href="blogs/Handmade Holidays.html"><br>Handmade for the Holidays: DIY Holiday Gifts with a Personal
+                Touch</a></h1>
+          </div>
+          <div class="blog-summary">
+            <p>Tis the season! My family doesn't do lists for gifts, and I find it very hard to buy great gifts for
+              other people. As a result, for the past few years, I've been making DIY gifts. This year, creating my
+              gifts was fun, and I ended up with some cool projects, but I ran into many issues. All the <b>final</b>
+              gifts should be able to be able to be made with minimal upfront cost, and maybe some basic graphic design.
+              So, here's my documented experience...</p>
+          </div>
+          <p class="read-more"><a href="blogs/Handmade Holidays.html">Read On</a></p>
+        </div>
+
+        <div class="footer">
+
+          <p class="date">12/30/2023</p>
+          <p class="languages">CAD&nbsp Graphic Design&nbsp Epoxy</p>
+        </div>
+      </div>
+
+      <div class="blog-container">
+        <div class="blog-header">
+          <div class="blog-cover">
+            <img src="/images/20230319_083705.jpg">
+          </div>
+        </div>
+
+        <div class="blog-body">
+          <div class="blog-title">
+            <h1><a href="blogs/Semester Review.html"><br>A Semester Review (As a Vanderbilt CS Student)</a></h1>
+          </div>
+          <div class="blog-summary">
+            <p>Another semester has passed, and I wanted to give a recap/review of how things went. I did a lot of
+              stuff, and there's a lot I want to talk about. So, here's everything from my academic to social life, all
+              in one post...</p>
+          </div>
+          <p class="read-more"><a href="blogs/Semester Review.html">Read On</a></p>
+        </div>
+
+        <div class="footer">
+
+          <p class="date">12/17/2023</p>
+          <!--<p class="languages">HTML CSS</p>-->
+        </div>
+      </div>
+
+      <div class="blog-container">
+        <div class="blog-header">
+        </div>
+
+        <div class="blog-body">
+          <div class="blog-title">
+            <h1><a href="blogs/thisWeekILearned.html"><br>This week I learned to _</a></h1>
+          </div>
+          <div class="blog-summary">
+            <p>This week, I learned to juggle. Yeah, kind of random, but I decided it was something I wanted to do.
+              So, on Sunday night, I started trying to learn.
+              I think I watched 1 video a week ago and then forgot almost all of it.
+              Regardless, I just started practicing and got the hang of it after like an hour.
+              After a little more practice, I'm more consistent and would say I've learned the skill pretty well...</p>
+          </div>
+          <p class="read-more"><a href="blogs/thisWeekILearned.html">Read On</a></p>
+        </div>
+
+        <div class="footer">
+
+          <p class="date">12/03/2023</p>
+          <!--<p class="languages">HTML CSS</p>-->
+        </div>
+      </div>
+
+      <div class="blog-container">
+        <div class="blog-header">
+        </div>
+
+        <div class="blog-body">
+          <div class="blog-title">
+            <h1><a href="blogs/ItBegins.html"><br>And so it Begins</a></h1>
+          </div>
+          <div class="blog-summary">
+            <p>I made a website to share all of my projects!
+              By creating this website, you're able to read the words you're reading right now.
+              I've been wanting to make a website for a while and last weekend I decided to dive right in and do it.
+              So, over the course of 3 days, I designed this website which I hope to continue updating.
+              It was made with only HTML and CSS. I designed the home, projects, about, contact, and blog pages...</p>
+          </div>
+          <p><a href="blogs/ItBegins.html">Read On</a></p>
+        </div>
+
+        <div class="footer">
+
+          <p class="date">11/21/2023</p>
+          <p class="languages">HTML CSS</p>
+        </div>
+      </div>
+    </span>
+  </button>
+     
+
+
+  <button id="professional-about-view" class="expand-btn btn top-right">
+    <span class="display-content">Career</span>
+    <span class="hover-content">
+      <div class='about'>
+      <strong>Career Background</strong><br><br>
+      I am the founder of Maryson Developments. 
+      Maryson Developments develops SaaS products and does contract work specializing embedded systems, website development, and other custom software solutions. 
+      Check out more on our website (coming soon).
+
+      <br><br>
+
+      I graduated in 2025 from Vanderbilt University with majoring in Computer Science with minors in Digital Fabrication and Data Science. 
+      I joined a couple club where I was president of the ultimate frisbee club and treasurer of the vanderbilt ballet club.
+    </div>
+    </span>
+  </button>
+
+  <button id="coding-about-view" class="expand-btn btn middle-left">
+    <span class="display-content">Coding</span>
+    <span class="hover-content">
+      <div class='about'>
+      <strong>Coding Background</strong><br><br>
+      I started programming in Unity with C# where I created the mobile game "Neon Drop: The (almost) Impossible Game". 
+      While the game is no longer available, it was a lot of fun to make and I learned a lot. 
+      From there, I learned Python, Java, C++, Rust, MATLAB, C, and Assembly. 
+      Out of those, Python is by far my favorite language because of how it's way more straightforward to create new projects. 
+      Then, after a few tries I learned web development and made mariusschueller.com (with a more basic design compared the current website). 
+      Lastly, I've been experimenting with Raspberry Pi's which has been super fun. 
+      Essentially, I love learning new systems and challening myself.
+      </div>
+    </span>
+  </button>
+
+  <button id="teaching-about-view" class="expand-btn btn bottom-left">
+    <span class="display-content">Teaching</span>
+    <span class="hover-content">
+      <div class='about'>
+      <strong>Taching Background</strong><br><br>
+      I teach students in computer science, piano, and Spanish. 
+      My teaching career began at 16 years old as a private piano teacher.
+      Teaching younger learners are my specialty, but welcome learners of any age.
+      If you're interested in hiring me as a tutor, don't hesitate to reach out at
+      <a href="mailto:marius@mariusschueller.com">marius@mariusschueller.com</a>
+      </div>
+    </span>
+  </button>
+
+  <button id="music-about-view" class="expand-btn btn middle-right">
+    <span class="display-content">Musical</span>
+    <span class="hover-content">
+      <div class='about'>
+        <strong>Musical Background</strong><br><br>
+      Music has always been a part of my life. I have been playing piano since I was 5 years old,
+      where I was classically trained. Nowadays, I play more by ear, meaning try to play a song without any music. 
+      I've been playing cello since I was 8. 
+      Since then, I have also learned how to play new instruments including guitar, kalimba, and melodica.
+      I have an Instagram page where I'll occasionally post music called MariusMakesMusic.
+      </div>
+    </span>
+  </button>
+
+  <button id="hobbies-about-view" class="expand-btn btn bottom-right">
+    <span class="display-content">Hobbies</span>
+    <span class="hover-content">
+      <div class='about'>
+      <strong>Hobbies</strong><br><br>
+      I also love to play Ultimate Frisbee. It's a great way to stay active, have fun, 
+      and spend time with friends. I used to play for Vanderbilt's Ultimate Frisbee team.<br><br> 
+      Another hobby of mine is climbing. I mostly top rope, but I'll boulder upon occasion. 
+      It's a super fun physical workout and mental puzzle that I can experience with friends.<br><br>
+      Lastly, I love Ballet. I've been dancing almost my entire life. Most recently, 
+      I've had the absolute pleasure for dancing with the Vanderbilt Ballet theater.
+      </div>
+    </span>
+  </button>
+
+  
+  <canvas id="gameCanvas"></canvas>
+
+  <script src="navbar.js"></script>
+  <script src="typing.js"></script>
+  <script src="text_change.js"></script>
+  <script src="index.js"></script>
+
+  
+</body>
+</html>

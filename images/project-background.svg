@@ -1,0 +1,50 @@
+<svg viewBox="2595.5056179775283 0 786.5168539325842 988.7640449438202" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" id="Layer_1" style="max-height: 500px" width="786.5168539325842" height="988.7640449438202">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-5);
+      }
+    </style>
+    <linearGradient gradientUnits="userSpaceOnUse" y2="0" x2="1000" y1="1000" x1="1000" id="linear-gradient">
+      <stop stop-color="#cf5ca2" offset="0"/>
+      <stop stop-color="#7a5da2" offset="1"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" y2="0" x2="3000" y1="1000" x1="3000" id="linear-gradient-2">
+      <stop stop-color="#2a5da3" offset="0"/>
+      <stop stop-color="#7a5da2" offset="1"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" y2="0" x2="5000" y1="1000" x1="5000" id="linear-gradient-3">
+      <stop stop-color="#295ea4" offset="0"/>
+      <stop stop-color="#27ada3" offset="1"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" y2="0" x2="7000" y1="1000" x1="7000" id="linear-gradient-4">
+      <stop stop-color="#73c48f" offset="0"/>
+      <stop stop-color="#27ada3" offset="1"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" y2="0" x2="9000" y1="1000" x1="9000" id="linear-gradient-5">
+      <stop stop-color="#73c48f" offset="0"/>
+      <stop stop-color="#c3c48f" offset="1"/>
+    </linearGradient>
+  </defs>
+  <rect height="1000" width="2000" y="0" class="cls-1"/>
+  <rect height="1000" width="2000" x="2000" class="cls-4"/>
+  <rect height="1000" width="2000" y="0" x="4000" class="cls-2"/>
+  <rect height="1000" width="2000" y="0" x="6000" class="cls-3"/>
+  <rect height="1000" width="2000" y="0" x="8000" class="cls-5"/>
+</svg>

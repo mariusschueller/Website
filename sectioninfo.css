@@ -1,0 +1,41 @@
+.section-info {
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+    background: rgba(15, 15, 15, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 20;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    width: 30vw;
+    color: white;
+}
+
+.section-info .title {
+    font-size: 7vw;
+}
+
+.section-info .text {
+    font-size: 1.75vw; /* for smaller screens 2*/
+    font-family: monospace;
+}
+
+.section-info .text a {
+    color: white;
+}
+
+#text_box {
+    font-family: monospace;
+    white-space: pre; /* preserve spaces */
+  }
+  /* A simple blinking cursor */
+  #text_box::after {
+    content: "|";
+    animation: blink 1s step-start infinite;
+    margin-left: 2px;
+  }
+  @keyframes blink {
+    50% { opacity: 0; }
+  }

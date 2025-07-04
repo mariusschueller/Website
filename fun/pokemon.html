@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+        <title>Pokemon</title>
+        <link rel="stylesheet" href="pokemon.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    </head>
+    <body>
+        <img src="/counter/counter.php" style="display: none;">
+        <!-- Normal Fire Water Electric Grass Ice Fighting Poison Ground Flying Psychic Bug Rock Ghost Dragon Dark Steel Fairy -->
+        <!-- 0      1    2     3        4     5   6        7      8      9      10      11  12   13    14     15   16    17 -->
+        
+        <!-- Title -->
+        <h1>Pokemon Resistance and Weakness Generator</h1>
+        <!-- Many Many Buttons -->
+        <h2>Click on the pokemon type(s)</h2>
+        <div class="type-container">
+            <!-- Normal -->
+            <button id="normal" class="type normal" onclick="selectType(1)">
+                <span class="poketext">Normal</span>
+            </button>
+
+            <!-- Fire -->
+            <button id="fire" class="type fire" onclick="selectType(2)">
+                <span class="poketext">Fire</span>
+            </button>
+
+            <!-- Water -->
+            <button id="water" class="type water" onclick="selectType(3)">
+                <span class="poketext">Water</span>
+            </button>
+
+            <!-- Electric -->
+            <button id="electric" class="type electric" onclick="selectType(4)">
+                <span class="poketext">Electric</span>
+            </button>
+
+            <!-- Grass -->
+            <button id="grass" class="type grass" onclick="selectType(5)">
+                <span class="poketext">Grass</span>
+            </button>
+
+            <!-- Ice -->
+            <button id="ice" class="type ice" onclick="selectType(6)">
+                <span class="poketext">Ice</span>
+            </button>
+
+            <!-- Fighting -->
+            <button id="fighting" class="type fighting" onclick="selectType(7)">
+                <span class="poketext">Fighting</span>
+            </button>
+
+            <!-- Poison -->
+            <button id="poison" class="type poison" onclick="selectType(8)">
+                <span class="poketext">Poison</span>
+            </button>
+
+            <!-- Ground -->
+            <button id="ground" class="type ground" onclick="selectType(9)">
+                <span class="poketext">Ground</span>
+            </button>
+
+            <!-- Flying -->
+            <button id="flying" class="type flying" onclick="selectType(10)">
+                <span class="poketext">Flying</span>
+            </button>
+
+            <!-- Psychic -->
+            <button id="psychic" class="type psychic" onclick="selectType(11)">
+                <span class="poketext">Psychic</span>
+            </button>
+
+            <!-- Bug -->
+            <button id="bug" class="type bug" onclick="selectType(12)">
+                <span class="poketext">Bug</span>
+            </button>
+
+            <!-- Rock -->
+            <button id="rock" class="type rock" onclick="selectType(13)">
+                <span class="poketext">Rock</span>
+            </button>
+
+            <!-- Ghost -->
+            <button id="ghost" class="type ghost" onclick="selectType(14)">
+                <span class="poketext">Ghost</span>
+            </button>
+
+            <!-- Dragon -->
+            <button id="dragon" class="type dragon" onclick="selectType(15)">
+                <span class="poketext">Dragon</span>
+            </button>
+
+            <!-- Dark -->
+            <button id="dark" class="type dark" onclick="selectType(16)">
+                <span class="poketext">Dark</span>
+            </button>
+
+            <!-- Steel -->
+            <button id="steel" class="type steel" onclick="selectType(17)">
+                <span class="poketext">Steel</span>
+            </button>
+
+            <!-- Fairy -->
+            <button id="fairy" class="type fairy" onclick="selectType(18)">
+                <span class="poketext">Fairy</span>
+            </button>
+        </div>
+
+        <br>
+        <h2>Weak Against</h3>
+        <div id="weak" class="type-container">
+            
+            <!-- Show and hide outputs -->
+
+        </div>
+        <br>
+        <h2>Resists Against</h3>
+        <div id="resists" class="type-container">
+            
+        </div>
+        
+        <script src="pokemon.js"></script>
+    </body>

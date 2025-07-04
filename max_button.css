@@ -1,0 +1,273 @@
+.btn {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: rgba(15, 15, 15, 0.8);
+  color: white;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+  border-radius: 0.5rem;
+  display: none;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.btn:hover {
+    animation-play-state: paused;
+}
+
+/* Position helpers */
+.top-left {
+  top: 10px;
+  left: 10px;
+}
+.top-right {
+  top: 10vh;
+  right: 5vw;
+}
+.bottom-left {
+  bottom: 5vh;
+  left: 5vw;
+}
+.bottom-right {
+  bottom: 5vh;
+  right: 5vw;
+}
+.middle-left {
+  top: 40%;
+  left: 5vw;
+}
+.middle-right {
+  top: 40%;
+  right: 5vw;
+}
+
+/* Icon vs. hover‐content */
+.btn .icon,
+.btn .hover-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  width: 90%;
+  /* white-space: nowrap; */
+}
+
+.btn a {
+color: white;
+}
+
+.btn .hover-content {
+  display: none;
+  font-size: 1.5rem;
+}
+
+.btn .display-content {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: monospace;   
+}
+
+/* Expand on hover */
+.btn:hover {
+  width: 90vw;
+  height: 85vh;
+  z-index: 100;
+}
+
+/* Re-anchor corners when expanded */
+.top-left:hover {
+  top: 1vh;
+  left: 0.5vw;
+}
+.top-right:hover {
+  top: 10vh;
+  right: 5vw;
+  
+}
+.bottom-left:hover {
+  bottom: 5vh;
+  left: 5vw;
+  animation: none;
+}
+.bottom-right:hover {
+  bottom: 5vh;
+  right: 5vw;
+}
+
+
+/* Re-anchor sides when expanded and center vertically */
+.middle-left:hover {
+  top: 10vh; /* (100vh - 90vh) ÷ 2 = 5vh */
+  left: 5vw;
+  transform: none;
+}
+.middle-right:hover {
+  top: 10vh;
+  right: 5vw;
+  transform: none;
+}
+
+/* Swap icon/content visibility */
+.btn:hover .icon {
+  display: none;
+}
+
+.btn:hover .display-content {
+    display: none;
+}
+
+.btn:hover .hover-content {
+  display: block;
+  z-index: 101;
+  cursor: text;
+  pointer-events: auto; /* allow interactions like clicking links */
+  user-select: text;    /* enable text highlighting */
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.btn:hover .hover-content * {
+  user-select: text;
+}
+
+/* ----- Programmatic persistent expand ----- */
+.btn.stay-open {
+  width: 90vw;
+  height: 85vh;
+  z-index: 100;
+  animation: none !important; /* Force-disable pulsing when maximized, even over inline styles */
+}
+
+.btn.stay-open .icon,
+.btn.stay-open .display-content {
+  display: none;
+}
+
+.btn.stay-open .hover-content {
+  display: block;
+  z-index: 101;
+  cursor: text;
+  pointer-events: auto;
+  user-select: text;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Maintain correct anchoring for side buttons */
+.top-left.stay-open { top: 1vh; left: 0.5vw; }
+.top-right.stay-open { top: 10vh; right: 5vw; }
+.bottom-left.stay-open { bottom: 5vh; left: 5vw; }
+.bottom-right.stay-open { bottom: 5vh; right: 5vw; }
+.middle-left.stay-open { top: 10vh; left: 5vw; transform: none; }
+.middle-right.stay-open { top: 10vh; right: 5vw; transform: none; }
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    /* transform: scale(1); */
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    /* transform: scale(1.02); */
+    box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
+  }
+}
+
+@keyframes appear {
+    0% {opacity: 0;
+        transform: scale(0);
+    }
+    100% {opacity: 1;
+        transform: scale(1);
+    }
+  }
+
+
+  @keyframes disappear {
+    0% { opacity: 1; 
+        transform: scale(1);
+    }
+    100% { opacity: 0; 
+        transform: scale(0);
+    }
+  }
+
+
+  .about {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .btn {
+    width: 75px;
+    height: 75px;
+  }
+  
+  .btn .icon {
+    font-size: 1.5rem;
+  }
+  
+  .btn .display-content {
+    font-size: 0.7rem;
+  }
+  
+  /* Adjust positions for mobile */
+  .top-right {
+    top: 15vh;
+    right: 10px;
+  }
+  
+  .middle-right {
+    top: 40%;
+    right: 10px;
+  }
+  
+  .bottom-right {
+    bottom: 20px;
+    right: 10px;
+  }
+  
+  .middle-left {
+    top: 40%;
+    left: 10px;
+  }
+  
+  .bottom-left {
+    bottom: 20px;
+    left: 10px;
+  }
+  
+  .btn:hover {
+    width: 95vw;
+    height: 80vh;
+  }
+  
+  .middle-left:hover,
+  .middle-right:hover {
+    top: 10vh;
+  }
+}
