@@ -16,3 +16,8 @@ RewriteRule ^(.+)/$ $1 [R=301,L]
 DirectorySlash Off
 
 Redirect 301 /projects /project
+
+
+<FilesMatch "\.(js|css)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
