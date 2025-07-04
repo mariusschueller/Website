@@ -25,7 +25,7 @@ function text(){
                 section_views();
                 break;
             case "Projects":
-                animateText(text_box, "Check out some of my projects!");
+                animateText(text_box, "Check out my projects!");
                 section_views();
                 all_project_view.style.display = "flex";
                 all_project_view.style.animation = "appear 1s, pulse-glow 2s ease-in-out infinite 1s";
