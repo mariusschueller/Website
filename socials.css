@@ -1,0 +1,27 @@
+.socials {
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1vh;
+    border-radius: 1vh;
+}
+
+.socials a {
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.socials a:hover {
+    transform: scale(1.1);
+}
