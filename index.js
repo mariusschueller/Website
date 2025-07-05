@@ -147,7 +147,7 @@ const letterImage = {
 
 //////////////////////////////////
 // Gravity
-const gravity = 0.7;
+let gravity = 0.7;
 
 // Platform
 const platform = {
@@ -250,6 +250,12 @@ canvas.addEventListener('touchmove', (e) => {
 }, { passive: false });
 
 function update() {
+  player.speed = bgWidth * 0.0015;
+  player.width = bgWidth * 0.0125;
+  player.height = player.width * (120/80);
+  player.jumpStrength = player.height / 6;
+  gravity = player.jumpStrength * 0.035;
+
   // Horizontal movement
   if (keys.left) {
     player.dx = -player.speed;
@@ -281,13 +287,6 @@ function update() {
   camera.x = Math.max(0, Math.min(camera.x, bgWidth - camera.width)); // Assuming world width of 2000
   camera.y = Math.max(0, Math.min(camera.y, 1000 - camera.height)); // Assuming world height of 1000
 
-  
-  
-  if (bgHeight > 1200 && player.y + player.height > bgHeight-player.height) {
-    player.y = bgHeight-player.height - player.height;
-    player.dy = 0;
-    player.onGround = true;
-  }
   
   // Simple ground/platform collision
   if (player.y + player.height/2 > bgHeight-player.height) {
