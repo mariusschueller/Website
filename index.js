@@ -164,6 +164,10 @@ const keys = {
   up: false
 };
 
+let touchStartX = 0;
+let touchStartY = 0;
+let touchActive = false;
+
 // Event listeners
 window.addEventListener('keydown', (e) => {
   if (e.code === 'ArrowLeft' || e.code === 'KeyA') keys.left = true;
@@ -177,6 +181,73 @@ window.addEventListener('keyup', (e) => {
   if (e.code === 'ArrowRight' || e.code === 'KeyD') keys.right = false;
   if (e.code === 'ArrowUp' || e.code === 'KeyW' || e.code === 'Space') keys.up = false;
 });
+
+// Touch start handler
+canvas.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    touchActive = true;
+    const touch = e.touches[0];
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    
+    const touchY = touch.clientY / window.innerHeight;
+    const touchX = touch.clientX / window.innerWidth;
+    
+    // Top 10-50% of screen (jump)
+    if (touchY < 0.5 && touchY > 0.1) {
+        if (player.onGround) {
+            player.dy = -player.jumpStrength;
+            player.onGround = false;
+        }
+    }
+    
+    // Bottom 50% of screen (left/right movement)
+    if (touchY >= 0.5) {
+        if (touchX < 0.5) {
+            // Left side
+            keys.left = true;
+            keys.right = false;
+        } else {
+            // Right side
+            keys.right = true;
+            keys.left = false;
+        }
+    }
+}, { passive: false });
+
+// Touch end handler
+canvas.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    touchActive = false;
+    keys.left = false;
+    keys.right = false;
+});
+
+// Touch move handler (optional, for better responsiveness)
+canvas.addEventListener('touchmove', (e) => {
+    if (!touchActive) return;
+    e.preventDefault();
+    
+    const touch = e.touches[0];
+    const touchY = touch.clientY / window.innerHeight;
+    const touchX = touch.clientX / window.innerWidth;
+    
+    // Only handle left/right movement in bottom 50%
+    if (touchY >= 0.5) {
+        if (touchX < 0.5) {
+            // Left side
+            keys.left = true;
+            keys.right = false;
+        } else {
+            // Right side
+            keys.right = true;
+            keys.left = false;
+        }
+    } else {
+        keys.left = false;
+        keys.right = false;
+    }
+}, { passive: false });
 
 function update() {
   // Horizontal movement

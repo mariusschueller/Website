@@ -3,7 +3,7 @@ function findCenter(){
     return (bgWidth/5)/2 - player.width/2;
 }
 function home(){
-    player.x = (bgWidth/5)/2;
+    player.x = findCenter();
     player.y = 0;
 }
 
