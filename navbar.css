@@ -1,58 +1,56 @@
 #navbar {
-    width: 99%;
-    padding: 0.5vw;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 99%;
+  padding: 0.5vw;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #navbar span {
-    font-size: 1.5vw;
-    color: white;
-    text-align: center;
-    margin: 0;
+  font-size: 1.5vw;
+  color: white;
+  text-align: center;
+  margin: 0;
 }
 
-#navbar img{
-    height: 2.5vw;
-    margin-right: 5px;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+#navbar img {
+  height: 2.5vw;
+  margin-right: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-
-
 
 ul {
-    list-style-type: none;
-    margin: 0 0 0 auto;  
-    padding: 0;
-    display: flex;  
-    align-items: center; 
+  list-style-type: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
-  
+
 li {
-    margin: 0 0.5vw;
+  margin: 0 0.5vw;
 }
-  
+
 li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 1.5vw;
-    cursor: pointer;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.5vw;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
-    #navbar span {
-        font-size: 2vw;
-    }
+  #navbar span {
+    font-size: 2vw;
+  }
 
-    li a {
-        font-size: 2vw;
-    }
+  li a {
+    font-size: 2vw;
+  }
 }

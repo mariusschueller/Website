@@ -1,172 +1,171 @@
 /* General and Mobile-First Styles */
 .panel {
-    padding: 20px; /* Adds some space around the entire panel */
-    overflow-y: auto; /* Allows vertical scrolling */
-  }
+  padding: 20px; /* Adds some space around the entire panel */
+  overflow-y: auto; /* Allows vertical scrolling */
+}
 
-  ::-webkit-scrollbar {
-    width: 10px;
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  outline: 1px solid white;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+
+.cards {
+  list-style: none; /* Removes default list bullets */
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 20px; /* Space between cards */
+  grid-template-columns: 1fr; /* Default to a single column */
+}
+
+.cards__item {
+  display: flex;
+}
+
+.card {
+  background-color: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  transition: box-shadow 0.3s ease;
+  color: white;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allows content to fill available space */
+}
+
+.card__title {
+  font-size: 1.5rem;
+  margin: 0 0 5px 0;
+}
+
+.card__date {
+  font-size: 0.875rem;
+  color: whitesmoke;
+  margin: 0 0 15px 0;
+}
+
+/* It's better to remove the inline style="width: ...%" from your HTML img tags */
+.card__image {
+  max-width: 100%; /* Makes image responsive */
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.card__text {
+  flex-grow: 1; /* Pushes the button to the bottom */
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.learn-more {
+  display: flex;
+  padding: 10px 20px;
+  background-color: black; /* A nice blue, similar to LinkedIn */
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  outline: 1px solid white;
+  align-self: center; /* Aligns button to the left */
+}
+
+.learn-more:hover {
+  background-color: white;
+  color: black;
+  outline: 1px solid black;
+}
+
+/* Keyframe animation from your HTML */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: black;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: black;
-    outline: 1px solid white;
-    border-radius: 5px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    cursor: pointer;
-  }
-  
+}
+
+/* Fullscreen overlay for project images */
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: none; /* toggled to flex via JS on click */
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.image-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  cursor: zoom-out;
+}
+
+/* Tablet View */
+@media (min-width: 768px) {
   .cards {
-    list-style: none; /* Removes default list bullets */
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 20px; /* Space between cards */
-    grid-template-columns: 1fr; /* Default to a single column */
+    /* 2 columns for tablets */
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .cards__item {
-    display: flex;
-  }
-  
-  .card {
-    background-color:black;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    width: 100%;
-    transition: box-shadow 0.3s ease;
-    color: white;
-  }
-  
-  .card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card__content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* Allows content to fill available space */
-  }
-  
-  .card__title {
-    font-size: 1.5rem;
-    margin: 0 0 5px 0;
-  }
-  
-  .card__date {
-    font-size: 0.875rem;
-    color: whitesmoke;
-    margin: 0 0 15px 0;
-  }
-  
-  /* It's better to remove the inline style="width: ...%" from your HTML img tags */
-  .card__image {
-    max-width: 100%; /* Makes image responsive */
-    height: auto;
-    display: block;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    margin: 0 auto;
-  }
+}
 
-  
-  .card__text {
-    flex-grow: 1; /* Pushes the button to the bottom */
-    margin: 0 0 20px 0;
-    line-height: 1.5;
-    font-size: 1rem;
+/* Desktop View */
+@media (min-width: 1024px) {
+  .cards {
+    /* 3 columns for desktops */
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .learn-more {
-    display: flex;
-    padding: 10px 20px;
-    background-color: black; /* A nice blue, similar to LinkedIn */
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-    outline: 1px solid white;
-    align-self:center; /* Aligns button to the left */
-  }
-  
-  .learn-more:hover {
-    background-color: white;
-    color: black;
-    outline: 1px solid black;
-  }
-  
-  /* Keyframe animation from your HTML */
-  @keyframes reveal {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Fullscreen overlay for project images */
-  .image-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
-    display: none; /* toggled to flex via JS on click */
-    justify-content: center;
-    align-items: center;
-    z-index: 10000;
-  }
+}
 
-  .image-overlay img {
-    max-width: 90vw;
-    max-height: 90vh;
-    object-fit: contain;
-    border-radius: 8px;
-    cursor: zoom-out;
-  }
-  
-  /* Tablet View */
-  @media (min-width: 768px) {
-    .cards {
-      /* 2 columns for tablets */
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  /* Desktop View */
-  @media (min-width: 1024px) {
-    .cards {
-      /* 3 columns for desktops */
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
+details {
+  outline: 1px solid white;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-  details {
-    outline: 1px solid white;
-    cursor: pointer;
-    border-radius: 5px;
-    padding: 10px;
-  }
-  
-  summary {
-    font-size: 1rem;
-  }
+summary {
+  font-size: 1rem;
+}

@@ -15,7 +15,7 @@
 }
 
 .btn:hover {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 /* Position helpers */
@@ -57,7 +57,7 @@
 }
 
 .btn a {
-color: white;
+  color: white;
 }
 
 .btn .hover-content {
@@ -66,12 +66,12 @@ color: white;
 }
 
 .btn .display-content {
-    display: block;
-    text-align: center;
-    width: 100%;
-    margin-top: auto;
-    margin-bottom: auto;
-    font-family: monospace;   
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: monospace;
 }
 
 /* Expand on hover */
@@ -89,7 +89,6 @@ color: white;
 .top-right:hover {
   top: 10vh;
   right: 5vw;
-  
 }
 .bottom-left:hover {
   bottom: 5vh;
@@ -100,7 +99,6 @@ color: white;
   bottom: 5vh;
   right: 5vw;
 }
-
 
 /* Re-anchor sides when expanded and center vertically */
 .middle-left:hover {
@@ -120,7 +118,7 @@ color: white;
 }
 
 .btn:hover .display-content {
-    display: none;
+  display: none;
 }
 
 .btn:hover .hover-content {
@@ -128,7 +126,7 @@ color: white;
   z-index: 101;
   cursor: text;
   pointer-events: auto; /* allow interactions like clicking links */
-  user-select: text;    /* enable text highlighting */
+  user-select: text; /* enable text highlighting */
   position: relative;
   top: 0;
   left: 0;
@@ -171,12 +169,32 @@ color: white;
 }
 
 /* Maintain correct anchoring for side buttons */
-.top-left.stay-open { top: 1vh; left: 0.5vw; }
-.top-right.stay-open { top: 10vh; right: 5vw; }
-.bottom-left.stay-open { bottom: 5vh; left: 5vw; }
-.bottom-right.stay-open { bottom: 5vh; right: 5vw; }
-.middle-left.stay-open { top: 10vh; left: 5vw; transform: none; }
-.middle-right.stay-open { top: 10vh; right: 5vw; transform: none; }
+.top-left.stay-open {
+  top: 1vh;
+  left: 0.5vw;
+}
+.top-right.stay-open {
+  top: 10vh;
+  right: 5vw;
+}
+.bottom-left.stay-open {
+  bottom: 5vh;
+  left: 5vw;
+}
+.bottom-right.stay-open {
+  bottom: 5vh;
+  right: 5vw;
+}
+.middle-left.stay-open {
+  top: 10vh;
+  left: 5vw;
+  transform: none;
+}
+.middle-right.stay-open {
+  top: 10vh;
+  right: 5vw;
+  transform: none;
+}
 
 @keyframes pulse-glow {
   0%,
@@ -191,34 +209,36 @@ color: white;
 }
 
 @keyframes appear {
-    0% {opacity: 0;
-        transform: scale(0);
-    }
-    100% {opacity: 1;
-        transform: scale(1);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0);
   }
-
-
-  @keyframes disappear {
-    0% { opacity: 1; 
-        transform: scale(1);
-    }
-    100% { opacity: 0; 
-        transform: scale(0);
-    }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
+}
 
-
-  .about {
-    height: 100%;
-    width: 100%;
-    overflow-y: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    transform: scale(1);
   }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.about {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
@@ -226,46 +246,46 @@ color: white;
     width: 75px;
     height: 75px;
   }
-  
+
   .btn .icon {
     font-size: 1.5rem;
   }
-  
+
   .btn .display-content {
     font-size: 0.7rem;
   }
-  
+
   /* Adjust positions for mobile */
   .top-right {
     top: 15vh;
     right: 10px;
   }
-  
+
   .middle-right {
     top: 40%;
     right: 10px;
   }
-  
+
   .bottom-right {
     bottom: 20px;
     right: 10px;
   }
-  
+
   .middle-left {
     top: 40%;
     left: 10px;
   }
-  
+
   .bottom-left {
     bottom: 20px;
     left: 10px;
   }
-  
+
   .btn:hover {
     width: 95vw;
     height: 80vh;
   }
-  
+
   .middle-left:hover,
   .middle-right:hover {
     top: 10vh;

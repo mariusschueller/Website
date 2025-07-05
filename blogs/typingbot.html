@@ -1,392 +1,437 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-        <title>Typing Bot</title>
-        <link rel="stylesheet" href="BlogPageNew.css">
-<link rel="stylesheet" href="/projects.css">
-<link rel="stylesheet" href="/max_button.css">
-<link rel="stylesheet" href="/navbar.css">
-<link rel="stylesheet" href="/font.css">
-        
-        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-        
-    </head>
-    <body>
-        <img src="/counter/counter.php" style="display: none;">
-<div id="navbar">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Typing Bot</title>
+  <link rel="stylesheet" href="BlogPageNew.css">
+  <link rel="stylesheet" href="/projects.css">
+  <link rel="stylesheet" href="/max_button.css">
+  <link rel="stylesheet" href="/navbar.css">
+  <link rel="stylesheet" href="/font.css">
+
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+</head>
+
+<body>
+  <img src="/counter/counter.php" style="display: none;">
+  <div id="navbar">
     <a href="/home.html"> <img src="/images/Logo.png"></a>
     <span>Marius Schueller</span>
-      <ul>
-        <li><a href="/home.html">Home</a></li>
-      </ul>
+    <ul>
+      <li><a href="/home.html">Home</a></li>
+    </ul>
   </div>
-        <div class="content">
-            <button id="blog-view" class="expand-btn btn top-right">
-    <span class="display-content">View<br>Blogs</span>
-    <span class="hover-content">
-      <!--Blog Post 1-->
-      <div class="panel">
-    <div class="blog-container">
-      <div class="blog-header">
-        <div class="blog-cover">
-          <img src="/images/cspaperdailybanner.png" style="object-position:left;">
-        </div>
-      </div>
-
-      <div class="blog-body">
-        <div class="blog-title">
-          <h1><a href="blogs/cspaperdaily.html">Introducing CS Paper Daily</a></h1>
-        </div>
-        <div class="blog-summary">
-          <p>
-            I created the site <a href="https://cspaperdaily.com" target="_blank">
-              cspaperdaily.com</a>. It gives users computer science papers to 
-              read each day with the goal of creating a habit. 
-        </div>
-        <p class="read-more"><a href="blogs/cspaperdaily.html">Read</a></p>
-      </div>
-
-      <div class="footer">
-        <p class="date">2/18/2025</p>
-      </div>
-    </div>
-
-    <!--Blog Post 2-->
-    <div class="blog-container">
-      <div class="blog-header">
-        <div class="blog-cover">
-          <img src="/images/ledboardgraphic.png" style="object-position:left;">
-        </div>
-      </div>
-
-      <div class="blog-body">
-        <div class="blog-title">
-          <h1><a href="blogs/rgbmatrix.html">Building a Custom Animation Display</a></h1>
-        </div>
-        <div class="blog-summary">
-          <p>I programmed a light board to play any animation I want whenever I want. Here’s how I did it...
-        </div>
-        <p class="read-more"><a href="blogs/rgbmatrix.html">Read On</a></p>
-      </div>
-
-      <div class="footer">
-
-        <p class="date">1/31/2025</p>
-      </div>
-    </div>
-
-    <!--Blog Post 3-->
-    <div class="blog-container">
-      <div class="blog-header">
-        <div class="blog-cover">
-          <img src="/images/vandyfootball.jpg" style="object-position: bottom;">
-        </div>
-      </div>
-
-      <div class="blog-body">
-        <div class="blog-title">
-          <h1><a href="blogs/finalfall.html">The Final Fall: My Semester Review</a></h1>
-        </div>
-        <div class="blog-summary">
-          <p>So, it’s my last fall semester, and I’m now a senior. With 3 years under my belt already, I think I’ve got
-            this college thing pretty figured out. This semester was without a doubt my favorite semester so far. Here’s
-            my review…</p>
-        </div>
-        <p class="read-more"><a href="blogs/finalfall.html">Read On</a></p>
-      </div>
-
-      <div class="footer">
-
-        <p class="date">12/29/2024</p>
-      </div>
-    </div>
-
-
-      <div class="blog-container">
-        <div class="blog-header">
-          <div class="blog-cover">
-            <img src="/images/recruitment.png" style="object-position: left;">
-          </div>
-        </div>
-
-        <div class="blog-body">
-          <div class="blog-title">
-            <h1><a href="blogs/fine_i'll_do_leetcode.html"><br>Fine, I'll Do LeetCode</a></h1>
-          </div>
-          <div class="blog-summary">
-            <p>In the current cs job market, I would argue it’s not easy to get a job (or internship) as a
-              cs major. It feels like there are more applicants than jobs. I’ve gotten lucky the past few
-              years when getting internships, but now I graduate in less than a year and I need to start
-              thinking about a full-time job. That said, the most dreaded part of the job process for cs
-              majors is the technical interview...</p>
-          </div>
-          <p class="read-more"><a href="blogs/fine_i'll_do_leetcode.html">Read On</a></p>
-        </div>
-
-        <div class="footer">
-
-          <p class="date">9/6/2024</p>
-          <p class="languages">Job Interview</p>
-        </div>
-      </div>
-      <div class="blog-container">
-        <div class="blog-header">
-          <div class="blog-cover">
-            <img src="/images/downtownnashville.jpg" style="object-position: left;">
-          </div>
-        </div>
-
-        <div class="blog-body">
-          <div class="blog-title">
-            <h1><a href="blogs/Summer2024Update.html"><br>Summer 2024 Update</a></h1>
-          </div>
-          <div class="blog-summary">
-            <p>The summer has passed, so here’s a little life update on what happened this summer...</p>
-          </div>
-          <p class="read-more"><a href="blogs/Summer2024Update.html">Read On</a></p>
-        </div>
-
-        <div class="footer">
-
-          <p class="date">8/26/2024</p>
-          <p class="languages">Life</p>
-        </div>
-      </div>
-      <div class="blog-container">
-        <div class="blog-header">
-          <div class="blog-cover">
-            <img src="/images/monkeytype.png" style="object-position: left;">
-          </div>
-        </div>
-
-        <div class="blog-body">
-          <div class="blog-title">
-            <h1><a href="blogs/typingbot.html">Making a Typing Test Bot</a></h1>
-          </div>
-          <div class="blog-summary">
-            <p>I have some friends who are fast typers. That being said, I want to show them that I can type faster than
-              them if I wanted to, and by that I mean I can make something that can type faster than them. Here's my
-              step by step process...</p>
-          </div>
-          <p class="read-more"><a href="blogs/typingbot.html">Read On</a></p>
-        </div>
-
-        <div class="footer">
-
-          <p class="date">2/17/2024</p>
-          <p class="languages">Web Scraping&nbsp Python&nbsp</p>
-        </div>
-      </div>
-
-      <div class="blog-container">
-        <div class="blog-header">
-          <div class="blog-cover">
-            <img src="/images/holidayblog/banner.jpg">
-          </div>
-        </div>
-
-        <div class="blog-body">
-          <div class="blog-title">
-            <h1><a href="blogs/Handmade Holidays.html"><br>Handmade for the Holidays: DIY Holiday Gifts with a Personal
-                Touch</a></h1>
-          </div>
-          <div class="blog-summary">
-            <p>Tis the season! My family doesn't do lists for gifts, and I find it very hard to buy great gifts for
-              other people. As a result, for the past few years, I've been making DIY gifts. This year, creating my
-              gifts was fun, and I ended up with some cool projects, but I ran into many issues. All the <b>final</b>
-              gifts should be able to be able to be made with minimal upfront cost, and maybe some basic graphic design.
-              So, here's my documented experience...</p>
-          </div>
-          <p class="read-more"><a href="blogs/Handmade Holidays.html">Read On</a></p>
-        </div>
-
-        <div class="footer">
-
-          <p class="date">12/30/2023</p>
-          <p class="languages">CAD&nbsp Graphic Design&nbsp Epoxy</p>
-        </div>
-      </div>
-
-      <div class="blog-container">
-        <div class="blog-header">
-          <div class="blog-cover">
-            <img src="/images/20230319_083705.jpg">
-          </div>
-        </div>
-
-        <div class="blog-body">
-          <div class="blog-title">
-            <h1><a href="blogs/Semester Review.html"><br>A Semester Review (As a Vanderbilt CS Student)</a></h1>
-          </div>
-          <div class="blog-summary">
-            <p>Another semester has passed, and I wanted to give a recap/review of how things went. I did a lot of
-              stuff, and there's a lot I want to talk about. So, here's everything from my academic to social life, all
-              in one post...</p>
-          </div>
-          <p class="read-more"><a href="blogs/Semester Review.html">Read On</a></p>
-        </div>
-
-        <div class="footer">
-
-          <p class="date">12/17/2023</p>
-          <!--<p class="languages">HTML CSS</p>-->
-        </div>
-      </div>
-
-      <div class="blog-container">
-        <div class="blog-header">
-        </div>
-
-        <div class="blog-body">
-          <div class="blog-title">
-            <h1><a href="blogs/thisWeekILearned.html"><br>This week I learned to _</a></h1>
-          </div>
-          <div class="blog-summary">
-            <p>This week, I learned to juggle. Yeah, kind of random, but I decided it was something I wanted to do.
-              So, on Sunday night, I started trying to learn.
-              I think I watched 1 video a week ago and then forgot almost all of it.
-              Regardless, I just started practicing and got the hang of it after like an hour.
-              After a little more practice, I'm more consistent and would say I've learned the skill pretty well...</p>
-          </div>
-          <p class="read-more"><a href="blogs/thisWeekILearned.html">Read On</a></p>
-        </div>
-
-        <div class="footer">
-
-          <p class="date">12/03/2023</p>
-          <!--<p class="languages">HTML CSS</p>-->
-        </div>
-      </div>
-
-      <div class="blog-container">
-        <div class="blog-header">
-        </div>
-
-        <div class="blog-body">
-          <div class="blog-title">
-            <h1><a href="blogs/ItBegins.html"><br>And so it Begins</a></h1>
-          </div>
-          <div class="blog-summary">
-            <p>I made a website to share all of my projects!
-              By creating this website, you're able to read the words you're reading right now.
-              I've been wanting to make a website for a while and last weekend I decided to dive right in and do it.
-              So, over the course of 3 days, I designed this website which I hope to continue updating.
-              It was made with only HTML and CSS. I designed the home, projects, about, contact, and blog pages...</p>
-          </div>
-          <p class="read-more"><a href="blogs/ItBegins.html">Read On</a></p>
-        </div>
-
-        <div class="footer">
-
-          <p class="date">11/21/2023</p>
-          <p class="languages">HTML CSS</p>
-        </div>
-      </div>
-    </div>
-    </span>
-  </button>
-<div class="blog-container">
-                
-                <div class="blog-header">
-                <div class="blog-cover">
-                    <img src="/images/monkeytype.png" style="object-position:left;">
-                </div>
-                </div>
-                
-                <div class="blog-body">
-                    <div class="blog-title">
-                        <h1><br>Making a Typing Test Bot</h1>
-                    </div>
-                    <p>2/17/2024</p>
-                    <div class="blog-summary">
-                        <p>
-                        <br>
-                        I have some friends who are fast typers. That being said, I want to show them that I can type faster than them if I wanted to, and by that I mean I can make something that can type faster than them. Here's my step by step process.
-                        <br><br>
-                        </p>
-                        
-                        <h3>Step 1: Strategizing</h3>
-                        
-                        <p>
-                            After some thought, there are two possible routes to go down. I can either take a screenshot and read the text on the screen, or I can try to web scrape the text and do my typing through an input. I'm going to try web scraping first because I think it'll work better when new words appear because, in theory, they would just be in the HTML.
-                            <br><br>
-                        </p>
-                        
-                        
-                        <h3>Step 2: Inspecting Elements</h3>
-                        <p>
-                            Since I'm going to be doing web scraping, I'll need to be able to see and manipulate the HTML code on the website. So, after opening Monkey Type, a popular typing test website that I've seen my friends use, I began right-clicking stuff and hitting inspect element. 
-                            <br><br>
-                            <h4>Getting the current word</h4>
-                            After right-clicking around, I'm finding a bunch of divs in a word class and a bunch of letter elements inside of it. With further inspection, it seems that the current word that you should type also has the "active" class which I think will be very helpful in the future. Lastly, I want to make sure that this pattern holds true as you type words, which it does.
-                            <br>
-                            <video autoplay loop style="width: 80%; display: flex; margin: auto; margin-top: 10px;">
-                                <source src="/videos/Monkeytype Active Word.mp4" type="video/mp4">
-                              Your browser does not support the video tag.
-                            </video>
-                            <br><br>
-                            <h4>Finding the input</h4>
-                            The next thing I need to find is the place to type out the words. My assumption for how the website works, is that it uses an input element that I can find in HTML. Clicking around and randomly inspecting elements isn't working, so I plan B is doing a ctrl+f search on the HTML code for "input". With that, I see an element with an id of wordsInput which I'm gonna assume is the input that takes in the typing.
-                            <br><img src="/images/monkeytypeInput.png" width="80%" style="display:flex; margin: auto; margin-top: 10px; border-radius: 5px;">
-                            <br><br>
-                        </p>
-                        
-                        <h3>Step 3: Let's Get Coding</h3>
-                        <p>
-                            I'm gonna try to use Selenium to do the webscraping and inputting of information. Selenium should allow me to view and select HTML elements and input the words. So I wrote this to get started and just open the site.
-                            <script src="https://gist.github.com/mariusschueller/4edc74ea030dbe66cc5f0f5cf7d3b217.js"></script>
-                            <br>
-                            <h4>Printing out the current word</h4>
-                            To get the current word, I'm trying to get the element where class="word active". My initial thought is to use By.CLASS_NAME, but this won't work when an element has more than one class (and our element has the classes word and active). So I used By.CSS_SELECTOR and used the dot notation to get both classes.
-                            <br><br><script src="https://gist.github.com/mariusschueller/f4261ab6abed9ed9ee0ad4ae70505623.js"></script>
-                            <br>
-                            
-                            <h4>Typing out a word</h4>
-                            Now comes the typing. My guess for how the website works with input is indeed correct! So I'm typing everything into that input. I'm also seeing that the input isn't typed unless the cookies popup is answered, so I'm adding something to click on that before continuing.
-                            <br><br><script src="https://gist.github.com/mariusschueller/9a4abaf9dc95c38c659ff75954ac946a.js"></script>
-                            <br><br>
-
-                            <h4>Typing many words</h4>
-                            Typing out one word is cool, but I want get this to type out more words. As you can see below, I'm opting for a forever loop that stops once an error occurs. I'm noticing that the page has a results element that has the class "hidden", which then gets removed once the test is over. I keep running the loop until our result element is no longer hidden because the test has ended. At that point an error occurs which then gets caught, and I break from the while loop.
-                            <br><br><script src="https://gist.github.com/mariusschueller/8d33afb978ecaecbfe530835f0c3b104.js"></script>
-                            <br><br>
-
-                            <h4>Final Changes</h4>
-                            Using a manual time delay is lame. Let's change things so we'll just wait until the cookies button is loaded, and then click it. I also want the final stats to be printed. I found the element that contains words per minute, right clicked it, and copied its (css) selector to print out the word count.
-                            <br><br>
-                            Here's the final code:
-                            <br>
-                            <script src="https://gist.github.com/mariusschueller/5b63179991c31108e58b5d0fa2a851d6.js"></script>
-                            <a href="https://github.com/mariusschueller/typing-tester" target="_blank">Github</a>
-                            <br><br>
-                        </p>
-
-                        <h3>Ending Thoughts</h3>
-                        <p>This was a chill project. I've done a couple of selenium projects in the past, so I know the main pitfalls and avoided them in this project. That being said, I'm surprised I didn't run into problems with the current active word. The program usually scores somewhere between 250-800 wpm depending on the wifi speed and how my computer is feeling. From my test-runs, it beats the human record of 216 wpm. It's a cute little program of just under 50 lines of code and took around an hour of coding with no chatGPT assistance. I can't wait to challenge my friends to typing tests and crush them!
-                            <br><br>
-                            
-                        </p>
-
-                        <video controls loop style="width: 100%;">
-                            <source src="/videos/Typing Test Video.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-
-                        <p>- Marius</p>
-
-                    </div>
-                </div>
-                <div class="footer">
-                </div>
-                
+  <div class="content">
+    <button id="blog-view" class="expand-btn btn top-right">
+      <span class="display-content">View<br>Blogs</span>
+      <span class="hover-content">
+        <!--Blog Post 1-->
+        <div class="panel">
+          <div class="blog-container">
+            <div class="blog-header">
+              <div class="blog-cover">
+                <img src="/images/cspaperdailybanner.png" style="object-position:left;">
+              </div>
             </div>
 
-            <!--SENDGRID SUBSCRIBE-->
-            <!--<iframe class="new-subscribe" src="https://cdn.forms-content-1.sg-form.com/4ea806cf-a0da-11ee-a940-cead52b50d91" width="500" height="550">-->
+            <div class="blog-body">
+              <div class="blog-title">
+                <h1><a href="blogs/cspaperdaily.html">Introducing CS Paper Daily</a></h1>
+              </div>
+              <div class="blog-summary">
+                <p>
+                  I created the site <a href="https://cspaperdaily.com" target="_blank">
+                    cspaperdaily.com</a>. It gives users computer science papers to
+                  read each day with the goal of creating a habit.
+              </div>
+              <p class="read-more"><a href="blogs/cspaperdaily.html">Read</a></p>
+            </div>
 
-            <!--  -->
+            <div class="footer">
+              <p class="date">2/18/2025</p>
+            </div>
+          </div>
+
+          <!--Blog Post 2-->
+          <div class="blog-container">
+            <div class="blog-header">
+              <div class="blog-cover">
+                <img src="/images/ledboardgraphic.png" style="object-position:left;">
+              </div>
+            </div>
+
+            <div class="blog-body">
+              <div class="blog-title">
+                <h1><a href="blogs/rgbmatrix.html">Building a Custom Animation Display</a></h1>
+              </div>
+              <div class="blog-summary">
+                <p>I programmed a light board to play any animation I want whenever I want. Here’s how I did it...
+              </div>
+              <p class="read-more"><a href="blogs/rgbmatrix.html">Read On</a></p>
+            </div>
+
+            <div class="footer">
+
+              <p class="date">1/31/2025</p>
+            </div>
+          </div>
+
+          <!--Blog Post 3-->
+          <div class="blog-container">
+            <div class="blog-header">
+              <div class="blog-cover">
+                <img src="/images/vandyfootball.jpg" style="object-position: bottom;">
+              </div>
+            </div>
+
+            <div class="blog-body">
+              <div class="blog-title">
+                <h1><a href="blogs/finalfall.html">The Final Fall: My Semester Review</a></h1>
+              </div>
+              <div class="blog-summary">
+                <p>So, it’s my last fall semester, and I’m now a senior. With 3 years under my belt already, I think
+                  I’ve got
+                  this college thing pretty figured out. This semester was without a doubt my favorite semester so far.
+                  Here’s
+                  my review…</p>
+              </div>
+              <p class="read-more"><a href="blogs/finalfall.html">Read On</a></p>
+            </div>
+
+            <div class="footer">
+
+              <p class="date">12/29/2024</p>
+            </div>
+          </div>
+
+
+          <div class="blog-container">
+            <div class="blog-header">
+              <div class="blog-cover">
+                <img src="/images/recruitment.png" style="object-position: left;">
+              </div>
+            </div>
+
+            <div class="blog-body">
+              <div class="blog-title">
+                <h1><a href="blogs/fine_i'll_do_leetcode.html"><br>Fine, I'll Do LeetCode</a></h1>
+              </div>
+              <div class="blog-summary">
+                <p>In the current cs job market, I would argue it’s not easy to get a job (or internship) as a
+                  cs major. It feels like there are more applicants than jobs. I’ve gotten lucky the past few
+                  years when getting internships, but now I graduate in less than a year and I need to start
+                  thinking about a full-time job. That said, the most dreaded part of the job process for cs
+                  majors is the technical interview...</p>
+              </div>
+              <p class="read-more"><a href="blogs/fine_i'll_do_leetcode.html">Read On</a></p>
+            </div>
+
+            <div class="footer">
+
+              <p class="date">9/6/2024</p>
+              <p class="languages">Job Interview</p>
+            </div>
+          </div>
+          <div class="blog-container">
+            <div class="blog-header">
+              <div class="blog-cover">
+                <img src="/images/downtownnashville.jpg" style="object-position: left;">
+              </div>
+            </div>
+
+            <div class="blog-body">
+              <div class="blog-title">
+                <h1><a href="blogs/Summer2024Update.html"><br>Summer 2024 Update</a></h1>
+              </div>
+              <div class="blog-summary">
+                <p>The summer has passed, so here’s a little life update on what happened this summer...</p>
+              </div>
+              <p class="read-more"><a href="blogs/Summer2024Update.html">Read On</a></p>
+            </div>
+
+            <div class="footer">
+
+              <p class="date">8/26/2024</p>
+              <p class="languages">Life</p>
+            </div>
+          </div>
+          <div class="blog-container">
+            <div class="blog-header">
+              <div class="blog-cover">
+                <img src="/images/monkeytype.png" style="object-position: left;">
+              </div>
+            </div>
+
+            <div class="blog-body">
+              <div class="blog-title">
+                <h1><a href="blogs/typingbot.html">Making a Typing Test Bot</a></h1>
+              </div>
+              <div class="blog-summary">
+                <p>I have some friends who are fast typers. That being said, I want to show them that I can type faster
+                  than
+                  them if I wanted to, and by that I mean I can make something that can type faster than them. Here's my
+                  step by step process...</p>
+              </div>
+              <p class="read-more"><a href="blogs/typingbot.html">Read On</a></p>
+            </div>
+
+            <div class="footer">
+
+              <p class="date">2/17/2024</p>
+              <p class="languages">Web Scraping&nbsp Python&nbsp</p>
+            </div>
+          </div>
+
+          <div class="blog-container">
+            <div class="blog-header">
+              <div class="blog-cover">
+                <img src="/images/holidayblog/banner.jpg">
+              </div>
+            </div>
+
+            <div class="blog-body">
+              <div class="blog-title">
+                <h1><a href="blogs/Handmade Holidays.html"><br>Handmade for the Holidays: DIY Holiday Gifts with a
+                    Personal
+                    Touch</a></h1>
+              </div>
+              <div class="blog-summary">
+                <p>Tis the season! My family doesn't do lists for gifts, and I find it very hard to buy great gifts for
+                  other people. As a result, for the past few years, I've been making DIY gifts. This year, creating my
+                  gifts was fun, and I ended up with some cool projects, but I ran into many issues. All the
+                  <b>final</b>
+                  gifts should be able to be able to be made with minimal upfront cost, and maybe some basic graphic
+                  design.
+                  So, here's my documented experience...</p>
+              </div>
+              <p class="read-more"><a href="blogs/Handmade Holidays.html">Read On</a></p>
+            </div>
+
+            <div class="footer">
+
+              <p class="date">12/30/2023</p>
+              <p class="languages">CAD&nbsp Graphic Design&nbsp Epoxy</p>
+            </div>
+          </div>
+
+          <div class="blog-container">
+            <div class="blog-header">
+              <div class="blog-cover">
+                <img src="/images/20230319_083705.jpg">
+              </div>
+            </div>
+
+            <div class="blog-body">
+              <div class="blog-title">
+                <h1><a href="blogs/Semester Review.html"><br>A Semester Review (As a Vanderbilt CS Student)</a></h1>
+              </div>
+              <div class="blog-summary">
+                <p>Another semester has passed, and I wanted to give a recap/review of how things went. I did a lot of
+                  stuff, and there's a lot I want to talk about. So, here's everything from my academic to social life,
+                  all
+                  in one post...</p>
+              </div>
+              <p class="read-more"><a href="blogs/Semester Review.html">Read On</a></p>
+            </div>
+
+            <div class="footer">
+
+              <p class="date">12/17/2023</p>
+              <!--<p class="languages">HTML CSS</p>-->
+            </div>
+          </div>
+
+          <div class="blog-container">
+            <div class="blog-header">
+            </div>
+
+            <div class="blog-body">
+              <div class="blog-title">
+                <h1><a href="blogs/thisWeekILearned.html"><br>This week I learned to _</a></h1>
+              </div>
+              <div class="blog-summary">
+                <p>This week, I learned to juggle. Yeah, kind of random, but I decided it was something I wanted to do.
+                  So, on Sunday night, I started trying to learn.
+                  I think I watched 1 video a week ago and then forgot almost all of it.
+                  Regardless, I just started practicing and got the hang of it after like an hour.
+                  After a little more practice, I'm more consistent and would say I've learned the skill pretty well...
+                </p>
+              </div>
+              <p class="read-more"><a href="blogs/thisWeekILearned.html">Read On</a></p>
+            </div>
+
+            <div class="footer">
+
+              <p class="date">12/03/2023</p>
+              <!--<p class="languages">HTML CSS</p>-->
+            </div>
+          </div>
+
+          <div class="blog-container">
+            <div class="blog-header">
+            </div>
+
+            <div class="blog-body">
+              <div class="blog-title">
+                <h1><a href="blogs/ItBegins.html"><br>And so it Begins</a></h1>
+              </div>
+              <div class="blog-summary">
+                <p>I made a website to share all of my projects!
+                  By creating this website, you're able to read the words you're reading right now.
+                  I've been wanting to make a website for a while and last weekend I decided to dive right in and do it.
+                  So, over the course of 3 days, I designed this website which I hope to continue updating.
+                  It was made with only HTML and CSS. I designed the home, projects, about, contact, and blog pages...
+                </p>
+              </div>
+              <p class="read-more"><a href="blogs/ItBegins.html">Read On</a></p>
+            </div>
+
+            <div class="footer">
+
+              <p class="date">11/21/2023</p>
+              <p class="languages">HTML CSS</p>
+            </div>
+          </div>
         </div>
-    </body>
+      </span>
+    </button>
+    <div class="blog-container">
+
+      <div class="blog-header">
+        <div class="blog-cover">
+          <img src="/images/monkeytype.png" style="object-position:left;">
+        </div>
+      </div>
+
+      <div class="blog-body">
+        <div class="blog-title">
+          <h1><br>Making a Typing Test Bot</h1>
+        </div>
+        <p>2/17/2024</p>
+        <div class="blog-summary">
+          <p>
+            <br>
+            I have some friends who are fast typers. That being said, I want to show them that I can type faster than
+            them if I wanted to, and by that I mean I can make something that can type faster than them. Here's my step
+            by step process.
+            <br><br>
+          </p>
+
+          <h3>Step 1: Strategizing</h3>
+
+          <p>
+            After some thought, there are two possible routes to go down. I can either take a screenshot and read the
+            text on the screen, or I can try to web scrape the text and do my typing through an input. I'm going to try
+            web scraping first because I think it'll work better when new words appear because, in theory, they would
+            just be in the HTML.
+            <br><br>
+          </p>
+
+
+          <h3>Step 2: Inspecting Elements</h3>
+          <p>
+            Since I'm going to be doing web scraping, I'll need to be able to see and manipulate the HTML code on the
+            website. So, after opening Monkey Type, a popular typing test website that I've seen my friends use, I began
+            right-clicking stuff and hitting inspect element.
+            <br><br>
+          <h4>Getting the current word</h4>
+          After right-clicking around, I'm finding a bunch of divs in a word class and a bunch of letter elements inside
+          of it. With further inspection, it seems that the current word that you should type also has the "active"
+          class which I think will be very helpful in the future. Lastly, I want to make sure that this pattern holds
+          true as you type words, which it does.
+          <br>
+          <video autoplay loop style="width: 80%; display: flex; margin: auto; margin-top: 10px;">
+            <source src="/videos/Monkeytype Active Word.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <br><br>
+          <h4>Finding the input</h4>
+          The next thing I need to find is the place to type out the words. My assumption for how the website works, is
+          that it uses an input element that I can find in HTML. Clicking around and randomly inspecting elements isn't
+          working, so I plan B is doing a ctrl+f search on the HTML code for "input". With that, I see an element with
+          an id of wordsInput which I'm gonna assume is the input that takes in the typing.
+          <br><img src="/images/monkeytypeInput.png" width="80%"
+            style="display:flex; margin: auto; margin-top: 10px; border-radius: 5px;">
+          <br><br>
+          </p>
+
+          <h3>Step 3: Let's Get Coding</h3>
+          <p>
+            I'm gonna try to use Selenium to do the webscraping and inputting of information. Selenium should allow me
+            to view and select HTML elements and input the words. So I wrote this to get started and just open the site.
+            <script src="https://gist.github.com/mariusschueller/4edc74ea030dbe66cc5f0f5cf7d3b217.js"></script>
+            <br>
+          <h4>Printing out the current word</h4>
+          To get the current word, I'm trying to get the element where class="word active". My initial thought is to use
+          By.CLASS_NAME, but this won't work when an element has more than one class (and our element has the classes
+          word and active). So I used By.CSS_SELECTOR and used the dot notation to get both classes.
+          <br><br>
+          <script src="https://gist.github.com/mariusschueller/f4261ab6abed9ed9ee0ad4ae70505623.js"></script>
+          <br>
+
+          <h4>Typing out a word</h4>
+          Now comes the typing. My guess for how the website works with input is indeed correct! So I'm typing
+          everything into that input. I'm also seeing that the input isn't typed unless the cookies popup is answered,
+          so I'm adding something to click on that before continuing.
+          <br><br>
+          <script src="https://gist.github.com/mariusschueller/9a4abaf9dc95c38c659ff75954ac946a.js"></script>
+          <br><br>
+
+          <h4>Typing many words</h4>
+          Typing out one word is cool, but I want get this to type out more words. As you can see below, I'm opting for
+          a forever loop that stops once an error occurs. I'm noticing that the page has a results element that has the
+          class "hidden", which then gets removed once the test is over. I keep running the loop until our result
+          element is no longer hidden because the test has ended. At that point an error occurs which then gets caught,
+          and I break from the while loop.
+          <br><br>
+          <script src="https://gist.github.com/mariusschueller/8d33afb978ecaecbfe530835f0c3b104.js"></script>
+          <br><br>
+
+          <h4>Final Changes</h4>
+          Using a manual time delay is lame. Let's change things so we'll just wait until the cookies button is loaded,
+          and then click it. I also want the final stats to be printed. I found the element that contains words per
+          minute, right clicked it, and copied its (css) selector to print out the word count.
+          <br><br>
+          Here's the final code:
+          <br>
+          <script src="https://gist.github.com/mariusschueller/5b63179991c31108e58b5d0fa2a851d6.js"></script>
+          <a href="https://github.com/mariusschueller/typing-tester" target="_blank">Github</a>
+          <br><br>
+          </p>
+
+          <h3>Ending Thoughts</h3>
+          <p>This was a chill project. I've done a couple of selenium projects in the past, so I know the main pitfalls
+            and avoided them in this project. That being said, I'm surprised I didn't run into problems with the current
+            active word. The program usually scores somewhere between 250-800 wpm depending on the wifi speed and how my
+            computer is feeling. From my test-runs, it beats the human record of 216 wpm. It's a cute little program of
+            just under 50 lines of code and took around an hour of coding with no chatGPT assistance. I can't wait to
+            challenge my friends to typing tests and crush them!
+            <br><br>
+
+          </p>
+
+          <video controls loop style="width: 100%;">
+            <source src="/videos/Typing Test Video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <p>- Marius</p>
+
+        </div>
+      </div>
+      <div class="footer">
+      </div>
+
+    </div>
+
+    <!--SENDGRID SUBSCRIBE-->
+    <!--<iframe class="new-subscribe" src="https://cdn.forms-content-1.sg-form.com/4ea806cf-a0da-11ee-a940-cead52b50d91" width="500" height="550">-->
+
+    <!--  -->
+  </div>
+</body>
+
 </html>

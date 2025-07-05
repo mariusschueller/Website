@@ -1,39 +1,53 @@
-const canvas = document.getElementById('gameCanvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
 
-const text_box = document.getElementById('text');
-const section_text = document.getElementById('section-text');
+const text_box = document.getElementById("text");
+const section_text = document.getElementById("section-text");
 
-const all_project_view = document.getElementById('all-project-view');
-const coding_project_view = document.getElementById('coding-project-view');
-const music_project_view = document.getElementById('music-project-view');
-const design_project_view = document.getElementById('design-project-view');
-const threeD_project_view = document.getElementById('3d-project-view');
+const all_project_view = document.getElementById("all-project-view");
+const coding_project_view = document.getElementById("coding-project-view");
+const music_project_view = document.getElementById("music-project-view");
+const design_project_view = document.getElementById("design-project-view");
+const threeD_project_view = document.getElementById("3d-project-view");
 
-const professional_about_view = document.getElementById('professional-about-view');
-const coding_about_view = document.getElementById('coding-about-view');
-const music_about_view = document.getElementById('music-about-view');
-const teaching_about_view = document.getElementById('teaching-about-view');
-const hobbies_about_view = document.getElementById('hobbies-about-view');
-    
-const blog_view = document.getElementById('blog-view');
+const professional_about_view = document.getElementById(
+  "professional-about-view"
+);
+const coding_about_view = document.getElementById("coding-about-view");
+const music_about_view = document.getElementById("music-about-view");
+const teaching_about_view = document.getElementById("teaching-about-view");
+const hobbies_about_view = document.getElementById("hobbies-about-view");
 
-let all_views = [all_project_view, coding_project_view, music_project_view, design_project_view, threeD_project_view, blog_view, professional_about_view, coding_about_view, music_about_view, teaching_about_view, hobbies_about_view]
+const blog_view = document.getElementById("blog-view");
+
+let all_views = [
+  all_project_view,
+  coding_project_view,
+  music_project_view,
+  design_project_view,
+  threeD_project_view,
+  blog_view,
+  professional_about_view,
+  coding_about_view,
+  music_about_view,
+  teaching_about_view,
+  hobbies_about_view,
+];
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 // Background image
 const background = new Image();
-background.src = 'background.svg';
+background.src = "background.svg";
 let bgWidth = 0;
 let bgHeight = 0;
-    
+
 // Calculate background dimensions to fill screen while maintaining aspect ratio
 function updateBackgroundSize() {
   const canvasAspect = canvas.width / canvas.height;
   const bgAspect = background.width / background.height;
-  
+
   if (canvasAspect > bgAspect) {
     // Canvas is wider than background (relative to height)
     bgWidth = canvas.width;
@@ -44,9 +58,9 @@ function updateBackgroundSize() {
     bgWidth = canvas.height * bgAspect;
   }
 }
-  
+
 // When background loads, update its size
-background.onload = function() {
+background.onload = function () {
   updateBackgroundSize();
 };
 
@@ -55,7 +69,7 @@ const camera = {
   x: 0,
   y: 0,
   width: window.innerWidth,
-  height: window.innerHeight
+  height: window.innerHeight,
 };
 
 // Player properties
@@ -69,81 +83,80 @@ const player = {
   speed: 10,
   jumpStrength: 20,
   onGround: false,
-  facingRight: false,  // Add this line to track facing direction
+  facingRight: false, // Add this line to track facing direction
   // Spritesheet properties
   spritesheet: new Image(),
-  frameWidth: 1024,  // 2048 / 4 = 512 (since there are 4 images)
+  frameWidth: 1024, // 2048 / 4 = 512 (since there are 4 images)
   frameHeight: 1024, // Full height of each frame
   currentFrame: 0,
-  frameCount: 4,    // Total frames in the spritesheet
-  frameX: 0,        // Current x position in spritesheet
-  frameY: 0,        // Current y position in spritesheet
+  frameCount: 4, // Total frames in the spritesheet
+  frameX: 0, // Current x position in spritesheet
+  frameY: 0, // Current y position in spritesheet
   animationSpeed: 0.25,
-  animationTimer: 0
+  animationTimer: 0,
 };
 
 // Load the player spritesheet
-player.spritesheet.src = 'images/marius_spritesheet.png';
+player.spritesheet.src = "images/marius_spritesheet.png";
 
 // IMAGES
 ///////////////////////////////////////////////////
 
 // Load the image
 const meImg = new Image();
-meImg.src = 'images/me.png';
+meImg.src = "images/me.png";
 
 // Position for the image
 const meImage = {
   x: 100,
   y: 100,
   width: 330,
-  height: 448
+  height: 448,
 };
 
 const comImg = new Image();
-comImg.src = 'images/computer.png';
+comImg.src = "images/computer.png";
 
 // Position for the image
 const comImage = {
   x: 100,
   y: 100,
   width: 667,
-  height: 601
+  height: 601,
 };
 
 const bulbImg = new Image();
-bulbImg.src = 'images/bulb.png';
+bulbImg.src = "images/bulb.png";
 
 // Position for the image
 const bulbImage = {
   x: 100,
   y: 100,
   width: 185,
-  height: 299
+  height: 299,
 };
 
 const handImg = new Image();
-handImg.src = 'images/hand.png';
+handImg.src = "images/hand.png";
 
 // Position for the image
 const handImage = {
   x: 100,
   y: 100,
   width: 552,
-  height: 280
+  height: 280,
 };
 
 const letterImg = new Image();
-letterImg.src = 'images/envelope.png';
+letterImg.src = "images/envelope.png";
 
 // Position for the image
 const letterImage = {
   x: 100,
   y: 100,
   width: 595,
-  height: 613
+  height: 613,
 };
-
 
 //////////////////////////////////
 // Gravity
@@ -154,14 +167,14 @@ const platform = {
   x: 0,
   y: canvas.height - 100,
   width: canvas.width,
-  height: 40
+  height: 40,
 };
 
 // Input state
 const keys = {
   left: false,
   right: false,
-  up: false
+  up: false,
 };
 
 let touchStartX = 0;
@@ -169,100 +182,112 @@ let touchStartY = 0;
 let touchActive = false;
 
 // Event listeners
-window.addEventListener('keydown', (e) => {
-  if (e.code === 'ArrowLeft' || e.code === 'KeyA') keys.left = true;
-  if (e.code === 'ArrowRight' || e.code === 'KeyD') keys.right = true;
-  if ((e.code === 'ArrowUp' || e.code === 'KeyW' || e.code === 'Space') && player.onGround) {
+window.addEventListener("keydown", (e) => {
+  if (e.code === "ArrowLeft" || e.code === "KeyA") keys.left = true;
+  if (e.code === "ArrowRight" || e.code === "KeyD") keys.right = true;
+  if (
+    (e.code === "ArrowUp" || e.code === "KeyW" || e.code === "Space") &&
+    player.onGround
+  ) {
     keys.up = true;
   }
 });
-window.addEventListener('keyup', (e) => {
-  if (e.code === 'ArrowLeft' || e.code === 'KeyA') keys.left = false;
-  if (e.code === 'ArrowRight' || e.code === 'KeyD') keys.right = false;
-  if (e.code === 'ArrowUp' || e.code === 'KeyW' || e.code === 'Space') keys.up = false;
+window.addEventListener("keyup", (e) => {
+  if (e.code === "ArrowLeft" || e.code === "KeyA") keys.left = false;
+  if (e.code === "ArrowRight" || e.code === "KeyD") keys.right = false;
+  if (e.code === "ArrowUp" || e.code === "KeyW" || e.code === "Space")
+    keys.up = false;
 });
 
 // Touch start handler
-canvas.addEventListener('touchstart', (e) => {
+canvas.addEventListener(
+  "touchstart",
+  (e) => {
     e.preventDefault();
     touchActive = true;
     const touch = e.touches[0];
     touchStartX = touch.clientX;
     touchStartY = touch.clientY;
-    
+
     const touchY = touch.clientY / window.innerHeight;
     const touchX = touch.clientX / window.innerWidth;
-    
+
     // Top 10-50% of screen (jump)
     if (touchY < 0.5 && touchY > 0.1) {
-        if (player.onGround) {
-            player.dy = -player.jumpStrength;
-            player.onGround = false;
-        }
+      if (player.onGround) {
+        player.dy = -player.jumpStrength;
+        player.onGround = false;
+      }
     }
-    
+
     // Bottom 50% of screen (left/right movement)
     if (touchY >= 0.5) {
-        if (touchX < 0.5) {
-            // Left side
-            keys.left = true;
-            keys.right = false;
-        } else {
-            // Right side
-            keys.right = true;
-            keys.left = false;
-        }
+      if (touchX < 0.5) {
+        // Left side
+        keys.left = true;
+        keys.right = false;
+      } else {
+        // Right side
+        keys.right = true;
+        keys.left = false;
+      }
     }
-}, { passive: false });
+  },
+  { passive: false }
+);
 
 // Touch end handler
-canvas.addEventListener('touchend', (e) => {
-    e.preventDefault();
-    touchActive = false;
-    keys.left = false;
-    keys.right = false;
+canvas.addEventListener("touchend", (e) => {
+  e.preventDefault();
+  touchActive = false;
+  keys.left = false;
+  keys.right = false;
 });
 
 // Touch move handler (optional, for better responsiveness)
-canvas.addEventListener('touchmove', (e) => {
+canvas.addEventListener(
+  "touchmove",
+  (e) => {
     if (!touchActive) return;
     e.preventDefault();
-    
+
     const touch = e.touches[0];
     const touchY = touch.clientY / window.innerHeight;
     const touchX = touch.clientX / window.innerWidth;
-    
+
     // Only handle left/right movement in bottom 50%
     if (touchY >= 0.5) {
-        if (touchX < 0.5) {
-            // Left side
-            keys.left = true;
-            keys.right = false;
-        } else {
-            // Right side
-            keys.right = true;
-            keys.left = false;
-        }
-    } else {
-        keys.left = false;
+      if (touchX < 0.5) {
+        // Left side
+        keys.left = true;
         keys.right = false;
+      } else {
+        // Right side
+        keys.right = true;
+        keys.left = false;
+      }
+    } else {
+      keys.left = false;
+      keys.right = false;
     }
-}, { passive: false });
+  },
+  { passive: false }
+);
 
 function update() {
   player.speed = bgWidth * 0.0015;
   player.width = bgWidth * 0.0125;
-  player.height = player.width * (120/80);
+  player.height = player.width * (120 / 80);
   player.jumpStrength = player.height / 6;
   gravity = player.jumpStrength * 0.035;
 
   // Horizontal movement
   if (keys.left) {
     player.dx = -player.speed;
-    player.facingRight = true;  // Face left when moving left
+    player.facingRight = true; // Face left when moving left
   } else if (keys.right) {
     player.dx = player.speed;
-    player.facingRight = false;   // Face right when moving right
+    player.facingRight = false; // Face right when moving right
   } else {
     player.dx = 0;
   }
@@ -281,16 +306,15 @@ function update() {
   player.y += player.dy;
 
   // Update camera position to follow player (centered)
-  camera.x = player.x + player.width/2 - camera.width/2;
-  
+  camera.x = player.x + player.width / 2 - camera.width / 2;
+
   // Keep camera within world bounds
   camera.x = Math.max(0, Math.min(camera.x, bgWidth - camera.width)); // Assuming world width of 2000
   camera.y = Math.max(0, Math.min(camera.y, 1000 - camera.height)); // Assuming world height of 1000
 
-  
   // Simple ground/platform collision
-  if (player.y + player.height/2 > bgHeight-player.height) {
-    player.y = bgHeight-player.height - player.height/2;
+  if (player.y + player.height / 2 > bgHeight - player.height) {
+    player.y = bgHeight - player.height - player.height / 2;
     player.dy = 0;
     player.onGround = true;
   }
@@ -305,12 +329,12 @@ function update() {
 function draw() {
   // Clear
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
+
   // Draw background with parallax effect (moves at 30% of camera speed)
   if (background.complete) {
     const parallaxX = camera.x * -1;
     const offsetX = parallaxX % bgWidth;
-    
+
     // Draw as many background images as needed to fill the screen
     for (let x = -bgWidth + offsetX; x < canvas.width; x += bgWidth) {
       ctx.drawImage(background, x, 0, bgWidth, bgHeight);
@@ -320,61 +344,61 @@ function draw() {
   // Draw all other images first
   if (meImg.complete) {
     img_aspect = meImage.width / meImage.height;
-    width = img_aspect * bgHeight/2
+    width = (img_aspect * bgHeight) / 2;
     ctx.drawImage(
-      meImg, 
-      (bgWidth / 5) * 4 - (bgWidth / 5 / 2) - width/2 - camera.x,
-      bgHeight/2.5,  
-      width, 
-      bgHeight/2
+      meImg,
+      (bgWidth / 5) * 4 - bgWidth / 5 / 2 - width / 2 - camera.x,
+      bgHeight / 2.5,
+      width,
+      bgHeight / 2
     );
   }
 
   if (comImg.complete) {
     img_aspect = comImage.width / comImage.height;
-    width = img_aspect * bgHeight/2
+    width = (img_aspect * bgHeight) / 2;
     ctx.drawImage(
-      comImg, 
-      bgWidth / 5 / 2 - width/2 - camera.x,
-      bgHeight/2.5,  
-      width, 
-      bgHeight/2
+      comImg,
+      bgWidth / 5 / 2 - width / 2 - camera.x,
+      bgHeight / 2.5,
+      width,
+      bgHeight / 2
     );
   }
 
   if (bulbImg.complete) {
     img_aspect = bulbImage.width / bulbImage.height;
-    width = img_aspect * bgHeight/2
+    width = (img_aspect * bgHeight) / 2;
     ctx.drawImage(
-      bulbImg, 
-      (bgWidth / 5) * 2 - (bgWidth / 5 / 2) - width/2 - camera.x,
-      bgHeight/2.5,  
-      width, 
-      bgHeight/2
+      bulbImg,
+      (bgWidth / 5) * 2 - bgWidth / 5 / 2 - width / 2 - camera.x,
+      bgHeight / 2.5,
+      width,
+      bgHeight / 2
     );
   }
-  
+
   if (handImg.complete) {
     img_aspect = handImage.width / handImage.height;
-    width = img_aspect * bgHeight/2
+    width = (img_aspect * bgHeight) / 2;
     ctx.drawImage(
-      handImg, 
-      (bgWidth / 5) * 3 - (bgWidth / 5 / 2) - width/2 - camera.x,
-      bgHeight/2.5,  
-      width, 
-      bgHeight/2
+      handImg,
+      (bgWidth / 5) * 3 - bgWidth / 5 / 2 - width / 2 - camera.x,
+      bgHeight / 2.5,
+      width,
+      bgHeight / 2
     );
   }
 
   if (letterImg.complete) {
     img_aspect = letterImage.width / letterImage.height;
-    width = img_aspect * bgHeight/2
+    width = (img_aspect * bgHeight) / 2;
     ctx.drawImage(
-      letterImg, 
-      (bgWidth / 5) * 5 - (bgWidth / 5 / 2) - width/2 - camera.x,
-      bgHeight/2.5,  
-      width, 
-      bgHeight/2
+      letterImg,
+      (bgWidth / 5) * 5 - bgWidth / 5 / 2 - width / 2 - camera.x,
+      bgHeight / 2.5,
+      width,
+      bgHeight / 2
     );
   }
 
@@ -389,16 +413,13 @@ function draw() {
         if (player.currentFrame == 0) {
           player.frameX = 0;
           player.frameY = 0;
-        }
-        else if (player.currentFrame == 1){
+        } else if (player.currentFrame == 1) {
           player.frameX = player.frameWidth;
           player.frameY = 0;
-        }
-        else if (player.currentFrame == 2){
+        } else if (player.currentFrame == 2) {
           player.frameX = 0;
           player.frameY = player.frameHeight;
-        }
-        else if (player.currentFrame == 3){
+        } else if (player.currentFrame == 3) {
           player.frameX = player.frameWidth;
           player.frameY = player.frameHeight;
         }
@@ -413,7 +434,7 @@ function draw() {
 
     // Save the current context state
     ctx.save();
-    
+
     // If facing left, flip the sprite by scaling negatively on the x-axis
     if (!player.facingRight) {
       ctx.translate(player.x - camera.x + player.width, 0);
@@ -425,30 +446,30 @@ function draw() {
     // Draw the current frame
     ctx.drawImage(
       player.spritesheet,
-      player.frameX,  // source x
-      player.frameY,  // source y
-      player.frameWidth,  // source width
+      player.frameX, // source x
+      player.frameY, // source y
+      player.frameWidth, // source width
       player.frameHeight, // source height
-      player.facingRight ? 0 : 0,  // destination x (0 because we're translating)
-      player.y,       // destination y
-      player.width,   // destination width
-      player.height   // destination height
+      player.facingRight ? 0 : 0, // destination x (0 because we're translating)
+      player.y, // destination y
+      player.width, // destination width
+      player.height // destination height
     );
-    
+
     // Restore the context state
     ctx.restore();
   }
-  
+
   // Save the current context state
   ctx.save();
-  
+
   // Translate the canvas to create camera effect
   ctx.translate(-camera.x, -camera.y);
 
   // Restore the context state
   ctx.restore();
 }
-  
+
 function loop() {
   update();
   draw();
@@ -460,7 +481,7 @@ function loop() {
 loop();
 
 // Resize handling
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   camera.width = window.innerWidth;

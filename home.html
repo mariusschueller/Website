@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,27 +13,35 @@
   <link rel="stylesheet" href="blog.css">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <style>
-    body { margin: 0; overflow: hidden; }
-    canvas { display: block; background: #000; }
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+      background: #000;
+    }
   </style>
 </head>
+
 <body>
   <img src="/counter/counter.php" style="display: none;">
   <div id="navbar">
     <a href="/home.html"> <img src="/images/Logo.png"></a>
     <span>Marius Schueller</span>
-      <ul>
-        <li><a onclick="home()">Home</a></li>
-        <li><a onclick="projects()">Projects</a></li>
-        <li><a onclick="blog()">Blog</a></li>
-        <li><a onclick="about()">About</a></li>
-        <li><a onclick="contact()">Contact</a></li>
-      </ul>
+    <ul>
+      <li><a onclick="home()">Home</a></li>
+      <li><a onclick="projects()">Projects</a></li>
+      <li><a onclick="blog()">Blog</a></li>
+      <li><a onclick="about()">About</a></li>
+      <li><a onclick="contact()">Contact</a></li>
+    </ul>
   </div>
   <!-- <h1>Welcome!</h1> -->
   <div class="section-info">
     <span id="section-text" class="title">Home</span><br>
-    <span id="text" class="text"><span>  
+    <span id="text" class="text"><span>
   </div>
 
 
@@ -50,7 +59,9 @@
                 <img class="card__image" aria-live="polite" src="/images/LinkedInBanner.png" alt="Alt text."
                   loading="lazy" onload="this.style.animationName = 'reveal'" style="width: 100%; border-radius: 5px;">
                 <p class="card__text">
-                  I made a LinkedIn banner that will hopefully attract more attention when someone is on my page. The banner will serve as a mini description of my skills by illustrating my core skill areas in web dev, embedded systems, game dev, and software development. 
+                  I made a LinkedIn banner that will hopefully attract more attention when someone is on my page. The
+                  banner will serve as a mini description of my skills by illustrating my core skill areas in web dev,
+                  embedded systems, game dev, and software development.
                 </p>
                 <a href="projects/linkedinbanner.html" class="learn-more">Learn More</a>
               </div>
@@ -853,7 +864,9 @@
                 <img class="card__image" aria-live="polite" src="/images/LinkedInBanner.png" alt="Alt text."
                   loading="lazy" onload="this.style.animationName = 'reveal'" style="width: 100%; border-radius: 5px;">
                 <p class="card__text">
-                  I made a LinkedIn banner that will hopefully attract more attention when someone is on my page. The banner will serve as a mini description of my skills by illustrating my core skill areas in web dev, embedded systems, game dev, and software development. 
+                  I made a LinkedIn banner that will hopefully attract more attention when someone is on my page. The
+                  banner will serve as a mini description of my skills by illustrating my core skill areas in web dev,
+                  embedded systems, game dev, and software development.
                 </p>
                 <a href="projects/linkedinbanner.html" class="learn-more">Learn More</a>
               </div>
@@ -968,7 +981,7 @@
           </li>
         </ul>
       </div>
-    </div>
+      </div>
     </span>
   </button>
 
@@ -978,281 +991,291 @@
     <span class="hover-content">
       <!--Blog Post 1-->
       <div class="panel">
-    <div class="blog-container">
-      <div class="blog-header">
-        <div class="blog-cover">
-          <img src="/images/cspaperdailybanner.png" style="object-position:left;">
-        </div>
-      </div>
+        <div class="blog-container">
+          <div class="blog-header">
+            <div class="blog-cover">
+              <img src="/images/cspaperdailybanner.png" style="object-position:left;">
+            </div>
+          </div>
 
-      <div class="blog-body">
-        <div class="blog-title">
-          <h1><a href="blogs/cspaperdaily.html">Introducing CS Paper Daily</a></h1>
-        </div>
-        <div class="blog-summary">
-          <p>
-            I created the site <a href="https://cspaperdaily.com" target="_blank">
-              cspaperdaily.com</a>. It gives users computer science papers to 
-              read each day with the goal of creating a habit. 
-        </div>
-        <p class="read-more"><a href="blogs/cspaperdaily.html">Read</a></p>
-      </div>
+          <div class="blog-body">
+            <div class="blog-title">
+              <h1><a href="blogs/cspaperdaily.html">Introducing CS Paper Daily</a></h1>
+            </div>
+            <div class="blog-summary">
+              <p>
+                I created the site <a href="https://cspaperdaily.com" target="_blank">
+                  cspaperdaily.com</a>. It gives users computer science papers to
+                read each day with the goal of creating a habit.
+            </div>
+            <p class="read-more"><a href="blogs/cspaperdaily.html">Read</a></p>
+          </div>
 
-      <div class="footer">
-        <p class="date">2/18/2025</p>
-      </div>
-    </div>
-
-    <!--Blog Post 2-->
-    <div class="blog-container">
-      <div class="blog-header">
-        <div class="blog-cover">
-          <img src="/images/ledboardgraphic.png" style="object-position:left;">
-        </div>
-      </div>
-
-      <div class="blog-body">
-        <div class="blog-title">
-          <h1><a href="blogs/rgbmatrix.html">Building a Custom Animation Display</a></h1>
-        </div>
-        <div class="blog-summary">
-          <p>I programmed a light board to play any animation I want whenever I want. Here’s how I did it...
-        </div>
-        <p class="read-more"><a href="blogs/rgbmatrix.html">Read On</a></p>
-      </div>
-
-      <div class="footer">
-
-        <p class="date">1/31/2025</p>
-      </div>
-    </div>
-
-    <!--Blog Post 3-->
-    <div class="blog-container">
-      <div class="blog-header">
-        <div class="blog-cover">
-          <img src="/images/vandyfootball.jpg" style="object-position: bottom;">
-        </div>
-      </div>
-
-      <div class="blog-body">
-        <div class="blog-title">
-          <h1><a href="blogs/finalfall.html">The Final Fall: My Semester Review</a></h1>
-        </div>
-        <div class="blog-summary">
-          <p>So, it’s my last fall semester, and I’m now a senior. With 3 years under my belt already, I think I’ve got
-            this college thing pretty figured out. This semester was without a doubt my favorite semester so far. Here’s
-            my review…</p>
-        </div>
-        <p class="read-more"><a href="blogs/finalfall.html">Read On</a></p>
-      </div>
-
-      <div class="footer">
-
-        <p class="date">12/29/2024</p>
-      </div>
-    </div>
-
-
-      <div class="blog-container">
-        <div class="blog-header">
-          <div class="blog-cover">
-            <img src="/images/recruitment.png" style="object-position: left;">
+          <div class="footer">
+            <p class="date">2/18/2025</p>
           </div>
         </div>
 
-        <div class="blog-body">
-          <div class="blog-title">
-            <h1><a href="blogs/fine_i'll_do_leetcode.html"><br>Fine, I'll Do LeetCode</a></h1>
+        <!--Blog Post 2-->
+        <div class="blog-container">
+          <div class="blog-header">
+            <div class="blog-cover">
+              <img src="/images/ledboardgraphic.png" style="object-position:left;">
+            </div>
           </div>
-          <div class="blog-summary">
-            <p>In the current cs job market, I would argue it’s not easy to get a job (or internship) as a
-              cs major. It feels like there are more applicants than jobs. I’ve gotten lucky the past few
-              years when getting internships, but now I graduate in less than a year and I need to start
-              thinking about a full-time job. That said, the most dreaded part of the job process for cs
-              majors is the technical interview...</p>
+
+          <div class="blog-body">
+            <div class="blog-title">
+              <h1><a href="blogs/rgbmatrix.html">Building a Custom Animation Display</a></h1>
+            </div>
+            <div class="blog-summary">
+              <p>I programmed a light board to play any animation I want whenever I want. Here’s how I did it...
+            </div>
+            <p class="read-more"><a href="blogs/rgbmatrix.html">Read On</a></p>
           </div>
-          <p class="read-more"><a href="blogs/fine_i'll_do_leetcode.html">Read On</a></p>
-        </div>
 
-        <div class="footer">
+          <div class="footer">
 
-          <p class="date">9/6/2024</p>
-          <p class="languages">Job Interview</p>
-        </div>
-      </div>
-      <div class="blog-container">
-        <div class="blog-header">
-          <div class="blog-cover">
-            <img src="/images/downtownnashville.jpg" style="object-position: left;">
+            <p class="date">1/31/2025</p>
           </div>
         </div>
 
-        <div class="blog-body">
-          <div class="blog-title">
-            <h1><a href="blogs/Summer2024Update.html"><br>Summer 2024 Update</a></h1>
+        <!--Blog Post 3-->
+        <div class="blog-container">
+          <div class="blog-header">
+            <div class="blog-cover">
+              <img src="/images/vandyfootball.jpg" style="object-position: bottom;">
+            </div>
           </div>
-          <div class="blog-summary">
-            <p>The summer has passed, so here’s a little life update on what happened this summer...</p>
+
+          <div class="blog-body">
+            <div class="blog-title">
+              <h1><a href="blogs/finalfall.html">The Final Fall: My Semester Review</a></h1>
+            </div>
+            <div class="blog-summary">
+              <p>So, it’s my last fall semester, and I’m now a senior. With 3 years under my belt already, I think I’ve
+                got
+                this college thing pretty figured out. This semester was without a doubt my favorite semester so far.
+                Here’s
+                my review…</p>
+            </div>
+            <p class="read-more"><a href="blogs/finalfall.html">Read On</a></p>
           </div>
-          <p class="read-more"><a href="blogs/Summer2024Update.html">Read On</a></p>
-        </div>
 
-        <div class="footer">
+          <div class="footer">
 
-          <p class="date">8/26/2024</p>
-          <p class="languages">Life</p>
-        </div>
-      </div>
-      <div class="blog-container">
-        <div class="blog-header">
-          <div class="blog-cover">
-            <img src="/images/monkeytype.png" style="object-position: left;">
-          </div>
-        </div>
-
-        <div class="blog-body">
-          <div class="blog-title">
-            <h1><a href="blogs/typingbot.html">Making a Typing Test Bot</a></h1>
-          </div>
-          <div class="blog-summary">
-            <p>I have some friends who are fast typers. That being said, I want to show them that I can type faster than
-              them if I wanted to, and by that I mean I can make something that can type faster than them. Here's my
-              step by step process...</p>
-          </div>
-          <p class="read-more"><a href="blogs/typingbot.html">Read On</a></p>
-        </div>
-
-        <div class="footer">
-
-          <p class="date">2/17/2024</p>
-          <p class="languages">Web Scraping&nbsp Python&nbsp</p>
-        </div>
-      </div>
-
-      <div class="blog-container">
-        <div class="blog-header">
-          <div class="blog-cover">
-            <img src="/images/holidayblog/banner.jpg">
+            <p class="date">12/29/2024</p>
           </div>
         </div>
 
-        <div class="blog-body">
-          <div class="blog-title">
-            <h1><a href="blogs/Handmade Holidays.html"><br>Handmade for the Holidays: DIY Holiday Gifts with a Personal
-                Touch</a></h1>
+
+        <div class="blog-container">
+          <div class="blog-header">
+            <div class="blog-cover">
+              <img src="/images/recruitment.png" style="object-position: left;">
+            </div>
           </div>
-          <div class="blog-summary">
-            <p>Tis the season! My family doesn't do lists for gifts, and I find it very hard to buy great gifts for
-              other people. As a result, for the past few years, I've been making DIY gifts. This year, creating my
-              gifts was fun, and I ended up with some cool projects, but I ran into many issues. All the <b>final</b>
-              gifts should be able to be able to be made with minimal upfront cost, and maybe some basic graphic design.
-              So, here's my documented experience...</p>
+
+          <div class="blog-body">
+            <div class="blog-title">
+              <h1><a href="blogs/fine_i'll_do_leetcode.html"><br>Fine, I'll Do LeetCode</a></h1>
+            </div>
+            <div class="blog-summary">
+              <p>In the current cs job market, I would argue it’s not easy to get a job (or internship) as a
+                cs major. It feels like there are more applicants than jobs. I’ve gotten lucky the past few
+                years when getting internships, but now I graduate in less than a year and I need to start
+                thinking about a full-time job. That said, the most dreaded part of the job process for cs
+                majors is the technical interview...</p>
+            </div>
+            <p class="read-more"><a href="blogs/fine_i'll_do_leetcode.html">Read On</a></p>
           </div>
-          <p class="read-more"><a href="blogs/Handmade Holidays.html">Read On</a></p>
-        </div>
 
-        <div class="footer">
+          <div class="footer">
 
-          <p class="date">12/30/2023</p>
-          <p class="languages">CAD&nbsp Graphic Design&nbsp Epoxy</p>
-        </div>
-      </div>
-
-      <div class="blog-container">
-        <div class="blog-header">
-          <div class="blog-cover">
-            <img src="/images/20230319_083705.jpg">
+            <p class="date">9/6/2024</p>
+            <p class="languages">Job Interview</p>
           </div>
         </div>
-
-        <div class="blog-body">
-          <div class="blog-title">
-            <h1><a href="blogs/Semester Review.html"><br>A Semester Review (As a Vanderbilt CS Student)</a></h1>
+        <div class="blog-container">
+          <div class="blog-header">
+            <div class="blog-cover">
+              <img src="/images/downtownnashville.jpg" style="object-position: left;">
+            </div>
           </div>
-          <div class="blog-summary">
-            <p>Another semester has passed, and I wanted to give a recap/review of how things went. I did a lot of
-              stuff, and there's a lot I want to talk about. So, here's everything from my academic to social life, all
-              in one post...</p>
+
+          <div class="blog-body">
+            <div class="blog-title">
+              <h1><a href="blogs/Summer2024Update.html"><br>Summer 2024 Update</a></h1>
+            </div>
+            <div class="blog-summary">
+              <p>The summer has passed, so here’s a little life update on what happened this summer...</p>
+            </div>
+            <p class="read-more"><a href="blogs/Summer2024Update.html">Read On</a></p>
           </div>
-          <p class="read-more"><a href="blogs/Semester Review.html">Read On</a></p>
-        </div>
 
-        <div class="footer">
+          <div class="footer">
 
-          <p class="date">12/17/2023</p>
-          <!--<p class="languages">HTML CSS</p>-->
-        </div>
-      </div>
-
-      <div class="blog-container">
-        <div class="blog-header">
-        </div>
-
-        <div class="blog-body">
-          <div class="blog-title">
-            <h1><a href="blogs/thisWeekILearned.html"><br>This week I learned to _</a></h1>
+            <p class="date">8/26/2024</p>
+            <p class="languages">Life</p>
           </div>
-          <div class="blog-summary">
-            <p>This week, I learned to juggle. Yeah, kind of random, but I decided it was something I wanted to do.
-              So, on Sunday night, I started trying to learn.
-              I think I watched 1 video a week ago and then forgot almost all of it.
-              Regardless, I just started practicing and got the hang of it after like an hour.
-              After a little more practice, I'm more consistent and would say I've learned the skill pretty well...</p>
+        </div>
+        <div class="blog-container">
+          <div class="blog-header">
+            <div class="blog-cover">
+              <img src="/images/monkeytype.png" style="object-position: left;">
+            </div>
           </div>
-          <p class="read-more"><a href="blogs/thisWeekILearned.html">Read On</a></p>
-        </div>
 
-        <div class="footer">
-
-          <p class="date">12/03/2023</p>
-          <!--<p class="languages">HTML CSS</p>-->
-        </div>
-      </div>
-
-      <div class="blog-container">
-        <div class="blog-header">
-        </div>
-
-        <div class="blog-body">
-          <div class="blog-title">
-            <h1><a href="blogs/ItBegins.html"><br>And so it Begins</a></h1>
+          <div class="blog-body">
+            <div class="blog-title">
+              <h1><a href="blogs/typingbot.html">Making a Typing Test Bot</a></h1>
+            </div>
+            <div class="blog-summary">
+              <p>I have some friends who are fast typers. That being said, I want to show them that I can type faster
+                than
+                them if I wanted to, and by that I mean I can make something that can type faster than them. Here's my
+                step by step process...</p>
+            </div>
+            <p class="read-more"><a href="blogs/typingbot.html">Read On</a></p>
           </div>
-          <div class="blog-summary">
-            <p>I made a website to share all of my projects!
-              By creating this website, you're able to read the words you're reading right now.
-              I've been wanting to make a website for a while and last weekend I decided to dive right in and do it.
-              So, over the course of 3 days, I designed this website which I hope to continue updating.
-              It was made with only HTML and CSS. I designed the home, projects, about, contact, and blog pages...</p>
+
+          <div class="footer">
+
+            <p class="date">2/17/2024</p>
+            <p class="languages">Web Scraping&nbsp Python&nbsp</p>
           </div>
-          <p><a href="blogs/ItBegins.html">Read On</a></p>
         </div>
 
-        <div class="footer">
+        <div class="blog-container">
+          <div class="blog-header">
+            <div class="blog-cover">
+              <img src="/images/holidayblog/banner.jpg">
+            </div>
+          </div>
 
-          <p class="date">11/21/2023</p>
-          <p class="languages">HTML CSS</p>
+          <div class="blog-body">
+            <div class="blog-title">
+              <h1><a href="blogs/Handmade Holidays.html"><br>Handmade for the Holidays: DIY Holiday Gifts with a
+                  Personal
+                  Touch</a></h1>
+            </div>
+            <div class="blog-summary">
+              <p>Tis the season! My family doesn't do lists for gifts, and I find it very hard to buy great gifts for
+                other people. As a result, for the past few years, I've been making DIY gifts. This year, creating my
+                gifts was fun, and I ended up with some cool projects, but I ran into many issues. All the <b>final</b>
+                gifts should be able to be able to be made with minimal upfront cost, and maybe some basic graphic
+                design.
+                So, here's my documented experience...</p>
+            </div>
+            <p class="read-more"><a href="blogs/Handmade Holidays.html">Read On</a></p>
+          </div>
+
+          <div class="footer">
+
+            <p class="date">12/30/2023</p>
+            <p class="languages">CAD&nbsp Graphic Design&nbsp Epoxy</p>
+          </div>
         </div>
-      </div>
+
+        <div class="blog-container">
+          <div class="blog-header">
+            <div class="blog-cover">
+              <img src="/images/20230319_083705.jpg">
+            </div>
+          </div>
+
+          <div class="blog-body">
+            <div class="blog-title">
+              <h1><a href="blogs/Semester Review.html"><br>A Semester Review (As a Vanderbilt CS Student)</a></h1>
+            </div>
+            <div class="blog-summary">
+              <p>Another semester has passed, and I wanted to give a recap/review of how things went. I did a lot of
+                stuff, and there's a lot I want to talk about. So, here's everything from my academic to social life,
+                all
+                in one post...</p>
+            </div>
+            <p class="read-more"><a href="blogs/Semester Review.html">Read On</a></p>
+          </div>
+
+          <div class="footer">
+
+            <p class="date">12/17/2023</p>
+            <!--<p class="languages">HTML CSS</p>-->
+          </div>
+        </div>
+
+        <div class="blog-container">
+          <div class="blog-header">
+          </div>
+
+          <div class="blog-body">
+            <div class="blog-title">
+              <h1><a href="blogs/thisWeekILearned.html"><br>This week I learned to _</a></h1>
+            </div>
+            <div class="blog-summary">
+              <p>This week, I learned to juggle. Yeah, kind of random, but I decided it was something I wanted to do.
+                So, on Sunday night, I started trying to learn.
+                I think I watched 1 video a week ago and then forgot almost all of it.
+                Regardless, I just started practicing and got the hang of it after like an hour.
+                After a little more practice, I'm more consistent and would say I've learned the skill pretty well...
+              </p>
+            </div>
+            <p class="read-more"><a href="blogs/thisWeekILearned.html">Read On</a></p>
+          </div>
+
+          <div class="footer">
+
+            <p class="date">12/03/2023</p>
+            <!--<p class="languages">HTML CSS</p>-->
+          </div>
+        </div>
+
+        <div class="blog-container">
+          <div class="blog-header">
+          </div>
+
+          <div class="blog-body">
+            <div class="blog-title">
+              <h1><a href="blogs/ItBegins.html"><br>And so it Begins</a></h1>
+            </div>
+            <div class="blog-summary">
+              <p>I made a website to share all of my projects!
+                By creating this website, you're able to read the words you're reading right now.
+                I've been wanting to make a website for a while and last weekend I decided to dive right in and do it.
+                So, over the course of 3 days, I designed this website which I hope to continue updating.
+                It was made with only HTML and CSS. I designed the home, projects, about, contact, and blog pages...</p>
+            </div>
+            <p><a href="blogs/ItBegins.html">Read On</a></p>
+          </div>
+
+          <div class="footer">
+
+            <p class="date">11/21/2023</p>
+            <p class="languages">HTML CSS</p>
+          </div>
+        </div>
     </span>
   </button>
-     
+
 
 
   <button id="professional-about-view" class="expand-btn btn top-right">
     <span class="display-content">Career</span>
     <span class="hover-content">
       <div class='about'>
-      <strong>Career Background</strong><br><br>
-      I am the founder of Maryson Developments. 
-      Maryson Developments develops SaaS products and does contract work specializing embedded systems, website development, and other custom software solutions. 
-      Check out more on our website (coming soon).
+        <strong>Career Background</strong><br><br>
+        I am the founder of Maryson Developments.
+        Maryson Developments develops SaaS products and does contract work specializing embedded systems, website
+        development, and other custom software solutions.
+        Check out more on our website (coming soon).
 
-      <br><br>
+        <br><br>
 
-      I graduated in 2025 from Vanderbilt University, majoring in Computer Science with minors in Digital Fabrication and Data Science. 
-      I joined a couple club where I was president of the ultimate frisbee club and treasurer of the vanderbilt ballet club.
-    </div>
+        I graduated in 2025 from Vanderbilt University, majoring in Computer Science with minors in Digital Fabrication
+        and Data Science.
+        I joined a couple club where I was president of the ultimate frisbee club and treasurer of the vanderbilt ballet
+        club.
+      </div>
     </span>
   </button>
 
@@ -1260,14 +1283,17 @@
     <span class="display-content">Coding</span>
     <span class="hover-content">
       <div class='about'>
-      <strong>Coding Background</strong><br><br>
-      I started programming in Unity with C# where I created the mobile game "Neon Drop: The (almost) Impossible Game". 
-      While the game is no longer available, it was a lot of fun to make and I learned a lot. 
-      From there, I learned Python, Java, C++, Rust, MATLAB, C, and Assembly. 
-      Out of those, Python is by far my favorite language because of how it's way more straightforward to create new projects. 
-      Then, after a few tries I learned web development and made mariusschueller.com (with a more basic design compared the current website). 
-      Lastly, I've been experimenting with Raspberry Pi's which has been super fun. 
-      Essentially, I love learning new systems and challening myself.
+        <strong>Coding Background</strong><br><br>
+        I started programming in Unity with C# where I created the mobile game "Neon Drop: The (almost) Impossible
+        Game".
+        While the game is no longer available, it was a lot of fun to make and I learned a lot.
+        From there, I learned Python, Java, C++, Rust, MATLAB, C, and Assembly.
+        Out of those, Python is by far my favorite language because of how it's way more straightforward to create new
+        projects.
+        Then, after a few tries I learned web development and made mariusschueller.com (with a more basic design
+        compared the current website).
+        Lastly, I've been experimenting with Raspberry Pi's which has been super fun.
+        Essentially, I love learning new systems and challening myself.
       </div>
     </span>
   </button>
@@ -1276,12 +1302,12 @@
     <span class="display-content">Teaching</span>
     <span class="hover-content">
       <div class='about'>
-      <strong>Teaching Background</strong><br><br>
-      I teach students in computer science, piano, and Spanish. 
-      My teaching career began at 16 years old as a private piano teacher.
-      Teaching younger learners are my specialty, but welcome learners of any age.
-      If you're interested in hiring me as a tutor, don't hesitate to reach out at
-      <a href="mailto:marius@mariusschueller.com">marius@mariusschueller.com</a>
+        <strong>Teaching Background</strong><br><br>
+        I teach students in computer science, piano, and Spanish.
+        My teaching career began at 16 years old as a private piano teacher.
+        Teaching younger learners are my specialty, but welcome learners of any age.
+        If you're interested in hiring me as a tutor, don't hesitate to reach out at
+        <a href="mailto:marius@mariusschueller.com">marius@mariusschueller.com</a>
       </div>
     </span>
   </button>
@@ -1291,11 +1317,11 @@
     <span class="hover-content">
       <div class='about'>
         <strong>Musical Background</strong><br><br>
-      Music has always been a part of my life. I have been playing piano since I was 5 years old,
-      where I was classically trained. Nowadays, I play more by ear, meaning try to play a song without any music. 
-      I've been playing cello since I was 8. 
-      Since then, I have also learned how to play new instruments including guitar, kalimba, and melodica.
-      I have an Instagram page where I'll occasionally post music called MariusMakesMusic.
+        Music has always been a part of my life. I have been playing piano since I was 5 years old,
+        where I was classically trained. Nowadays, I play more by ear, meaning try to play a song without any music.
+        I've been playing cello since I was 8.
+        Since then, I have also learned how to play new instruments including guitar, kalimba, and melodica.
+        I have an Instagram page where I'll occasionally post music called MariusMakesMusic.
       </div>
     </span>
   </button>
@@ -1304,18 +1330,18 @@
     <span class="display-content">Hobbies</span>
     <span class="hover-content">
       <div class='about'>
-      <strong>Hobbies</strong><br><br>
-      I also love to play Ultimate Frisbee. It's a great way to stay active, have fun, 
-      and spend time with friends. I used to play for Vanderbilt's Ultimate Frisbee team.<br><br> 
-      Another hobby of mine is climbing. I mostly top rope, but I'll boulder upon occasion. 
-      It's a super fun physical workout and mental puzzle that I can experience with friends.<br><br>
-      Lastly, I love Ballet. I've been dancing almost my entire life. Most recently, 
-      I've had the absolute pleasure for dancing with the Vanderbilt Ballet theater.
+        <strong>Hobbies</strong><br><br>
+        I also love to play Ultimate Frisbee. It's a great way to stay active, have fun,
+        and spend time with friends. I used to play for Vanderbilt's Ultimate Frisbee team.<br><br>
+        Another hobby of mine is climbing. I mostly top rope, but I'll boulder upon occasion.
+        It's a super fun physical workout and mental puzzle that I can experience with friends.<br><br>
+        Lastly, I love Ballet. I've been dancing almost my entire life. Most recently,
+        I've had the absolute pleasure for dancing with the Vanderbilt Ballet theater.
       </div>
     </span>
   </button>
 
-  
+
   <canvas id="gameCanvas"></canvas>
 
   <script src="navbar.js"></script>
@@ -1323,6 +1349,7 @@
   <script src="text_change.js"></script>
   <script src="index.js"></script>
 
-  
+
 </body>
+
 </html>
