@@ -1,5 +1,12 @@
 RewriteEngine On
 
+# Prevent caching for HTML files
+<FilesMatch "\.(html|htm)$">
+  Header set Cache-Control "no-cache, no-store, must-revalidate"
+  Header set Pragma "no-cache"
+  Header set Expires 0
+</FilesMatch>
+
 # Redirect .html URLs to clean URLs
 RewriteCond %{THE_REQUEST} /\S+\.html [NC]
 RewriteRule ^(.+)\.html$ /$1 [R=301,L]
@@ -15,8 +22,8 @@ RewriteRule ^(.+)/$ $1 [R=301,L]
 # Prevent Apache from forcing a trailing slash on directories
 DirectorySlash Off
 
+# Redirects
 Redirect 301 /projects /project
-
 
 <FilesMatch "\.(js|css)$">
   Header set Cache-Control "public, max-age=0, must-revalidate"
