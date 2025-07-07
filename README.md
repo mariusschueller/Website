@@ -1,6 +1,6 @@
 # Personal Website & Portfolio
 
-Welcome to my personal website and game portfolio! This project showcases my work, blog posts, and interactive elements.
+Welcome to my personal website! This project showcases my work, blog posts, and interactive elements.
 
 ## Features
 - Interactive Homepage
