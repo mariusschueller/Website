@@ -23,7 +23,7 @@ function text() {
       case "Home":
         animateText(
           text_box,
-          "Hi, my name is Marius and I'm a creator with lots of ideas...<br><br>Use arrow keys or WASD to navigate"
+          "Hi, my name is Marius and I'm a creator with lots of ideas...<br><br><a href='https://github.com/mariusschueller'>GitHub</a> <a href='https://www.linkedin.com/in/mariusschueller/'>LinkedIn</a> <a href='mailto:marius@mariusschueller.com'>Mail</a><br><br>Use arrow keys or WASD to navigate"
         );
         section_views();
         break;
