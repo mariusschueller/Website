@@ -1,0 +1,11 @@
+.images {
+    margin: auto; 
+    width: 40%;
+}
+
+.image_container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-wrap: wrap;
+}
