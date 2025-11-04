@@ -22,9 +22,6 @@ RewriteRule ^(.+)/$ $1 [R=301,L]
 # Prevent Apache from forcing a trailing slash on directories
 DirectorySlash Off
 
-# Redirects
-Redirect 301 /projects /project
-
 <FilesMatch "\.(js|css)$">
   Header set Cache-Control "public, max-age=0, must-revalidate"
 </FilesMatch>
