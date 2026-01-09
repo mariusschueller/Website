@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>photo Gallery</title>
+  <link rel="stylesheet" href="BlogPageNew.css">
+  <link rel="stylesheet" href="/projects.css">
+  <link rel="stylesheet" href="/max_button.css">
+  <link rel="stylesheet" href="/navbar.css">
+  <link rel="stylesheet" href="/font.css">
+
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+</head>
+
+<body>
+  <img src="/counter/counter.php" style="display: none;">
+  <div id="navbar">
+    <a href="/home.html"> <img src="/images/Logo.png"></a>
+    <span>Marius Schueller</span>
+    <ul>
+      <li><a href="/home.html">Home</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="blog-container">
+
+      <div class="blog-header">
+        <div class="blog-cover">
+          <img src="/images/Gallery.png" style="object-position:left;">
+        </div>
+      </div>
+
+      <div class="blog-body">
+        <div class="blog-title">
+          <h1><br>Photo Gallery</h1>
+        </div>
+        <p>1/8/2026</p>
+        <div class="blog-summary">
+          <p>
+            <br>
+            It’s my 1 year anniversary with my girlfriend, and I wanted to gift her a cool present. After some thought, I decided to create a 3d photo gallery of us for her to view online. It basically serves as a cool digital scrapbook. Here’s how I made it.
+          </p>
+
+          <video autoplay loop controls style="width: 50%; display: flex; margin: auto; margin-top: 10px;">
+            <source src="/videos/PhotoGallery.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+
+          <h2>Basic Steps</h2>
+
+          <p>
+            Note: if you aren’t familiar with Unity and want to do this project, I’d recommend using your favorite AI to help in conjunction with this guide. I used Unity’s WebGL capabilities.
+            <br>
+
+            <br>
+            - I started by moving all the photos I wanted into the Unity project I created. Next, I dragged all my photos into my scene.<br> <br>
+            - After that, I set all the z values of my photos to be further and further away in my scene. <br><br>
+            - I wrote a simple script to place them, but for some reason Unity was skipping values (must be a Unity bug), so instead I manually moved my GameObjects to the right places. Then, I wrote and gave all my image GameObjects this script:<br><br>
+          </p>
+          <script src="https://gist.github.com/mariusschueller/ab918fc69162106becfd84d58a4cf248.js"></script>
+          <p>
+            I had to play around with the values. But the numbers I used are what worked for me and my amount of photos. <br><br>
+            - Lastly, I tested it by hitting play and then building the project.
+          </p>
+
+          <p>
+            From there I deployed my Unity web project onto a subdomain, but it can also be deployed to github pages as I’ve done <a href="https://mariusschueller.github.io/Photo-Gallery/" target="_blank">here</a>. I disabled the compression method in the publishing settings to get things to work immediately. To run this website locally, you can type <span style="background-color: #f4f4f4; padding: 2px 5px; border-radius: 4px; color: #e83e8c;">python3 -m http.server</span>. If you are so inclined, you can mess with the built files if you don’t like the automatically generated Unity UI to change how things look. 
+          </p>
+          <h2>End</h2>
+          <p>
+          Anyways, this was a fun and chill project, and my girlfriend was super happy with the results. You can find the full code <a target="_blank" href="https://ko-fi.com/s/ccb05c3df8">here</a>!
+          </p>          
+
+
+          <p>- Marius</p>
+
+        </div>
+
+      </div>
+      <div class="footer">
+        <!-- <a href="https://github.com/mariusschueller/rpi-rgb-led-matrix">Forked LED Library</a>&nbsp;&nbsp;&nbsp;<a
+          href="https://github.com/mariusschueller/flask-vercel-led">LED API</a> -->
+      </div>
+
+    </div>
+
+    <!--SENDGRID SUBSCRIBE-->
+    <!--<iframe class="new-subscribe" src="https://cdn.forms-content-1.sg-form.com/4ea806cf-a0da-11ee-a940-cead52b50d91"
+            width="500" height="550">-->
+
+
+  </div>
+</body>
+
+</html>
