@@ -86,10 +86,10 @@ const player = {
   facingRight: false, // Add this line to track facing direction
   // Spritesheet properties
   spritesheet: new Image(),
-  frameWidth: 1024, // 2048 / 4 = 512 (since there are 4 images)
-  frameHeight: 1024, // Full height of each frame
+  frameWidth: 0, // set once the spritesheet loads, from its actual size
+  frameHeight: 0,
   currentFrame: 0,
-  frameCount: 4, // Total frames in the spritesheet
+  frameCount: 4, // Total frames in the spritesheet (2x2 grid)
   frameX: 0, // Current x position in spritesheet
   frameY: 0, // Current y position in spritesheet
   animationSpeed: 0.25,
@@ -97,6 +97,12 @@ const player = {
 };
 
 // Load the player spritesheet
+// Frame size is derived from the loaded image's real dimensions rather than
+// hardcoded, since hosts/CDNs can silently re-encode the PNG at a different size.
+player.spritesheet.onload = function () {
+  player.frameWidth = player.spritesheet.naturalWidth / 2;
+  player.frameHeight = player.spritesheet.naturalHeight / 2;
+};
 player.spritesheet.src = "images/marius_spritesheet.png";
 
 // IMAGES
