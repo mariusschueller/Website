@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canciones</title>
+    <link rel="stylesheet" href="canciones.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+</head>
+
+<body>
+    <div id="svg-container"></div>
+
+    <img src="/counter/counter.php" style="display: none;">
+
+    <!-- <h1>Welcome!</h1> -->
+    <h1>Canciones Del Corazón</h1>
+
+    <p>¡Hola and Welcome to the Céspedes-Schueller family's send off concert of Daniluz and Marius!
+    </p>
+    <div class="center-text">
+        <p>
+            A livestream will be here at ~4pm central on August 15th. After the show, a recording can be
+            found here.
+        </p>
+
+    </div>
+    <!-- <iframe width="70%" height="400" src="https://www.youtube.com/embed/kJQP7kiw5Fk?si=9YgowUFZ6YPpOtgb&amp;controls=0"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+    <p class="bottom-text">
+        Thanks to all for virtually supporting us! Nothing is expected, but if you would like to support Marius and
+        Daniluz on their new adventures you can venmo @ or Zelle @; otherwise, feel free to reach out to us personally.
+    </p>
+
+    <script>
+        const container = document.getElementById('svg-container');
+
+        // Warm pastel palette matching the page's peach/brown theme
+        const pastelColors = [
+            '#FFDFBA', // Peach
+            '#F8D9A0', // Warm gold
+            '#FFE7C2', // Apricot
+            '#FEC8D8', // Rose
+            '#F6C89F', // Tan
+            '#FFD8BE', // Blush
+            '#F0C6A5'  // Sand
+        ];
+
+        const numHearts = 12;
+        const animationTypes = ['float1', 'float2', 'float3'];
+
+        // Material-style heart path, natively spans a 24x24 box; centered via translate(-12,-12)
+        const heartPath = 'M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z';
+
+        function createHeartSVG() {
+            let svgHTML = `
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="soft-shadow" x="-20%" y="-20%" width="110%" height="110%">
+                            <feDropShadow dx="2" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.08"/>
+                        </filter>
+                    </defs>
+            `;
+
+            const ww = window.innerWidth;
+            const wh = window.innerHeight;
+
+            for (let i = 0; i < numHearts; i++) {
+                const x = Math.random() * (ww + 100) - 50;
+                const y = Math.random() * (wh + 100) - 50;
+
+                // Extra 4x factor keeps hearts visually comparable in size to the previous flowers
+                const scale = (Math.random() * 1.5 + 1) * 4;
+
+                const color = pastelColors[Math.floor(Math.random() * pastelColors.length)];
+
+                const animType = animationTypes[Math.floor(Math.random() * animationTypes.length)];
+                const animDuration = Math.random() * 20 + 50;
+                const animDelay = Math.random() * -40;
+
+                const heartHTML = `<path d="${heartPath}" transform="translate(-12,-12)" fill="${color}" opacity="0.9"/>`;
+
+                svgHTML += `
+                    <g id="heart-base-${i}" transform="translate(${x}, ${y}) scale(${scale})" ">
+                        <g class="heart-anim" style="animation-name: ${animType}; animation-duration: ${animDuration}s; animation-delay: ${animDelay}s;">
+                            ${heartHTML}
+                        </g>
+                    </g>
+                `;
+            }
+
+            svgHTML += `</svg>`;
+            container.innerHTML = svgHTML;
+        }
+
+        createHeartSVG();
+
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(createHeartSVG, 300);
+        });
+    </script>
+
+</body>
+
+</html>

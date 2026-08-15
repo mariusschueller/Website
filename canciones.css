@@ -1,0 +1,120 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+    background-color: rgb(244, 234, 224);
+    color: black;
+    overflow-x: hidden;
+}
+
+#svg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes float1 {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    33% {
+        transform: translate(60px, -80px) rotate(120deg) scale(1.05);
+    }
+
+    66% {
+        transform: translate(-40px, 50px) rotate(240deg) scale(0.95);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(360deg) scale(1);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    33% {
+        transform: translate(-70px, 60px) rotate(-100deg) scale(0.95);
+    }
+
+    66% {
+        transform: translate(50px, -40px) rotate(-200deg) scale(1.05);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(-360deg) scale(1);
+    }
+}
+
+@keyframes float3 {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    33% {
+        transform: translate(40px, 90px) rotate(140deg) scale(1.02);
+    }
+
+    66% {
+        transform: translate(-60px, -70px) rotate(280deg) scale(0.98);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(360deg) scale(1);
+    }
+}
+
+.heart-anim {
+    transform-origin: 0 0;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+h1 {
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    color: rgb(141, 88, 53);
+    font-weight: bolder;
+}
+
+p {
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(178, 58, 14);
+    font-size: 24px;
+
+    text-shadow: 0 0 8px rgba(252, 246, 238, 0.85), 0 0 14px rgba(252, 246, 238, 0.6);
+
+}
+
+.center-text {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    bottom: 50%;
+    background-color: rgba(0, 0, 0, 10%);
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 20px;
+    padding: 4px;
+}
+
+
+.bottom-text {
+    position: absolute;
+    margin-left: 20px;
+    margin-right: 20px;
+    bottom: 0;
+}
