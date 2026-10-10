@@ -1,4 +1,14 @@
 <?php
+// Skip counting when running locally
+$host = strtolower(preg_replace('/:\d+$/', '', $_SERVER['HTTP_HOST'] ?? ''));
+$visitor_ip = $_SERVER['REMOTE_ADDR'] ?? '';
+if (in_array($host, ['localhost', '127.0.0.1', '[::1]']) || in_array($visitor_ip, ['127.0.0.1', '::1'])) {
+    if (php_sapi_name() !== 'cli') {
+        http_response_code(200);
+    }
+    exit;
+}
+
 $counter_file = "counter.txt";
 $log_file = "visit_log.txt";
 
